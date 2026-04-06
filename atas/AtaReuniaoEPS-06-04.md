@@ -2,7 +2,7 @@
 
 ### Reunião apenas da equipe
 
-
+# EM CONSTRUÇÃO
 ## Local
 
 Reunião realizada no horário da disciplina de EPS.
@@ -70,12 +70,18 @@ Na tabela 2 consta o horário de início e o horário de término previsto da re
 * Preparação para a reunião de hoje com o PO às 19h30. Pauta:
   * Validação da visão do produto, objetivos, personas e jornadas de usuário
   * Revisão técnica, de negócio e de UX, Sequenciador e MVP
-* 
+
 
 ## Atividades
 
-Na definição da arquitetura do projeto, foi discutido que o projeto deve ter controle de acesso, processamento/Tratamento de imagem, front e modelo da IA.
+Na definição da arquitetura do projeto, foi discutido que o projeto deve ter controle de acesso, processamento/Tratamento de imagem, frontend e modelo da IA. O [Arthur](https://github.com/artrsousa1) confeccionará um diagrama de arquitetura de acordo com a discussão dessa reunião para ser validado pelo time. Determinou-se que apenas o modelo de IA será implementado em repositório diferente.
 
+Front - react e type scriot
+back - node e typescript
+banco postgres
+API da IA - python
+
+definições da reunião de hoje
 
 
 

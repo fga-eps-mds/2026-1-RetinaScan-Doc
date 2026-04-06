@@ -1,0 +1,89 @@
+## Ata de reunião 1 - 23/03/2026
+
+### *Kick-off* com PO
+
+
+## Local
+
+Reunião realizada no horário da disciplina de EPS.
+
+## Participantes
+
+**Professor**: Hilmer Neri Rodrigues</br>
+**Product Owner**: Vinícius Rispoli de Carvalho
+
+<div>
+<font size="3"><p><b>Tabela 1:</b> Participantes da reunião</p></font>
+
+|       Matrícula         |              Aluno                     | Presente |
+|-------------------------|----------------------------------------|----------|
+|       222037648         |     André Cláudio Maia da Cunha        |     ✓    |
+|       221007850         |     Arthur Ribeiro e Sousa             |     ✓    |
+|       221021901         |     Cecília Ernesto Silva Quaresma     |     ✓    |
+|       221007706         |     Elias Faria de Oliveira            |     ✓    |
+|       202016168         |     Eric Camargo da Silva              |     ✓    |
+|       211061814         |     Gustavo Costa de Jesus             |     ✓    |
+|       211061832         |     Harleny Angéllica Araújo de Sousa  |     ✓    |
+|       211062947         |     Iderlan Junio Cardoso da Silva     |     ✓    |
+|       221037975         |     Natália Rodrigues de Morais        |     ✓    |
+|       190020814         |     Vinícius Roriz Meireles Silva      |     ✓    |
+|       211031889         |     Yan Luca Viana de Araújo Fontenele |     ✓    |
+|       212002907         |     Zenilda Pedrosa Vieira             |     ✓    |
+
+
+<font size="3"><p><b>Fonte:</b> <a href="https://github.com/cqcoding">Cecília Quaresma</a>, 2026</p></font>
+</div>
+
+## Início e término
+
+Na tabela 2 consta o horário de início e o horário de término previsto da reunião, assim como o horário que foi efetivamente realizado.
+
+<div>
+<font size="3"><p><b>Tabela 2:</b> Horários</p></font>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Hora de Início</th>
+            <th>Hora de Término</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Previsto</td>
+            <td>12:30</td>
+            <td>13:30</td>
+        </tr>
+        <tr>
+            <td>Realizado</td>
+            <td>12:35</td>
+            <td>13:30</td>
+        </tr>
+    </tbody>
+</table>
+
+<font size="3"><p><b>Fonte:</b> <a href="https://github.com/cqcoding">Cecília Quaresma</a>, 2026</p></font>
+</div>
+
+## Pauta
+
+* Esclarecimento de dúvidas sobre contextualização e briefing do projeto.
+* Rascunho-hipótese da visão do produto 
+* Brainstorming inicial
+
+## Atividades
+
+Durante a reunião foi definido que seguiríamos a *Lean Inception* de forma assíncrona em grupos de 3-4 integrantes, a fim de conciliar melhor os horários e, ao final, realizar uma validação cruzada antes de seguir para a etapa seguinte. Também ficou decidido com o *Product Owner* que marcaríamos uma outra reunião, desta vez remota, com um professor *stakeholder* da Faculdade de Medicina, ao final da semana, a fim de validar os artefatos criados.
+
+
+## Conclusão
+
+A reunião inicial foi essencial para direcionar o grupo em relação aos próximos passos que devem ser tomados na *Lean Inception*. 
+
+
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor | Revisor |
+| :----: | ---- | --------- | ----- | ------- |
+| `1.0`  |23/03/2026| Criação da ata de reunião | [Cecília Ernesto Silva Quaresma](https://github.com/cqcoding) |[xxxx](xxxx)  |

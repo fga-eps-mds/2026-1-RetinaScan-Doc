@@ -112,7 +112,7 @@ Foi discutido também o fluxo atual:
 
 ### Sobre o desenvolvimento:
 
-- Serão entregues 9 verões do produto em modelo iterativo e incremental
+- Serão entregues 9 versões do produto em modelo iterativo e incremental
 
 ### Sobre tecnologia:
 
@@ -145,4 +145,4 @@ A reunião inicial foi essencial para direcionar o grupo em relação aos próxi
 
 | Versão | Data       | Descrição                             | Autor                                        | Revisor      |
 | :----: | ---------- | ------------------------------------- | -------------------------------------------- | ------------ |
-| `1.0`  | 02/04/2026 | Ata da Reunião de apresentação com PO | [Iderlan Junio](https://github.com/IderlanJ) | [xxxx](xxxx) |
+| `1.0`  | 02/04/2026 | Ata da reunião de apresentação com PO | [Iderlan Junio](https://github.com/IderlanJ) | [xxxx](xxxx) |

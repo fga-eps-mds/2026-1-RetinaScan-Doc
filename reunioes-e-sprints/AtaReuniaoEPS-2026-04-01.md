@@ -1,4 +1,4 @@
-## Ata de reunião 1 - 01/04/2026
+## Ata de reunião 2 - 01/04/2026
 
 ### _Apresentação da equipe_ e Kick off com PO
 

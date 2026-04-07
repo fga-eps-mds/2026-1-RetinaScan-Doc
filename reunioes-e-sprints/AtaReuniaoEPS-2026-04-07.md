@@ -1,4 +1,4 @@
-## Ata de reunião 1 - 06/04/2026
+## Ata de reunião 4 - 06/04/2026
 
 ### Validação Lean inception e definição do MVP
 

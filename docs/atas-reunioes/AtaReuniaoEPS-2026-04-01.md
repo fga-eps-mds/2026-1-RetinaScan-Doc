@@ -11,12 +11,11 @@ Reunião realizada no modelo assíncrono via Teams
 **Professor**: Hilmer Neri Rodrigues</br>
 **Product Owner**: Vinícius Rispoli de Carvalho, Thiago
 
-<div>
-<font size="3"><p><b>Tabela 1:</b> Participantes da reunião</p></font>
+**Tabela 1:** Participantes da reunião
 
 | Matrícula | Aluno                              | Presente |
 | --------- | ---------------------------------- | -------- |
-| 222037648 | André Cláudio Maia da Cunha        |          |
+| 222037648 | André Cláudio Maia da Cunha        | ✓        |
 | 221007850 | Arthur Ribeiro e Sousa             | ✓        |
 | 221021901 | Cecília Ernesto Silva Quaresma     |          |
 | 221007706 | Elias Faria de Oliveira            | ✓        |
@@ -29,9 +28,7 @@ Reunião realizada no modelo assíncrono via Teams
 | 211031889 | Yan Luca Viana de Araújo Fontenele |          |
 | 212002907 | Zenilda Pedrosa Vieira             | ✓        |
 
-<font size="3"><p><b>Fonte:</b> <a href="https://github.com/IderlanJ">Iderlan Junio</a>, 2026</p></font>
-
-</div>
+**Fonte:** [Iderlan Junio](https://github.com/IderlanJ), 2026
 
 ## Início e término
 
@@ -145,4 +142,4 @@ A reunião inicial foi essencial para direcionar o grupo em relação aos próxi
 
 | Versão | Data       | Descrição                             | Autor                                        | Revisor      |
 | :----: | ---------- | ------------------------------------- | -------------------------------------------- | ------------ |
-| `1.0`  | 02/04/2026 | Ata da reunião de apresentação com PO | [Iderlan Junio](https://github.com/IderlanJ) | [xxxx](xxxx) |
+| `1.0`  | 02/04/2026 | Ata da reunião de apresentação com PO | [Iderlan Junio](https://github.com/IderlanJ) | [André Maia](https://github.com/andre-maia51) |

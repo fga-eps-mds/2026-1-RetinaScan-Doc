@@ -12,8 +12,7 @@ Reunião realizada no horário da disciplina de EPS.
 **Professor**: Hilmer Neri Rodrigues</br>
 **Product Owner**: Vinícius Rispoli de Carvalho
 
-<div>
-<font size="3"><p><b>Tabela 1:</b> Participantes da reunião</p></font>
+**Tabela 1:** Participantes da reunião
 
 |       Matrícula         |              Aluno                     | Presente |
 |-------------------------|----------------------------------------|----------|
@@ -30,9 +29,7 @@ Reunião realizada no horário da disciplina de EPS.
 |       211031889         |     Yan Luca Viana de Araújo Fontenele |     ✓    |
 |       212002907         |     Zenilda Pedrosa Vieira             |     ✓    |
 
-
-<font size="3"><p><b>Fonte:</b> <a href="https://github.com/cqcoding">Cecília Quaresma</a>, 2026</p></font>
-</div>
+**Fonte:** [Cecília Quaresma](https://github.com/cqcoding), 2026
 
 ## Início e término
 
@@ -86,4 +83,4 @@ A reunião inicial foi essencial para direcionar o grupo em relação aos próxi
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | ---- | --------- | ----- | ------- |
-| `1.0`  |23/03/2026| Criação da ata de reunião | [Cecília Ernesto Silva Quaresma](https://github.com/cqcoding) |[xxxx](xxxx)  |
+| `1.0`  |23/03/2026| Criação da ata de reunião | [Cecília Ernesto Silva Quaresma](https://github.com/cqcoding) |[André Maia](https://github.com/andre-maia51) |

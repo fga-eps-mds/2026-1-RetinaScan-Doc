@@ -10,13 +10,12 @@ Reunião realizada no modelo assíncrono via Teams
 
 **Product Owner**: Vinícius Rispoli de Carvalho
 
-<div>
-<font size="3"><p><b>Tabela 1:</b> Participantes da reunião</p></font>
+**Tabela 1:** Participantes da reunião
 
 | Matrícula | Aluno                              | Presente |
 | --------- | ---------------------------------- | -------- |
 | 222037648 | André Cláudio Maia da Cunha        | ✓        |
-| 221007850 | Arthur Ribeiro e Sousa             |         |
+| 221007850 | Arthur Ribeiro e Sousa             |          |
 | 221021901 | Cecília Ernesto Silva Quaresma     |          |
 | 221007706 | Elias Faria de Oliveira            | ✓        |
 | 202016168 | Eric Camargo da Silva              |          |
@@ -24,13 +23,11 @@ Reunião realizada no modelo assíncrono via Teams
 | 211061832 | Harleny Angéllica Araújo de Sousa  | ✓        |
 | 211062947 | Iderlan Junio Cardoso da Silva     | ✓        |
 | 221037975 | Natália Rodrigues de Morais        | ✓        |
-| 190020814 | Vinícius Roriz Meireles Silva      | ✓         |
+| 190020814 | Vinícius Roriz Meireles Silva      | ✓        |
 | 211031889 | Yan Luca Viana de Araújo Fontenele | ✓        |
 | 212002907 | Zenilda Pedrosa Vieira             | ✓        |
 
-<font size="3"><p><b>Fonte:</b> <a href="https://github.com/IderlanJ">Iderlan Junio</a>, 2026</p></font>
-
-</div>
+**Fonte:** [Iderlan Junio](https://github.com/IderlanJ), 2026
 
 ## Início e término
 

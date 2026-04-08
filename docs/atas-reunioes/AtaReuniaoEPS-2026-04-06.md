@@ -2,16 +2,13 @@
 
 ### Reunião apenas da equipe
 
-# EM CONSTRUÇÃO
 ## Local
 
 Reunião realizada no horário da disciplina de EPS.
 
 ## Participantes
 
-
-<div>
-<font size="3"><p><b>Tabela 1:</b> Participantes da reunião</p></font>
+**Tabela 1:** Participantes da reunião
 
 |       Matrícula         |              Aluno                     | Presente |
 |-------------------------|----------------------------------------|----------|
@@ -28,9 +25,7 @@ Reunião realizada no horário da disciplina de EPS.
 |       211031889         |     Yan Luca Viana de Araújo Fontenele |     ✓    |
 |       212002907         |     Zenilda Pedrosa Vieira             |     ✓    |
 
-
-<font size="3"><p><b>Fonte:</b> <a href="https://github.com/ZenildaVieira">Zenilda Vieira</a>, 2026</p></font>
-</div>
+**Fonte:** [Zenilda Vieira](https://github.com/ZenildaVieira), 2026
 
 ## Início e término
 
@@ -76,22 +71,19 @@ Na tabela 2 consta o horário de início e o horário de término previsto da re
 
 Na definição da arquitetura do projeto, foi discutido que o projeto deve ter controle de acesso, processamento/Tratamento de imagem, frontend e modelo da IA. O [Arthur](https://github.com/artrsousa1) confeccionará um diagrama de arquitetura de acordo com a discussão dessa reunião para ser validado pelo time. Determinou-se que apenas o modelo de IA será implementado em repositório diferente.
 
-Front - react e type scriot
-back - node e typescript
-banco postgres
-API da IA - python
-
-definições da reunião de hoje
-
-
+| Camada / Parte do Sistema | Tecnologias |
+| :--- | :--- |
+| Frontend | React e TypeScript |
+| Backend | Node e TypeScript |
+| Banco de Dados | PostgreSQL |
+| API da IA | Python |
 
 ## Conclusão
 
-
-
+Foi definido pela equipe os pontos que deveriam ser discutidos na reunião com o PO. Além disso, foi acordado entre os membros da equipe sobre as tecnologias que serão utilizadas em cada parte do projeto, bem como as ideias iniciais da arquitetura do projeto que será validada posteriormente.
 
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | ---- | --------- | ----- | ------- |
-| `1.0`  |06/04/2026| Criação da ata de reunião | [Zenilda Pedrosa Vieira](https://github.com/ZenildaVieira) |[xxxx](xxxx)  |
+| `1.0`  |06/04/2026| Criação da ata de reunião | [Zenilda Pedrosa Vieira](https://github.com/ZenildaVieira) |[André Maia](https://github.com/andre-maia51)  |

@@ -1,0 +1,61 @@
+repo_url: https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc
+repo_name: RetinaScan - Doc
+
+site_name: RetinaScan
+theme:
+  name: material
+
+  palette:
+    - scheme: default
+      accent: indigo
+      primary: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+nav:
+  - Home: "index.md"
+  - Guia de Contribuição:
+      - Código de Conduta: "guia_de_contribuicao/codigo-de-conduta.md"
+      - Política de Branches: "guia_de_contribuicao/politica-de-branches.md"
+      - Política de Commits: "guia_de_contribuicao/politica-de-commits.md"
+  - Planejamento:
+      - Comunicação: "planejamento/comunicacao.md"
+      - Ferramentas: "planejamento/ferramentas.md"
+      - Heatmap de Horários: "planejamento/heatmap-de-horarios.md"
+      - Roadmap do Produto: "planejamento/roadmap-do-produto.md"
+      - Tabela de Conhecimentos: "planejamento/tabela-de-conhecimentos.md"
+  - Produto:
+      - Backlog do Produto: "produto/backlog-do-produto.md"
+      - Identidade Visual: "produto/identidade-visual.md"
+      - Lean Inception: "produto/lean-inception.md"
+      - Protótipo de Alta Fidelidade: "produto/prototipo-de-alta.md"
+  - Projeto:
+      - Arquitetura: "projeto/arquitetura.md"
+      - EAP: "projeto/EAP.md"
+      - Metodologias: "projeto/metodologias.md"
+      - Modelagem do Banco de Dados: "projeto/modelagem-do-BD.md"
+  - Atas de Reuniões:
+      - Reunião 23.03.2026: "atas-reunioes/AtaReuniaoEPS-2026-03-23.md"
+      - Reunião 01.04.2026: "atas-reunioes/AtaReuniaoEPS-2026-04-01.md"
+      - Reunião 06.04.2026: "atas-reunioes/AtaReuniaoEPS-2026-04-06.md"
+      - Reunião 07.04.2026: "atas-reunioes/AtaReuniaoEPS-2026-04-07.md"

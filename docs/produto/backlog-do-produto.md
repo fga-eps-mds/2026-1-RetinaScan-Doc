@@ -1,8 +1,6 @@
 # Backlog do Produto
 
-**Nota:** Os critérios de aceitação de cada issue podem ser consultados no ZenHub através do link abaixo:  
-> https://github.com/fga-eps-mds/2026-1-retinascan-doc/issues#workspaces/20261-fcte-fm-01-69bd9cee544e2d00306abb69/board
-
+**Nota:** Os critérios de aceitação de cada issue podem ser consultados no ZenHub através do link: [Backlog Zenhub](https://github.com/fga-eps-mds/2026-1-retinascan-doc/issues#workspaces/20261-fcte-fm-01-69bd9cee544e2d00306abb69/board)
 ## Épicos
 
 ### Autenticação e Controle de Acesso

@@ -13,7 +13,7 @@ Os riscos foram divididos nessas seguintes categorias:
 - Organizacional
 - Técnico
 
-  ## Definições
+## Definições
 
 ### Probabilidade e impacto dos riscos
 
@@ -109,7 +109,7 @@ Os riscos foram divididos nessas seguintes categorias:
 
 ## Monitoramento dos Riscos
 
-<iframe width="700" height="760" src="https://docs.google.com/spreadsheets/d/1J1RfDBU82Kv7Slv5gsDqED5zfFmU3313uKn5vsFBtzo/preview"></iframe>
+<iframe width="700" height="400" src="https://docs.google.com/spreadsheets/d/1J1RfDBU82Kv7Slv5gsDqED5zfFmU3313uKn5vsFBtzo/preview"></iframe>
 
 ## Conclusão
 

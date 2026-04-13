@@ -52,7 +52,7 @@ A solução utiliza uma arquitetura com serviços desacoplados, incluindo:
     <td align="center">
       <a href="https://github.com/EliasOliver21">
         <img src="http://github.com/EliasOliver21.png" width="100" height="100" style="border-radius: 50%; object-fit: cover;" alt=""/>
-        <br /><sub><b>Elias</b></sub>
+        <br /><sub><b>Elias Oliveira</b></sub>
       </a>
     </td>
     <td align="center">

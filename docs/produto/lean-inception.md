@@ -125,7 +125,7 @@ A representação visual da Persona 1 está na Figura 3.
 
 <div align="center">
 	<p><strong>Figura 3.</strong> Persona 1 (Dra Meridite Cinza).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/Persona1.PNG" alt="Persona 1"/>
+	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona1.PNG" alt="Persona 1"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -146,7 +146,7 @@ A representação visual da Persona 2 está na Figura 4.
 
 <div align="center">
 	<p><strong>Figura 4.</strong> Persona 2 (Derik Carneiro).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/Persona2.PNG" alt="Persona 2"/>
+	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona2.PNG" alt="Persona 2"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -167,7 +167,7 @@ A representação visual da Persona 3 está na Figura 5.
 
 <div align="center">
 	<p><strong>Figura 5.</strong> Persona 3 (Leon Silva).</p>
-	<img src="[](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens)/Persona3.PNG" alt="Persona 3"/>
+	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona3.PNG" alt="Persona 3"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -195,7 +195,7 @@ O fluxo detalhado da jornada está ilustrado na Figura 6.
 
 <div align="center">
 	<p><strong>Figura 6.</strong> Jornada do Usuário.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/jornada-do-usuario.PNG" alt="Jornada do Usuário"/>
+	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/jornada-do-usuario.PNG" alt="Jornada do Usuário"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -246,7 +246,7 @@ As funcionalidades levantadas e agrupadas na ideação estão apresentadas na Fi
 
 <div align="center">
 	<p><strong>Figura 7.</strong> Brainstorming de Funcionalidades.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/brainstorm-de-funcionalidades.PNG" alt="Brainstorming de Funcionalidades"/>
+	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/brainstorm-de-funcionalidades.PNG" alt="Brainstorming de Funcionalidades"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -322,7 +322,7 @@ Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de 
 
 <div align="center">
 	<p><strong>Figura 9.</strong> Sequenciador e definição do MVP.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/sequenciador.PNG" alt="Sequenciador e definição do MVP"/>
+	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/sequenciador.PNG" alt="Sequenciador e definição do MVP"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 

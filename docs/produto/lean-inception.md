@@ -58,7 +58,7 @@ Conforme a Figura 1, a delimitação do produto explicita o escopo funcional e o
 
 <div align="center">
 	<p><strong>Figura 1.</strong> Produto É, Não É, Faz e Não Faz.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/e-nao-e-faz-nao-faz.PNG" alt="Produto É, Não É, Faz e Não Faz"/>
+	<img src="../assets/imagens/lean-inception/e-nao-e-faz-nao-faz.PNG" alt="Produto É, Não É, Faz e Não Faz"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -102,7 +102,7 @@ Os objetivos consolidados por cluster são apresentados na Figura 2.
 
 <div align="center">
 	<p><strong>Figura 2.</strong> Objetivos do Produto.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/objetivos.PNG" alt="Objetivos do Produto"/>
+	<img src="../assets/imagens/lean-inception/objetivos.PNG" alt="Objetivos do Produto"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -125,7 +125,7 @@ A representação visual da Persona 1 está na Figura 3.
 
 <div align="center">
 	<p><strong>Figura 3.</strong> Persona 1 (Dra Meridite Cinza).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona1.PNG" alt="Persona 1"/>
+	<img src="../assets/imagens/lean-inception/Persona1.PNG" alt="Persona 1"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -146,7 +146,7 @@ A representação visual da Persona 2 está na Figura 4.
 
 <div align="center">
 	<p><strong>Figura 4.</strong> Persona 2 (Derik Carneiro).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona2.PNG" alt="Persona 2"/>
+	<img src="../assets/imagens/lean-inception/Persona2.PNG" alt="Persona 2"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -167,7 +167,7 @@ A representação visual da Persona 3 está na Figura 5.
 
 <div align="center">
 	<p><strong>Figura 5.</strong> Persona 3 (Leon Silva).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona3.PNG" alt="Persona 3"/>
+	<img src="../assets/imagens/lean-inception/Persona3.PNG" alt="Persona 3"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -195,7 +195,7 @@ O fluxo detalhado da jornada está ilustrado na Figura 6.
 
 <div align="center">
 	<p><strong>Figura 6.</strong> Jornada do Usuário.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/jornada-do-usuario.PNG" alt="Jornada do Usuário"/>
+	<img src="../assets/imagens/lean-inception/jornada-do-usuario.PNG" alt="Jornada do Usuário"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -246,7 +246,7 @@ As funcionalidades levantadas e agrupadas na ideação estão apresentadas na Fi
 
 <div align="center">
 	<p><strong>Figura 7.</strong> Brainstorming de Funcionalidades.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/brainstorm-de-funcionalidades.PNG" alt="Brainstorming de Funcionalidades"/>
+	<img src="../assets/imagens/lean-inception/brainstorm-de-funcionalidades.PNG" alt="Brainstorming de Funcionalidades"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -277,7 +277,7 @@ A priorização resultante da revisão técnica, de negócio e de UX é apresent
 
 <div align="center">
 	<p><strong>Figura 8.</strong> Revisão Técnica, de Negócio e de UX.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/revisao-tecnica-de-negocio-e-ux.PNG" alt="Revisão Técnica, de Negócio e de UX"/>
+	<img src="../assets/imagens/lean-inception/revisao-tecnica-de-negocio-e-ux.PNG" alt="Revisão Técnica, de Negócio e de UX"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -322,7 +322,7 @@ Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de 
 
 <div align="center">
 	<p><strong>Figura 9.</strong> Sequenciador e definição do MVP.</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/sequenciador.PNG" alt="Sequenciador e definição do MVP"/>
+	<img src="../assets/imagens/lean-inception/sequenciador.PNG" alt="Sequenciador e definição do MVP"/>
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
@@ -330,4 +330,5 @@ Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de 
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | :--: | :-- | :-- | :-- |
+| 1.1 | 13/04/2026 | Correção dos links das imagens para caminhos relativos compatíveis com GitHub Pages. | [Zenilda Vieira](https://github.com/ZenildaVieira) |  |
 | 1.0 | 13/04/2026 | Preenchimento do documento com resultados da Lean Inception | [Zenilda Vieira](https://github.com/ZenildaVieira) |  |

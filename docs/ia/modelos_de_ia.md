@@ -39,8 +39,7 @@ O modelo é baseado no RETFound:
 - Modelo treinado:  
   [Download do modelo](https://seu-link/model_v1_0_0.pth)
 
-- Código utilizado:  
-  https://github.com/fga-eps-mds/2026-1-RetinaScan-AI
+- [Código Fonte](https://github.com/fga-eps-mds/2026-1-RetinaScan-AI)
 
 ### Configuração
 
@@ -57,13 +56,9 @@ O modelo é baseado no RETFound:
 | Accuracy | 0.85 |
 | F1-score | 0.82 |
 
-
-
 ### Observações
 
 - Serão adicionadas posteriormente após uma análise mais apurada dos resultados obtido com a utilização do modelo.
-
-## Modelo v1.0.0 - RETFound (Fine-tuning Inicial)
 
 ## Histórico de Versão
 | Versão | Data | Descrição | Autor | Revisor |

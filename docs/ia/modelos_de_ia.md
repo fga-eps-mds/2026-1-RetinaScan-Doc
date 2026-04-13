@@ -9,21 +9,19 @@ O projeto utiliza como base o modelo **RETFound**, um foundation model treinado 
 
 ## Modelos de I.A Utilizados no Projeto
 
-## Lista de Modelos
-
-## *Modelo v1.0.0 - RETFound (Fine-tuning Inicial)*
+## Modelo v1.0.0 - RETFound (Fine-tuning Inicial)
 
 ### Informações Gerais
 
 
 | Campo | Valor |
 |------|------|
-| Modelo Base | RETFound |
+| Modelo Base | RETFound_dinov2 |
 | Arquitetura | Vision Transformer (ViT) |
 | Tipo | Fine-tuned |
-| Dataset | EyePACS + Augmentation |
+| Dataset | RFMiD |
 | Versão | v1.1.0 |
-| Data de Treinamento | 2026-04-20 |
+| Data de Treinamento | 05/04/2026 |
 | Epochs | 30 |
 
 
@@ -60,11 +58,14 @@ O modelo é baseado no RETFound:
 | F1-score | 0.82 |
 
 
+
 ### Observações
 
 - Serão adicionadas posteriormente após uma análise mais apurada dos resultados obtido com a utilização do modelo.
 
+## Modelo v1.0.0 - RETFound (Fine-tuning Inicial)
 
+## Histórico de Versão
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | :--: | :-- | :-- | :-- |
 | 1.0 | 13/04/2026 | Documentação do Fine-tuning inicial do RETFound | [Elias Oliveira](https://github.com/EliasOliver21) | -- |

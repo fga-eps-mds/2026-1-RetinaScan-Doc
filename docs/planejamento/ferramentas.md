@@ -83,7 +83,7 @@ Na Tabela 1 temos as seguintes ferramentas de acordo com sua função:
     </tr>
 </table>
 <font size="3" align="center"><p><b>Fonte:</b> <a href="https://github.com/ZenildaVieira">Zenilda Vieira</a>, 2026</p></font>
-</div>
+
 
 
 ## Histórico de Versão

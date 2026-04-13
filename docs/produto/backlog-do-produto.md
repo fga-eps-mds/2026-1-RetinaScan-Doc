@@ -188,4 +188,4 @@ Permite a visualização, exportação e compartilhamento de informações e res
 
 | Versão | Data       | Descrição | Autor        | Revisor      |
 | :----: | ---------- | --------- | ------------ | ------------ |
-| `1.0`  | 12/04/2016 | Criação do Documento | [Natália De Morais](https://github.com/Natyrodrigues) | ---- |
+| `1.0`  | 12/04/2026 | Criação do Documento | [Natália De Morais](https://github.com/Natyrodrigues) | ---- |

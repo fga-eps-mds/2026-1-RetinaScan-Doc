@@ -330,5 +330,4 @@ Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de 
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | :--: | :-- | :-- | :-- |
-| 1.1 | 13/04/2026 | Correção dos links das imagens para caminhos relativos compatíveis com GitHub Pages. | [Zenilda Vieira](https://github.com/ZenildaVieira) |  |
 | 1.0 | 13/04/2026 | Preenchimento do documento com resultados da Lean Inception | [Zenilda Vieira](https://github.com/ZenildaVieira) |  |

@@ -90,5 +90,4 @@ Na Tabela 1 temos as seguintes ferramentas de acordo com sua função:
 
 | Versão | Data       | Descrição                                    | Autor                                              | Revisor |
 | :----: | ---------- | -------------------------------------------- | -------------------------------------------------- | ------- |
-|  1.2   | 13/04/2026 | Correção dos links das imagens para caminhos relativos compatíveis com GitHub Pages. | [Zenilda Vieira](https://github.com/ZenildaVieira) |         |
 |  1.1   | 07/04/2026 | Escrita do documento e inclusão das imagens. | [Zenilda Vieira](https://github.com/ZenildaVieira) |         |

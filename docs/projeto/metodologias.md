@@ -52,18 +52,19 @@ As Sprints do projeto têm duração semanal, alinhadas ao calendário da discip
 
 ### Dupla de Líderes Rotativos
 
-Como adaptação ao Scrum tradicional, a equipe adota a prática de **duplas de líderes rotativos** a cada Sprint. A cada ciclo, dois integrantes assumem conjuntamente o papel de liderança, sendo responsáveis por facilitar as cerimônias, acompanhar o progresso das tarefas e remover impedimentos do time. Essa rotatividade garante que todos os membros desenvolvam habilidades de liderança e gestão ao longo do semestre.
+Como adaptação ao Scrum tradicional, a equipe adota a prática de **rodízio de lideranças por quinzena**. Em cada quinzena, os membros definidos conduzem as cerimônias, acompanham o progresso das tarefas e apoiam na remoção de impedimentos. Essa rotatividade garante que todos desenvolvam habilidades de liderança e gestão ao longo do semestre.
 
-A tabela abaixo apresenta as duplas definidas para cada Sprint do projeto:
+A tabela abaixo apresenta o rodízio de lideranças definido para o projeto:
 
-| Sprint | Data | Dupla de Líderes |
-| :----: | :--: | :--------------- |
-| RM1 | 01/04/2026 | [Gustavo Costa](https://github.com/cwtshh) e [Iderlan Junio](https://github.com/IderlanJ) |
-| R1  | 13/04/2026 | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51) |
-| RM2 | 27/04/2026 | [Zenilda Vieira](https://github.com/ZenildaVieira) e [Cecília Quaresma](https://github.com/cqcoding) |
-| R2  | 11/05/2026 | [Elias Oliveira](https://github.com/EliasOliver21) |
-| RM4 | 25/05/2026 | [Eric Camargo](https://github.com/Ericcs10) e [Harleny ](https://github.com/Angelicahaas) |
-| RM5 | 08/06/2026 | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
+| Quinzena | Período | Evento(s) | Dupla de Líderes |
+| :------: | :-------------------: | :-------------------------- | :---------------- |
+| 1ª | 30/03 a 12/04/2026 | RM1 (13/04) | [Gustavo Costa](https://github.com/cwtshh) e [Iderlan Junio](https://github.com/IderlanJ) |
+| 2ª | 13/04 a 26/04/2026 | R1 (27/04) | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51) |
+| 3ª | 27/04 a 10/05/2026 | RM2 (04/05) e RM3 (11/05) | [Zenilda Vieira](https://github.com/ZenildaVieira) e [Cecília Quaresma](https://github.com/cqcoding) |
+| 4ª | 11/05 a 24/05/2026 | R2 (25/05) | [Elias Oliveira](https://github.com/EliasOliver21) e [Yan Luca](https://github.com/yan-luca) |
+| 5ª | 25/05 a 07/06/2026 | RM4 (01/06) | [Eric Camargo](https://github.com/Ericcs10) e [Harleny Angélica](https://github.com/Angelicahaas) |
+| 6ª | 08/06 a 21/06/2026 | RM5 (15/06) | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
+| 7ª | 22/06 a 05/07/2026 | R3 (29/06) e RM6 (06/07) | A definir |
 
 **Fonte:** Equipe RetinaScan, 2026.
 

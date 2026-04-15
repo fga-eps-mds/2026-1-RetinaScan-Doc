@@ -20,17 +20,12 @@ Em seguida, foi conduzido um novo processo de fine-tuning utilizando uma variaç
 
 Atualmente, o projeto faz uso do dataset **RFMiD** e decorrer do desenvolvimento, serão usados outros datasets para aprimorar treinamento.
 
-<div class="md-typeset__scrollwrap">
-  <div class="md-typeset__table">
 
 | Campo | Modelo Base | Modelo de Arquitetura | Dataset | Versão | Data de Treinamento | Epochs |
 |:------|:------------|:----------------------|:--------|:-------|:--------------------|:-------|
 | [RETFound_mae_natureCFP](https://drive.google.com/drive/folders/1zzlsGu1LXpuL5hHLGziQmI168RTFJDUm) | RETFound_mae | redfound_mae | RFMiD | v1.0.0 | 05/04/2026 | 50 |
 | [RETFound_dinov2_ODIR](https://drive.google.com/drive/folders/1lsQwFobQDNoKW4UTAiIKgWpp-AY8zsHH) | RETFound_dinov2 | redfound_dinov2 | ODIR | v2.0.0 | 13/04/2026 | 50 |
 | [RETfound_dinov2_RFMiD](https://drive.google.com/drive/folders/1TIbB6AMFzwu7H8p32TuZteQXeadipfq0) | RETFound_dinov2 | redfound_dinov2 | ODIR / RFMiD | v2.1.0 | 13/04/2026 | 50 |
-
-  </div>
-</div>
 
 ---
 #### Arquitetura

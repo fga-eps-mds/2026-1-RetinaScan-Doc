@@ -4,18 +4,16 @@
 * Usuario
 * LogAcesso
 * Paciente
-* Atendimento
 * Exame
 * Imagem
-* AnaliseIA
+* Analise
 * Revisao
 
 ## Descrição das Entidades
-* **Usuario** (<u>idUsuario</u>, nomeCompleto, crm, email, senha, tipoPerfil, status)
+* **Usuario** (<u>idUsuario</u>, nomeCompleto, cpf, dtNascimento, crm, email, senha, tipoPerfil, status)
 * **LogAcesso** (<u>idLog</u>, dtHora, acaoRealizada)
-* **Paciente** (<u>idPaciente</u>, nomeCompleto, cpf, dtNascimento, sexo, {telefone})
-* **Atendimento** (<u>idPaciente</u>, <u>idUsuario</u>, dtHora, queixaPrincipal, comorbidades, decisaoFinal, proridadeAtendimento)
-* **Exame** (<u>idExame</u>, dtHora, status)
+* **Paciente** (<u>idPaciente</u>, nomeCompleto, cpf, numProntuario, dtNascimento, sexo, {telefone})
+* **Exame** (<u>idExame</u>, descricao, dtHora, status, comorbidades)
 * **Imagem** (<u>idImagem</u>, lateralidadeOlho, caminhoImg, qualidadeImg)
 * **Analise** (<u>idAnalise</u>, anomaliaDetectada, grauConfianca, dtHora)
 * **Revisao** (<u>idRevisao</u>, concordaComIA, justificativa)
@@ -26,13 +24,13 @@
     * Um LogAcesso contém as informações de um e somente um Usuario, enquanto um Usuario pode estar contido em um ou mais LogAcesso.
     * Cardinalidade: **(n:1)**
 
-* Usuario - **consulta** - Paciente
-    * Um Usuario consulta um ou mais Pacientes e um Paciente pode ser consultado por um ou mais Usuarios.
-    * Cardinalidade: **(n:m)**
+* Usuario - **cadastra** - Exame
+    * Um Usuario (Médico) pode cadastrar um ou mais Exames, já um Exame está atrelado a um e somente um Usuario.
+    * Cardinalidade: **(1:n)**
 
-* Atendimento - **gera** - Exame
-    * Um Atendimento pode gerar um ou mais Exames, já um Exame está atrelado a um e somente um Atendimento.
-    * Cardinalidade: **(n:1)**
+* Paciente - **realiza** - Exame
+    * Um Paciente pode realizar um ou mais Exames, já um Exame está atrelado a um e somente um Paciente.
+    * Cardinalidade: **(1:n)**
 
 * Exame - **possui** - Imagem
     * Um Exame possui uma ou mais Imagens, e uma Imagem é possuída por um e apenas um Exame.
@@ -74,6 +72,9 @@
 | senha | obrigatório | varchar | 255 | Senha de acesso criptografada |
 | tipoPerfil | obrigatório | enum | - | Nível de acesso (ex: ADMIN, MEDICO_TRIAGEM) |
 | status | obrigatório | varchar | 20 | Situação do cadastro (ex: Ativo, Inativo) |
+| cpf    | obrigatório, único |	varchar | 14 | CPF do usuário |
+| dtNascimento |obrigatório | date | - | Data de nascimento do usuário |
+
 
 ### LogAcesso
 
@@ -99,6 +100,7 @@
 | cpf | obrigatório, único | varchar | 14 | CPF ou Cartão SUS do paciente |
 | dtNascimento | obrigatório | date | - | Data de nascimento para cálculo de idade |
 | sexo | obrigatório | varchar | 20 | Sexo biológico do paciente |
+| numProntuario | obrigatório, único | varchar | 50 | Número do prontuário identificador na UBS |
 
 ### Telefone
 
@@ -110,21 +112,6 @@
 | idPaciente | chave primária, chave estrangeira, obrigatorio | int | - | Identificador do Paciente Vinculado |
 | numeroTelefone | chave primária, obrigatório | varchar | 20 | Número de telefone de contato |
 
-### Atendimento
-
-* **Esclarecimento Técnico:** Tabela proveniente de uma Entidade Associativa.
-* **Descrição:** Registra o evento da consulta/triagem, conectando o usuário (profissional) ao paciente em uma data específica.
-
-| Atributo | Propriedades do Atributo | Tipo de Dados | Tamanho | Descrição |
-| -------- | ------------------------ | :-----------: | :-----: | --------- |
-| idUsuario | chave primária, chave estrangeira, obrigatório | int | - | Identificador do profissional que realizou o atendimento |
-| idPaciente | chave primária, chave estrangeira, obrigatório | int | - | Identificador do paciente atendido |
-| dtHora | obrigatório | timestamp | - | Data e hora em que o atendimento foi iniciado |
-| queixaPrincipal | obrigatório | text | - | Relato dos sintomas ou motivo da visita |
-| comorbidades | opcional | text | - | Doenças pré-existentes (ex: diabetes, hipertensão) |
-| decisaoFinal | obrigatório | varchar | 100 | Encaminhamento realizado (ex: Encaminhado ao Oftalmologista) |
-| proridadeAtendimento | obrigatório | varchar | 50 | Nível de urgência definido na triagem (ex: Alta, Normal) |
-
 ### Exame
 
 * **Esclarecimento Técnico:** Tabela proveniente de uma Entidade.
@@ -132,10 +119,13 @@
 
 | Atributo | Propriedades do Atributo | Tipo de Dados | Tamanho | Descrição |
 | -------- | ------------------------ | :-----------: | :-----: | --------- |
-| idExame | chave primária, obrigatório | int | - | Identificador único do exame |
-| idAtendimento | chave estrangeira, obrigatório | int | - | Identificador do atendimento gerador do exame |
+| idExame | chave primária, obrigatório | uuid | - | Identificador único do exame |
+| idUsuario | chave estrangeira, obrigatório | int | - | Identificador do usuário gerador do exame |
+| idPaciente | chave estrangeira, obrigatório | int | - | Identificador do paciente que realiza o exame |
 | dtHora | obrigatório | timestamp | - | Data e hora da realização da captura |
 | status | obrigatório | varchar | 50 | Situação atual do exame (ex: Concluído, Em Processamento) |
+| comorbidades | opcional | text | - | Histórico de comorbidades relatadas no momento do exame |
+| descricao | opcional | text | - | Descrição de queixas, anotações clínicas e observações do médico |
 
 ### Imagem
 
@@ -145,7 +135,7 @@
 | Atributo | Propriedades do Atributo | Tipo de Dados | Tamanho | Descrição |
 | -------- | ------------------------ | :-----------: | :-----: | --------- |
 | idImagem | chave primária, obrigatório | uuid | 36 | Identificador único da imagem |
-| idExame | chave estrangeira, obrigatório | int | - | Identificador do exame ao qual a foto pertence |
+| idExame | chave estrangeira, obrigatório | uuid | - | Identificador do exame ao qual a foto pertence |
 | lateralidadeOlho | obrigatório | varchar | 20 | Indica se é o Olho Direito ou Olho Esquerdo |
 | caminhoImg | obrigatório | varchar | 255 | URL ou caminho do arquivo anonimizado no servidor/storage |
 | qualidadeImg | obrigatório | varchar | 50 | Status do pré-processamento (ex: Adequada, Inadequada) |
@@ -181,3 +171,4 @@
 | Versão | Data       | Descrição | Autor        | Revisor      |
 | :----: | ---------- | --------- | ------------ | ------------ |
 | `1.0`  | 11/04/2026 | Criação do documento de modelagem do Banco de Dados       | [André Maia](https://github.com/andre-maia51) | [xxxx](xxxx) |
+| `1.1`  | 15/04/2026 | Adaptação no modelo de BD para se adequar corretamente as regras de negócio       | [André Maia](https://github.com/andre-maia51) | [xxxx](xxxx) |

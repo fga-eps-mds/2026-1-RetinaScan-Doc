@@ -60,7 +60,8 @@ nav:
       - EAP: "projeto/EAP.md"
       - Metodologias: "projeto/metodologias.md"
       - Modelagem do Banco de Dados: "projeto/modelagem-do-BD.md"
-      - Modelos de Inteligência Artificial: "ia/modelos_de_ia.md"
+      - Modelos de Inteligência Artificial: "projeto/ia/modelos_de_ia.md"
+      - Versionamento de Modelos: "projeto/ia/versionamento_modelos.md"
   - Atas de Reuniões:
       - Reunião 23.03.2026: "atas-reunioes/AtaReuniaoEPS-2026-03-23.md"
       - Reunião 01.04.2026: "atas-reunioes/AtaReuniaoEPS-2026-04-01.md"

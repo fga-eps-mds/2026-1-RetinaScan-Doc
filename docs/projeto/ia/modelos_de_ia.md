@@ -57,11 +57,11 @@ Para mais detalhes sobre configuração do ambiente, execução e treinamento do
 
 #### Resultados
 
-Os resultados obtidos demonstram um bom desempenho do modelo na tarefa de classificação. A métrica de **Accuracy** (0.85) indica que o modelo possui alta taxa de acerto geral, enquanto o **F1-score** (0.82) evidencia um equilíbrio consistente entre precisão e recall, sendo especialmente relevante para cenários com possíveis desbalanceamentos nas classes. Esses valores sugerem que o modelo é capaz de identificar padrões relevantes nas imagens de retina de forma confiável.
+Os resultados obtidos demonstram um bom desempenho do modelo na tarefa de classificação. A métrica de **Accuracy** indica que o modelo possui alta taxa de acerto geral, enquanto o **F1-score** evidencia um equilíbrio consistente entre precisão e recall, sendo especialmente relevante para cenários com possíveis desbalanceamentos nas classes. Esses valores sugerem que o modelo é capaz de identificar padrões relevantes nas imagens de retina de forma confiável. Abaixo a tabela com as métricas do modelo mais refinado e mais recente em utilização:
 
 | Métrica   | Valor |
 |:----------|:------|
-| Accuracy  | 0.85  |
+| Accuracy  | 0.81  |
 | F1-score  | 0.82  |
 
 ---
@@ -77,4 +77,4 @@ Os resultados obtidos demonstram um bom desempenho do modelo na tarefa de classi
 | Versão | Data | Descrição | Autor | Revisor |
 |:------:|:----:|:----------|:------|:--------|
 | 1.0 | 13/04/2026 | Documentação do Fine-tuning inicial do RETFound | [Elias Oliveira](https://github.com/EliasOliver21) | [Harleny A.](https://github.com/Angelicahaas) |
-| 1.1 | 15/04/2026 | Adição de descrições e formatação das tabelas | [Harleny A.](https://github.com/Angelicahaas)<br>[Iderlan J.](https://github.com/IderlanJ)<br>[Elias O.](https://github.com/EliasOliver21) | -- |
+| 1.1 | 15/04/2026 | Adição de descrições e formatação das tabelas | [Harleny A.](https://github.com/Angelicahaas)<br>[Iderlan J.](https://github.com/IderlanJ)<br>[Elias O.](https://github.com/EliasOliver21) | [Elias Oliveira]("https://github.com/EliasOliver21") |

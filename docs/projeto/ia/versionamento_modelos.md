@@ -47,4 +47,4 @@ Obs: as informações do **nome_modelo** e **dataset** é possível localizar no
 
 | Versão | Data | Descrição | Autor | Revisor |
 |:------:|:----:|:----------|:------|:--------|
-| 1.0 | 16/04/2026 | Documentação regras de versionamento | [Iderlan J.](https://github.com/IderlanJ) [Harleny A.](https://github.com/Angelicahaas) [Elias Oliveira](https://github.com/EliasOliver21) |  |
+| 1.0 | 16/04/2026 | Documentação regras de versionamento | [Iderlan J.](https://github.com/IderlanJ) [Harleny A.](https://github.com/Angelicahaas) [Elias Oliveira](https://github.com/EliasOliver21) | [Elias Oliveira](https://github.com/EliasOliver21) |

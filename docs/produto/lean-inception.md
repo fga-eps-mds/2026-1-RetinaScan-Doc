@@ -108,6 +108,8 @@ Os objetivos consolidados por cluster são apresentados na Figura 2.
 
 ## Personas
 
+As personas 2 e 3 não foram aprovadas pelo PO para o momento. Versões futuras podem contemplar essas personas.
+
 ### Persona 1 - Dra Meridite Cinza
 
 **Perfil:** 40 anos, médica da família, casada, 4 filhos, sobrecarregada.
@@ -129,49 +131,7 @@ A representação visual da Persona 1 está na Figura 3.
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-### Persona 2 - Derik Carneiro
-
-**Perfil:** técnico de enfermagem, 35 anos, casado, frustrado.
-
-**Comportamento:** responsável, proativo, analítico, curioso.
-
-**Necessidades:**
-
-- agilizar o processo de triagem na coleta das imagens de retina;
-- ter direcionamento claro do próximo passo da triagem;
-- adquirir conhecimento para avaliar sinais de problemas oculares;
-- ter apoio para lidar com a alta demanda de pacientes.
-
-A representação visual da Persona 2 está na Figura 4.
-
-<div align="center">
-	<p><strong>Figura 4.</strong> Persona 2 (Derik Carneiro).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona2.PNG?raw=true" alt="Persona 2"/>
-	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
-</div>
-
-### Persona 3 - Leon Silva
-
-**Perfil:** 65 anos, diabético, 2 filhas, sociável, pratica exercícios.
-
-**Comportamento:** impaciente, matutino, teimoso, ativo, metódico.
-
-**Necessidades:**
-
-- descobrir se possui algum problema de saúde;
-- obter o tratamento apropriado com rapidez;
-- ser atendido com agilidade;
-- receber orientação clara caso haja problema de saúde.
-
-A representação visual da Persona 3 está na Figura 5.
-
-<div align="center">
-	<p><strong>Figura 5.</strong> Persona 3 (Leon Silva).</p>
-	<img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona3.PNG?raw=true" alt="Persona 3"/>
-	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
-</div>
-
-### Persona 4 - Administrador do Sistema (ADMIN)
+### Persona 4 - Dr. Marcelo Rosa (ADMIN)
 
 **Perfil:** 45 anos, gestor de TI/saúde ou responsável de operação na rede pública, encarregado pelo gerenciamento dos usuários do sistema.
 
@@ -180,6 +140,7 @@ A representação visual da Persona 3 está na Figura 5.
 **Necessidades:**
 
 - gerenciar contas, permissões e perfis (ADMIN, MÉDICO);
+- editar dados sensíveis de usuários, como CRM e CPF.
 
 <div align="center">
     <p><strong>Figura 6.</strong> Persona 4 (Administrador do Sistema).</p>
@@ -188,6 +149,8 @@ A representação visual da Persona 3 está na Figura 5.
 </div>
 
 ## Jornada do Usuário
+
+As jornadas das personas 2 e 3 foram retiradas do escopo atual do projeto.
 
 ### Jornada 1 - Triagem e Encaminhamento
 
@@ -316,26 +279,26 @@ A priorização resultante da revisão técnica, de negócio e de UX é apresent
 
 Com base no sequenciador, os incrementos foram organizados em 5 ondas:
 
-### Incremento 1 - Acesso e segurança básica
+### Onda 1 - Acesso e segurança básica
 
 - gerenciamento de usuários pelo ADMIN;
 - login do profissional da saúde;
 - controle de acesso por perfil.
 
-### Incremento 2 - Cadastro e processamento inicial
+### Onda 2 - Cadastro e processamento inicial
 
 - registrar log de acesso;
 - cadastrar exame;
 - pré-processamento de imagem;
 - upload de foto do exame.
 
-### Incremento 3 - Núcleo de IA
+### Onda 3 - Núcleo de IA
 
 - modelo treinado com alta acurácia (90%);
 - resultado da avaliação da IA;
 - botão de "Reportar Erro da IA".
 
-### Incremento 4 - Histórico e busca (MVP)
+### Onda 4 - Histórico e busca (MVP)
 
 - histórico de análises;
 - busca de relatório;
@@ -345,7 +308,7 @@ Com base no sequenciador, os incrementos foram organizados em 5 ondas:
 
 **Issues relacionadas ao MVP:** [#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/3), [#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13), [#14](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14), [#15](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15), [#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20), [#21](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21), [#16](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16), [#17](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17), [#18](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18)
 
-### Incremento 5 - Evoluções pós-MVP
+### Onda 5 - Evoluções pós-MVP
 
 - dashboard com métricas das análises anteriores;
 - download de relatório;
@@ -361,7 +324,7 @@ Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de 
 
 ## Canvas MVP
 
-O Canvas MVP preenchido está disponível em [docs/produto/mvp-canvas.md](mvp-canvas.md).
+O Canvas MVP preenchido está disponível em [Canvas MVP](mvp-canvas.md).
 
 
 ## Histórico de Versão

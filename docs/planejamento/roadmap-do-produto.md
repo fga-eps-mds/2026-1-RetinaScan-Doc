@@ -41,7 +41,7 @@ Sprint inicial de alinhamento estratégico, definição do escopo do MVP e prepa
 | Entrega                                              |  Tipo   | Issue |
 | :--------------------------------------------------- | :-----: | :---: |
 | Lean Inception (visão, personas, MVP, sequenciador)  | Produto |   —   |
-| Definição e priorização das funcionalidades iniciais | Produto |   -   |
+| Definição e priorização das funcionalidades iniciais | Produto |   —   |
 
 ---
 

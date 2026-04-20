@@ -32,7 +32,11 @@ jobs:
 
       - name: Converter para Markdown (Ocultando o Código)
         run: |
-          jupyter nbconvert --to markdown analytics/dashboard.ipynb --no-input --output-dir docs/
+          jupyter nbconvert \
+            --to markdown analytics/dashboard.ipynb \
+            --no-input \
+            --ClearOutputPreprocessor.enabled=True \
+            --output-dir docs/
           mv docs/dashboard.md docs/indicadores.md
 
       - name: Deploy MkDocs

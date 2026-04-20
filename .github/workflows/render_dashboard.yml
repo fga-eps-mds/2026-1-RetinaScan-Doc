@@ -19,7 +19,7 @@ jobs:
 
       - name: Instalar dependências
         run: |
-          pip install pandas numpy plotly nbconvert ipykernel mkdocs-material
+          pip install pandas numpy plotly nbconvert ipykernel mkdocs-material matplotlib requests
 
       - name: Gerar Dashboard Automático
         run: |

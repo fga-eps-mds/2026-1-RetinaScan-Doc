@@ -12,164 +12,128 @@ A EAP do RetinaScan foi construída com base no Sequenciador definido durante o 
 
 ### 1. RetinaScan
 
-#### 1.1 Gerenciamento do Projeto
+---
 
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.1.1 Planejamento | Definição de metodologias, ferramentas, heatmap de horários, tabela de conhecimentos e plano de gestão de riscos. |
-| 1.1.2 Comunicação | Estabelecimento dos canais e protocolos de comunicação entre equipe e stakeholders. |
-| 1.1.3 Acompanhamento de Sprints | Condução dos ritos Scrum (planning, review, retrospective, daily) e gestão do board ZenHub. |
-| 1.1.4 Duplas de Líderes Rotativos | Designação e atuação das duplas de liderança a cada Sprint ao longo do semestre. |
+#### 1.1 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03/2026)
+
+Fase de abertura do projeto com definição de visão, escopo inicial, priorização e organização de base para execução.
+
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.1.1 Visão do Produto (Lean Inception) | Produto | — | Definição dos objetivos, proposta de valor e visão geral do sistema. |
+| 1.1.2 Personas e Jornadas de Usuário | Produto | — | Levantamento dos perfis de usuário e principais fluxos de uso do sistema. |
+| 1.1.3 Brainstorming e Revisão Técnica, de Negócio e UX | Produto | — | Ideação e avaliação das funcionalidades por valor, esforço e experiência do usuário. |
+| 1.1.4 Sequenciador, MVP e Priorização Inicial | Produto | — | Priorização das funcionalidades e definição do MVP para início das entregas. |
+| 1.1.5 Planejamento e Governança do Projeto | Gestão | — | Definição de metodologias, ferramentas, heatmap, tabela de conhecimentos, riscos e liderança rotativa. |
+| 1.1.6 Comunicação e Acompanhamento de Sprints | Gestão | — | Definição de canais e condução dos ritos Scrum com gestão do board. |
+| 1.1.7 Primeira experimentação técnica com IA | Qualidade | — | Exploração técnica inicial para preparar o pipeline de IA. |
 
 ---
 
-#### 1.2 Produto — Lean Inception
+#### 1.2 Milestone 1 — Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (30/03 – 13/04/2026)
 
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.2.1 Visão do Produto | Definição dos objetivos, proposta de valor e visão geral do sistema. |
-| 1.2.2 Personas e Jornadas de Usuário | Levantamento dos perfis de usuário e seus fluxos de uso do sistema. |
-| 1.2.3 Brainstorming de Funcionalidades | Ideação e levantamento inicial das funcionalidades da solução. |
-| 1.2.4 Revisão Técnica, de Negócio e UX | Avaliação e classificação das funcionalidades por esforço, valor e experiência do usuário. |
-| 1.2.5 Sequenciador e MVP | Priorização das funcionalidades e definição do Produto Mínimo Viável. |
+Fase de estruturação do projeto com consolidação da base documental e primeira entrega técnica.
 
----
-
-#### 1.3 Documentação
-
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.3.1 Guia de Contribuição | Políticas de commits, branches e código de conduta. |
-| 1.3.2 Arquitetura | Documento de arquitetura da solução com diagrama e decisões técnicas. |
-| 1.3.3 Modelagem do Banco de Dados | Modelagem conceitual e lógica do banco de dados. |
-| 1.3.4 Metodologias | Descrição das metodologias e práticas adotadas pela equipe. |
-| 1.3.5 EAP | Estrutura analítica de decomposição do escopo do projeto. |
-| 1.3.6 Roadmap do Produto | Planejamento visual das entregas ao longo do semestre. |
-| 1.3.7 Atas de Reuniões | Registro das reuniões realizadas com a equipe e o Product Owner. |
-| 1.3.8 Identidade Visual e Protótipo | Definição da identidade visual e prototipação de alta fidelidade. |
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.2.1 Levantamento e escrita do backlog do produto | Produto | — | Organização inicial das funcionalidades e critérios de priorização. |
+| 1.2.2 Aprovação do backlog com o Product Owner | Produto | — | Validação do escopo priorizado para as próximas releases. |
+| 1.2.3 Configuração dos repositórios de documentação e desenvolvimento | Infraestrutura | — | Estruturação dos repositórios e fluxo de colaboração da equipe. |
+| 1.2.4 Guia de Contribuição | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Definição de políticas de contribuição, commits, branches e conduta. |
+| 1.5.5 Arquitetura | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Documentação da arquitetura da solução e decisões técnicas iniciais. |
+| 1.5.6 Modelagem do Banco de Dados | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Modelagem conceitual/lógica inicial para suportar os módulos do sistema. |
+| 1.5.7 Metodologias | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Registro das metodologias e práticas de desenvolvimento adotadas. |
+| 1.5.8 EAP | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Estrutura analítica do projeto para organização do escopo. |
+| 1.5.9 Roadmap do Produto | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Planejamento de entregas por milestones e sprints. |
+| 1.5.10 Atas de Reuniões | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Registro de decisões e alinhamentos com equipe e PO. |
+| 1.5.11 Identidade Visual e Protótipo | Produto | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Definição visual e prototipação de alta fidelidade do produto. |
+| 1.5.12 Cadastro automático de ADMIN | Desenvolvimento | [Api#5](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/5) | Implementação do usuário ADMIN inicial do sistema. |
 
 ---
 
-#### 1.4 RM1 — Documentação, Configuração e Fundação Técnica (30/03 – 12/04/2026)
+#### 1.6 Milestone 2 — Conclusão da Autenticação e Início do Módulo de Exames (R1) (13/04 – 27/04/2026)
 
-Sprint inicial do projeto, abrangendo a entrega completa da documentação base, configuração dos repositórios, decisões estruturais da equipe e as primeiras entregas de desenvolvimento.
+Fase de fechamento da autenticação, início do módulo de exames e integração das primeiras entregas de release.
 
-**Documentação e Configuração:**
-
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.4.1 Configuração dos repositórios | Criação e configuração dos repositórios de documentação e desenvolvimento, incluindo pipelines e proteções de branch. |
-| 1.4.2 Documentação base | Entrega dos documentos iniciais: arquitetura, metodologias, EAP, roadmap, ferramentas, heatmap, tabela de conhecimentos, plano de riscos e guia de contribuição. |
-| 1.4.3 Lean Inception | Entrega dos artefatos do Lean Inception: visão do produto, personas, brainstorming, revisão técnica, sequenciador e MVP. |
-| 1.4.4 Decisões da equipe | Definição de metodologias, duplas de líderes rotativos, canais de comunicação e backlog do produto. |
-
-**Desenvolvimento:**
-
-| Pacote de Trabalho | Issue | Descrição |
-| :--- | :---: | :--- |
-| 1.4.5 Cadastro automático de ADMIN | #7 | Criação automática do usuário administrador na primeira execução da aplicação. |
-| 1.4.6 Login do usuário | #10 | Autenticação via e-mail e senha para acesso ao sistema. |
-| 1.4.7 Cadastro de usuário pelo ADMIN | #8 | Cadastro de novos usuários pelo administrador do sistema. |
-| 1.4.8 API de IA com suporte a múltiplos modelos | — | Exposição da API de inteligência artificial com capacidade de treinamento e comparação de múltiplos modelos. |
-| 1.4.9 Resultados dos modelos treinados | — | Apresentação dos resultados obtidos nos modelos treinados até a sprint. |
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.6.1 Login do usuário (back-end) | Desenvolvimento | [Api#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/3) | Implementação de autenticação via API. |
+| 1.6.2 Cadastro de usuário pelo ADMIN (back-end e front-end) | Desenvolvimento | [Api#2](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/2), [Web#2](https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/2) | Cadastro de usuários com fluxo integrado entre API e interface. |
+| 1.6.3 Gestão de usuários no back-end (edição e solicitação de CPF/CRM) | Desenvolvimento | [Api#4](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/4), [Api#7](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/7) | Evolução do módulo de usuários para atualização de dados sensíveis. |
+| 1.6.4 Consolidação do protótipo de alta fidelidade | Produto | [Web#1](https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/1) | Ajuste do protótipo para aderência ao fluxo funcional da release. |
+| 1.6.5 Cadastro de exame | Produto | [Doc#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13) | Registro de exames no sistema. |
+| 1.6.6 Upload de imagem do exame | Produto | [Doc#14](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14) | Envio de imagem associada ao exame cadastrado. |
+| 1.6.7 Correção de bug na edição de admin cadastrado automaticamente | Qualidade | [Api#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/13) | Correção de inconsistência no fluxo de edição do ADMIN. |
+| 1.6.8 Refinamento da documentação de apoio à release | Documentação | [Doc#35](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/35), [Doc#40](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/40) | Atualização da documentação para suportar a entrega da R1. |
 
 ---
 
-#### 1.5 R1 — Release 1: Cadastro e Upload de Exames (13/04 – 26/04/2026)
+#### 1.7 Milestone 3 — Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (27/04 – 11/05/2026)
 
-Primeira release do produto, entregando as funcionalidades de registro de exames e envio de imagens oftalmológicas.
+Fase de evolução técnica do pipeline de IA e do processamento de exames.
 
-| Pacote de Trabalho | Issue | Descrição |
-| :--- | :---: | :--- |
-| 1.5.1 Cadastro de exame | #13 | Registro de um novo exame com informações do paciente. |
-| 1.5.2 Upload de imagem do exame | #14 | Envio de imagem oftalmológica associada a um exame. |
-
----
-
-#### 1.6 RM2 — Pré-processamento e Pipeline de IA (27/04 – 10/05/2026)
-
-Sprint focada no pré-processamento das imagens e na integração completa do pipeline de inteligência artificial.
-
-| Pacote de Trabalho | Issue | Descrição |
-| :--- | :---: | :--- |
-| 1.6.1 Pré-processamento de imagem | #15 | Padronização das imagens enviadas antes do processamento pela IA. |
-| 1.6.2 Integração com modelo de IA | #20 | Envio das imagens pré-processadas para o modelo de IA. |
-| 1.6.3 Recebimento e interpretação do resultado da IA | #21 | Processamento e interpretação da resposta retornada pelo modelo. |
-| 1.6.4 Classificação e associação do resultado ao exame | #22 | Vinculação do resultado da IA ao exame correspondente. |
-| 1.6.5 Tratamento de erros no pipeline de IA | #23 | Tratamento de falhas durante o processamento assíncrono. |
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.7.1 Pré-processamento de imagem | Produto | [Doc#15](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15) | Padronização das imagens para consumo da IA. |
+| 1.7.2 Integração com modelo de IA | Produto | [Doc#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20) | Integração entre sistema e serviço de inferência. |
+| 1.7.3 Recebimento e interpretação do resultado da IA | Produto | [Doc#21](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21) | Tratamento da resposta da IA para uso no sistema. |
+| 1.7.4 Classificação e associação do resultado ao exame | Produto | [Doc#22](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/22) | Vinculação do resultado ao exame correspondente. |
+| 1.7.5 Tratamento de erros no pipeline de IA | Produto | [Doc#23](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/23) | Tratamento de falhas no fluxo de processamento. |
 
 ---
 
-#### 1.7 RM3 — Histórico, Consulta e Validação do Modelo (11/05 – 24/05/2026)
+#### 1.8 Milestone 4 — Integração com IA e Início do Histórico de Exames (R2) (11/05 – 25/05/2026)
 
-Sprint que entrega as funcionalidades de consulta e histórico de exames, além da validação da acurácia do modelo de IA e do reporte de erros.
+Fase de consolidação da integração com IA e habilitação da consulta de histórico.
 
-| Pacote de Trabalho | Issue | Descrição |
-| :--- | :---: | :--- |
-| 1.7.1 Visualização do histórico de exames | #16 | Listagem dos exames realizados anteriormente. |
-| 1.7.2 Botão de "Reportar Erro da IA" | #19 | Funcionalidade para que o médico reporte inconsistências no resultado da IA. |
-| 1.7.3 Validação da acurácia do modelo de IA | #24 | Validação formal do modelo com acurácia mínima de 90%. |
-
----
-
-#### 1.8 R2 — Release 2: MVP (24/05/2026)
-
-Segunda release do produto, consolidando o MVP com busca e filtros de exames. A partir deste ponto o sistema está apto para uso clínico básico.
-
-| Pacote de Trabalho | Issue | Descrição |
-| :--- | :---: | :--- |
-| 1.8.1 Busca de exames | #17 | Busca de exames específicos por critérios definidos. |
-| 1.8.2 Filtros de exames | #18 | Aplicação de filtros para refinamento dos resultados do histórico. |
-
-> **Marco:** Conclusão do MVP ✓
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.8.1 Visualização do histórico de exames | Produto | [Doc#16](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16) | Exibição de exames realizados no histórico do usuário. |
+| 1.8.2 Reporte de erro da IA | Produto | [Doc#19](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/19) | Registro de inconsistências percebidas no resultado de IA. |
+| 1.8.3 Validação da acurácia do modelo de IA | Qualidade | [Doc#24](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/24) | Validação de desempenho do modelo usado no produto. |
+| 1.8.4 Busca de médicos | Produto | [Doc#42](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/42) | Busca de médicos cadastrados pelo administrador. |
+| 1.8.5 Busca de exames | Produto | [Doc#17](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17) | Busca de exames por critérios de consulta. |
+| 1.8.6 Filtros de exames | Produto | [Doc#18](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18) | Refinamento dos resultados exibidos no histórico. |
 
 ---
 
-#### 1.9 RM4 — Relatórios e Métricas (25/05 – 07/06/2026)
+#### 1.9 Milestone 5 — Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (25/05 – 15/06/2026)
 
-Sprint de desenvolvimento das funcionalidades de enhancements, entregando relatórios e visualização de métricas.
+Fase de evolução de relatórios/métricas e refinamento das funcionalidades de consulta e IA.
 
-| Pacote de Trabalho | Issue | Descrição |
-| :--- | :---: | :--- |
-| 1.9.1 Dashboard com métricas das análises | #25 | Visualização de métricas e indicadores dos exames realizados pelo administrador. |
-| 1.9.2 Download de relatório | #26 | Exportação de relatórios de exames em formato para download. |
-| 1.9.3 Compartilhamento de resultado via link | #27 | Geração de link para compartilhamento controlado de resultados de exames. |
-
----
-
-#### 1.10 RM5 — Estabilização e Qualidade (08/06 – 21/06/2026)
-
-Sprint dedicada à estabilização do produto, ampliação da cobertura de testes, correção de bugs e melhorias de qualidade antes da entrega final.
-
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.10.1 Testes unitários e de integração | Ampliação da cobertura de testes nas camadas de domínio e API. |
-| 1.10.2 Correção de bugs | Resolução de inconsistências e falhas identificadas nas sprints anteriores. |
-| 1.10.3 Melhorias de desempenho | Otimizações no pipeline de inferência e nas consultas ao banco de dados. |
-| 1.10.4 Revisão da documentação | Atualização e revisão geral dos documentos do projeto. |
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.9.1 Dashboard com métricas das análises | Produto | [Api#6](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/6), [Doc#25](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/25) | Visualização consolidada de indicadores de exames. |
+| 1.9.2 Download de relatório | Produto | [Doc#26](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/26) | Exportação de relatório de resultados. |
+| 1.9.3 Compartilhamento de resultado via link | Produto | [Doc#27](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/27) | Compartilhamento controlado por link. |
+| 1.9.4 Refinamento de busca, filtros e consulta de exames | Qualidade | — | Ajustes funcionais no fluxo de histórico e consulta. |
+| 1.9.5 Evolução do reporte de erro e interpretação de resultados da IA | Qualidade | — | Refinamento do ciclo de retorno da IA no sistema. |
+| 1.9.6 Edição de dados do usuário (front-end) | Desenvolvimento | [Web#6](https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/6) | Edição de dados de usuário na interface. |
 
 ---
 
-#### 1.11 R3 — Release Final (29/06/2026)
+#### 1.10 Milestone 6 — Conclusão do Épico de IA e Entrega do MVP (R3) (15/06 – 29/06/2026)
 
-Terceira e última release do projeto, consolidando todas as entregas do semestre e apresentando o produto para a banca avaliadora.
+Fase de validação final da IA, revisão de documentação e preparação da entrega final do MVP.
 
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.11.1 Entrega final do produto | Consolidação de todas as funcionalidades desenvolvidas ao longo do semestre. |
-| 1.11.2 Documentação final | Revisão e entrega completa de toda a documentação do projeto. |
-| 1.11.3 Apresentação | Preparação e apresentação do produto para a banca avaliadora. |
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.10.1 Validação final da classificação e associação de resultados da IA | Qualidade | — | Verificação final do comportamento do pipeline de IA para entrega. |
+| 1.10.2 Revisão e atualização da documentação | Documentação | — | Atualização da documentação com o estado final da release. |
+| 1.10.3 Preparação para a R3 | Gestão | — | Organização da entrega final e alinhamento de apresentação. |
+| 1.10.4 Consolidação final do produto e preparação da apresentação | Produto | — | Consolidação do MVP para apresentação à banca. |
 
 ---
 
-#### 1.12 RM6 — Encerramento (06/07/2026)
+#### 1.11 Milestone 7 — Ajustes Finais e Estabilização Pós-MVP (RM6) (29/06 – 06/07/2026)
 
-Sprint de encerramento do projeto com ajustes finais após a release e fechamento das atividades do semestre.
+Fase de encerramento do projeto com estabilização e fechamento formal das atividades.
 
-| Pacote de Trabalho | Descrição |
-| :--- | :--- |
-| 1.12.1 Ajustes pós-apresentação | Correções e melhorias identificadas durante a apresentação final. |
-| 1.12.2 Encerramento do projeto | Fechamento das issues, arquivamento dos repositórios e registro das lições aprendidas. |
+| Pacote de Trabalho | Tipo | Issue | Descrição |
+| :--- | :---: | :---: | :--- |
+| 1.11.1 Ajustes e correções pós-apresentação | Produto | — | Ajustes finais observados após a apresentação. |
+| 1.11.2 Fechamento das issues e arquivamento dos repositórios | Gestão | — | Encerramento de pendências operacionais e organização do repositório final. |
+| 1.11.3 Registro de lições aprendidas | Gestão | — | Registro das lições do semestre para retroalimentar próximos ciclos. |
 
 ---
 
@@ -177,68 +141,54 @@ Sprint de encerramento do projeto com ajustes finais após a release e fechament
 
 ```
 RetinaScan
-├── 1.1 Gerenciamento do Projeto
-│   ├── 1.1.1 Planejamento
-│   ├── 1.1.2 Comunicação
-│   ├── 1.1.3 Acompanhamento de Sprints
-│   └── 1.1.4 Duplas de Líderes Rotativos
-├── 1.2 Lean Inception
-│   ├── 1.2.1 Visão do Produto
-│   ├── 1.2.2 Personas e Jornadas
-│   ├── 1.2.3 Brainstorming de Funcionalidades
-│   ├── 1.2.4 Revisão Técnica, de Negócio e UX
-│   └── 1.2.5 Sequenciador e MVP
-├── 1.3 Documentação
-│   ├── 1.3.1 Guia de Contribuição
-│   ├── 1.3.2 Arquitetura
-│   ├── 1.3.3 Modelagem do Banco de Dados
-│   ├── 1.3.4 Metodologias
-│   ├── 1.3.5 EAP
-│   ├── 1.3.6 Roadmap do Produto
-│   ├── 1.3.7 Atas de Reuniões
-│   └── 1.3.8 Identidade Visual e Protótipo
-├── 1.4 RM1 — Documentação, Configuração e Fundação Técnica (30/03 – 12/04)
-│   ├── 1.4.1 Configuração dos repositórios
-│   ├── 1.4.2 Documentação base
-│   ├── 1.4.3 Lean Inception
-│   ├── 1.4.4 Decisões da equipe
-│   ├── 1.4.5 Cadastro automático de ADMIN
-│   ├── 1.4.6 Login do usuário
-│   ├── 1.4.7 Cadastro de usuário pelo ADMIN
-│   ├── 1.4.8 API de IA com suporte a múltiplos modelos
-│   └── 1.4.9 Resultados dos modelos treinados
-├── 1.5 R1 — Cadastro e Upload de Exames (13/04 – 26/04)
-│   ├── 1.5.1 Cadastro de exame
-│   └── 1.5.2 Upload de imagem do exame
-├── 1.6 RM2 — Pré-processamento e Pipeline de IA (27/04 – 10/05)
-│   ├── 1.6.1 Pré-processamento de imagem
-│   ├── 1.6.2 Integração com modelo de IA
-│   ├── 1.6.3 Recebimento e interpretação do resultado
-│   ├── 1.6.4 Classificação e associação do resultado
-│   └── 1.6.5 Tratamento de erros no pipeline
-├── 1.7 RM3 — Histórico, Consulta e Validação do Modelo (11/05 – 24/05)
-│   ├── 1.7.1 Visualização do histórico de exames
-│   ├── 1.7.2 Botão de Reportar Erro da IA
-│   └── 1.7.3 Validação da acurácia do modelo de IA
-├── 1.8 R2 — MVP (24/05)
-│   ├── 1.8.1 Busca de exames
-│   └── 1.8.2 Filtros de exames
-├── 1.9 RM4 — Relatórios e Métricas (25/05 – 07/06)
-│   ├── 1.9.1 Dashboard com métricas das análises
-│   ├── 1.9.2 Download de relatório
-│   └── 1.9.3 Compartilhamento de resultado via link
-├── 1.10 RM5 — Estabilização e Qualidade (08/06 – 21/06)
-│   ├── 1.10.1 Testes unitários e de integração
-│   ├── 1.10.2 Correção de bugs
-│   ├── 1.10.3 Melhorias de desempenho
-│   └── 1.10.4 Revisão da documentação
-├── 1.11 R3 — Release Final (29/06)
-│   ├── 1.11.1 Entrega final do produto
-│   ├── 1.11.2 Documentação final
-│   └── 1.11.3 Apresentação
-└── 1.12 RM6 — Encerramento (06/07)
-    ├── 1.12.1 Ajustes pós-apresentação
-    └── 1.12.2 Encerramento do projeto
+├── 1.4 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03)
+│   ├── 1.4.1 Visão do Produto
+│   ├── 1.4.2 Personas e Jornadas
+│   ├── 1.4.3 Brainstorming e Revisão Técnica/Negócio/UX
+│   ├── 1.4.4 Sequenciador, MVP e priorização inicial
+│   ├── 1.4.5 Planejamento e governança do projeto
+│   ├── 1.4.6 Comunicação e acompanhamento de sprints
+│   └── 1.4.7 Experimentação técnica com IA
+├── 1.5 Milestone 1 — Estruturação Inicial e RM1 (30/03 – 13/04)
+│   ├── 1.5.1 Backlog e alinhamento com PO
+│   ├── 1.5.2 Configuração dos repositórios
+│   ├── 1.5.3 Preparação de base técnica
+│   ├── 1.5.4 Guia de Contribuição
+│   ├── 1.5.5 Arquitetura
+│   ├── 1.5.6 Modelagem do Banco de Dados
+│   ├── 1.5.7 Metodologias
+│   ├── 1.5.8 EAP
+│   ├── 1.5.9 Roadmap do Produto
+│   ├── 1.5.10 Atas de Reuniões
+│   ├── 1.5.11 Identidade Visual e Protótipo
+│   └── 1.5.12 Cadastro automático de ADMIN
+├── 1.6 Milestone 2 — Conclusão da Autenticação e Início do Módulo de Exames (13/04 – 27/04)
+│   ├── 1.6.1 Autenticação e cadastro de usuários
+│   ├── 1.6.2 Gestão de usuários (back-end)
+│   ├── 1.6.3 Protótipo de alta fidelidade
+│   ├── 1.6.4 Cadastro e upload de exame
+│   └── 1.6.5 Refinamentos e correções da release
+├── 1.7 Milestone 3 — Evolução do Módulo de Exames e Iterações com IA (27/04 – 11/05)
+│   ├── 1.7.1 Pré-processamento de imagem
+│   ├── 1.7.2 Integração e retorno da IA
+│   └── 1.7.3 Classificação e tratamento de erros
+├── 1.8 Milestone 4 — Integração com IA e Início do Histórico de Exames (11/05 – 25/05)
+│   ├── 1.8.1 Histórico e consulta de exames
+│   ├── 1.8.2 Reporte/validação da IA
+│   └── 1.8.3 Busca de médicos
+├── 1.9 Milestone 5 — Conclusão do Histórico/Consulta e Evolução da IA (25/05 – 15/06)
+│   ├── 1.9.1 Relatórios e métricas
+│   ├── 1.9.2 Refinamentos de histórico e IA
+│   └── 1.9.3 Gestão de usuários (front-end)
+├── 1.10 Milestone 6 — Conclusão do Épico de IA e Entrega do MVP (15/06 – 29/06)
+│   ├── 1.10.1 Validação final da IA
+│   ├── 1.10.2 Revisão documental
+│   ├── 1.10.3 Preparação para R3
+│   └── 1.10.4 Consolidação final do produto
+└── 1.11 Milestone 7 — Ajustes Finais e Estabilização Pós-MVP (29/06 – 06/07)
+    ├── 1.11.1 Ajustes pós-apresentação
+    ├── 1.11.2 Fechamento operacional do projeto
+    └── 1.11.3 Registro de lições aprendidas
 ```
 
 ---
@@ -248,3 +198,5 @@ RetinaScan
 | Versão | Data       | Descrição            | Autor                                      | Revisor      |
 | :----: | ---------- | -------------------- | ------------------------------------------ | ------------ |
 | `1.0`  | 12/04/2026 | Criação do documento | [Eric Camargo](https://github.com/ericcs10) | [xxxx](xxxx) |
+| `1.1`  | 20/04/2026 | Alinhamento da EAP com milestones, sprints e entregas do roadmap do produto | [Zenilda Vieira](https://github.com/zenildavieira) | [xxxx](xxxx) |
+| `1.2`  | 20/04/2026 | Consolidação dos blocos 1.1, 1.2 e 1.3 dentro de 1.4 e 1.5 para remover redundâncias | [Zenilda Vieira](https://github.com/zenildavieira) | [xxxx](xxxx) |

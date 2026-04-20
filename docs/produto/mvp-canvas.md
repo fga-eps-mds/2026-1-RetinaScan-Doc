@@ -25,7 +25,7 @@ Implementar um fluxo web mínimo que permita captura/upload de retinografias, pr
 ### Jornada — Administração e Gestão (resumo)
 1. Login com conta ADMIN;
 2. Gestão de contas e permissões;
-4. Edição de dados sensíveis dos usuários.
+3. Edição de dados sensíveis dos usuários.
 
 ## Funcionalidades (MVP)
 

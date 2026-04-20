@@ -1,0 +1,8 @@
+﻿refs_total=42
+refs_distintas=30
+mismatches=
+missing_refs=0
+unmapped_open_issues=0
+saved:.tmp/issues/sync-audit.json
+saved:.tmp/issues/unmapped-open-issues.json
+saved:.tmp/issues/all-milestones.json

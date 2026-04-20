@@ -22,4 +22,4 @@ A partir desse mapa de calor, observamos que os melhores horários para a equipe
 
 | Versão | Data       | Descrição | Autor        | Revisor      |
 | :----: | ---------- | --------- | ------------ | ------------ |
-| 1.0  | 10/04/2026 | Criação do documento       | [André Maia](https://github.com/andre-maia51) | [Zenilda Vieira](https://github.com/zenildavieira) |
+| `1.0` | 10/04/2026 | Criação do documento       | [André Maia](https://github.com/andre-maia51) | [Zenilda Vieira](https://github.com/zenildavieira) |

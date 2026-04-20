@@ -1,0 +1,127 @@
+﻿[
+    {
+        "number":  1,
+        "title":  "Autenticação e Controle de Acesso",
+        "state":  "open"
+    },
+    {
+        "number":  2,
+        "title":  "Cadastro e Upload de Exames",
+        "state":  "open"
+    },
+    {
+        "number":  3,
+        "title":  "Histórico e Consulta",
+        "state":  "open"
+    },
+    {
+        "number":  4,
+        "title":  "Processamento e IA",
+        "state":  "open"
+    },
+    {
+        "number":  5,
+        "title":  "Relatórios e Métricas",
+        "state":  "open"
+    },
+    {
+        "number":  13,
+        "title":  "Cadastro de exame",
+        "state":  "open"
+    },
+    {
+        "number":  14,
+        "title":  "Upload de imagem do exame",
+        "state":  "open"
+    },
+    {
+        "number":  15,
+        "title":  "Pré-processamento de imagem",
+        "state":  "open"
+    },
+    {
+        "number":  16,
+        "title":  "Visualização do histórico de exames",
+        "state":  "open"
+    },
+    {
+        "number":  17,
+        "title":  "Busca de exames",
+        "state":  "open"
+    },
+    {
+        "number":  18,
+        "title":  "Filtros de exames",
+        "state":  "open"
+    },
+    {
+        "number":  19,
+        "title":  "Reportar erro da IA",
+        "state":  "open"
+    },
+    {
+        "number":  20,
+        "title":  "Integração com modelo de IA",
+        "state":  "open"
+    },
+    {
+        "number":  21,
+        "title":  "Recebimento e interpretação do resultado da IA",
+        "state":  "open"
+    },
+    {
+        "number":  22,
+        "title":  "Classificação e associação do resultado ao exame",
+        "state":  "open"
+    },
+    {
+        "number":  23,
+        "title":  "Tratamento de erros no pipeline de IA",
+        "state":  "open"
+    },
+    {
+        "number":  24,
+        "title":  "Validação da acurácia do modelo de IA",
+        "state":  "open"
+    },
+    {
+        "number":  25,
+        "title":  "Visualização de métricas",
+        "state":  "open"
+    },
+    {
+        "number":  26,
+        "title":  "Download de relatórios",
+        "state":  "open"
+    },
+    {
+        "number":  27,
+        "title":  "Compartilhamento de resultados via link",
+        "state":  "open"
+    },
+    {
+        "number":  31,
+        "title":  "Desenvolvimento da documentação do projeto",
+        "state":  "closed"
+    },
+    {
+        "number":  35,
+        "title":  "Correção/Atualização de documentos",
+        "state":  "open"
+    },
+    {
+        "number":  37,
+        "title":  "Criar templates de Issue e PR",
+        "state":  "closed"
+    },
+    {
+        "number":  40,
+        "title":  "Documento de Plano de Custos",
+        "state":  "closed"
+    },
+    {
+        "number":  42,
+        "title":  "Busca de Médicos",
+        "state":  "open"
+    }
+]

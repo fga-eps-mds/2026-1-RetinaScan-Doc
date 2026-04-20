@@ -25,7 +25,7 @@ Implementar um fluxo web mínimo que permita captura/upload de retinografias, pr
 ### Jornada — Administração e Gestão (resumo)
 1. Login com conta ADMIN;
 2. Gestão de contas e permissões;
-4. Edição de dados sensíveis dos usuários.
+3. Edição de dados sensíveis dos usuários.
 
 ## Funcionalidades (MVP)
 
@@ -84,4 +84,4 @@ Referências: `docs/produto/lean-inception.md`.
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | :--: | :-- | :-- | :-- |
-| 1.0 | 19/04/2026 | Preenchimento do canvas MVP com resultados da Lean Inception | [Zenilda Vieira](https://github.com/ZenildaVieira) |  |
+| 1.0 | 19/04/2026 | Preenchimento do canvas MVP com resultados da Lean Inception | [Zenilda Vieira](https://github.com/ZenildaVieira) | [xxxx](xxxx) |

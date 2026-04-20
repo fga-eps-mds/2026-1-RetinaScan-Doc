@@ -1,0 +1,290 @@
+﻿[
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  1,
+        "title":  "0 - Iniciação do Projeto e Definição do MVP",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  2,
+        "title":  "1 - Estruturação Inicial do Projeto e Primeira Release Minor",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  3,
+        "title":  "2 - Conclusão da Autenticação e Início do Módulo de Exames",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  1
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  4,
+        "title":  "3 - Evolução do Módulo de Exames e Iterações com IA (RM2 e RM3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  5,
+        "title":  "4 -  Integração com IA e Início do Histórico de Exames (R2)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  6,
+        "title":  "5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4 e RM5)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  7,
+        "title":  "6 - Conclusão do Épico de IA e Entrega do MVP (R3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Ai",
+        "repo":  "2026-1-RetinaScan-Ai",
+        "number":  8,
+        "title":  "7 - Ajustes Finais e Estabilização Pós-MVP (RM6)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  1,
+        "title":  "0 - Iniciação do Projeto e Definição do MVP",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  2,
+        "title":  "1 - Estruturação Inicial do Projeto e Primeira Release Minor",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  1
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  3,
+        "title":  "2 - Conclusão da Autenticação e Início do Módulo de Exames",
+        "state":  "open",
+        "openIssues":  5,
+        "closedIssues":  2
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  4,
+        "title":  "3 - Evolução do Módulo de Exames e Iterações com IA (RM2 e RM3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  5,
+        "title":  "4 -  Integração com IA e Início do Histórico de Exames (R2)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  6,
+        "title":  "5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4 e RM5)",
+        "state":  "open",
+        "openIssues":  1,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  7,
+        "title":  "6 - Conclusão do Épico de IA e Entrega do MVP (R3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Api",
+        "repo":  "2026-1-RetinaScan-Api",
+        "number":  8,
+        "title":  "7 - Ajustes Finais e Estabilização Pós-MVP (RM6)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  1,
+        "title":  "0 - Iniciação do Projeto e Definição do MVP",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  2,
+        "title":  "1 - Estruturação Inicial do Projeto e Primeira Release Minor",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  1
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  3,
+        "title":  "2 - Conclusão da Autenticação e Início do Módulo de Exames",
+        "state":  "open",
+        "openIssues":  6,
+        "closedIssues":  6
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  4,
+        "title":  "3 - Evolução do Módulo de Exames e Iterações com IA (RM2 e RM3)",
+        "state":  "open",
+        "openIssues":  5,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  5,
+        "title":  "4 -  Integração com IA e Início do Histórico de Exames (R2)",
+        "state":  "open",
+        "openIssues":  6,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  6,
+        "title":  "5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4 e RM5)",
+        "state":  "open",
+        "openIssues":  3,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  7,
+        "title":  "6 - Conclusão do Épico de IA e Entrega do MVP (R3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Doc",
+        "repo":  "2026-1-RetinaScan-Doc",
+        "number":  8,
+        "title":  "7 - Ajustes Finais e Estabilização Pós-MVP (RM6)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  1,
+        "title":  "0 - Iniciação do Projeto e Definição do MVP",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  2,
+        "title":  "1 - Estruturação Inicial do Projeto e Primeira Release Minor",
+        "state":  "closed",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  3,
+        "title":  "2 - Conclusão da Autenticação e Início do Módulo de Exames",
+        "state":  "open",
+        "openIssues":  2,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  4,
+        "title":  "3 - Evolução do Módulo de Exames e Iterações com IA (RM2 e RM3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  5,
+        "title":  "4 -  Integração com IA e Início do Histórico de Exames (R2)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  6,
+        "title":  "5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4 e RM5)",
+        "state":  "open",
+        "openIssues":  1,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  7,
+        "title":  "6 - Conclusão do Épico de IA e Entrega do MVP (R3)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    },
+    {
+        "repoTag":  "Web",
+        "repo":  "2026-1-RetinaScan-Web",
+        "number":  8,
+        "title":  "7 - Ajustes Finais e Estabilização Pós-MVP (RM6)",
+        "state":  "open",
+        "openIssues":  0,
+        "closedIssues":  0
+    }
+]

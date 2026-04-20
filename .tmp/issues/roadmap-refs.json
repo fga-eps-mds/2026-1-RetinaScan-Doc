@@ -1,0 +1,338 @@
+﻿[
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  80,
+        "text":  "| Guia de contribuição (commits, branches, código de conduta) |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  81,
+        "text":  "| Arquitetura da solução                                      |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  82,
+        "text":  "| Metodologias adotadas                                       |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  83,
+        "text":  "| EAP e Roadmap do Produto                                    |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  84,
+        "text":  "| Ferramentas, heatmap de horários e tabela de conhecimentos  |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  85,
+        "text":  "| Identidade visual e protótipo de alta fidelidade            |     Produto     | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  86,
+        "text":  "| Definição das duplas de líderes rotativos                   |     Gestão      | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  87,
+        "text":  "| Atas de reuniões                                            |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  31,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  88,
+        "text":  "| Desenvolvimento da documentação do projeto                  |  Documentação   | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  5,
+        "milestone":  "M1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (até 13/04/2026)",
+        "sprint":  "",
+        "line":  89,
+        "text":  "| Cadastro automático de ADMIN                                | Desenvolvimento |  [Api#5](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/5)  |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  3,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  109,
+        "text":  "| Login do usuário (Back-end)                                                     | Desenvolvimento |                                        [Api#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/3)                                         |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  2,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  110,
+        "text":  "| Cadastro de usuário pelo ADMIN (Back-end)                                       | Desenvolvimento |                                        [Api#2](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/2)                                         |"
+    },
+    {
+        "repoTag":  "Web",
+        "number":  2,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  111,
+        "text":  "| Cadastro de usuário pelo ADMIN (Front-end)                                      | Desenvolvimento |                                        [Web#2](https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/2)                                         |"
+    },
+    {
+        "repoTag":  "Web",
+        "number":  1,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  112,
+        "text":  "| Consolidação do protótipo de alta fidelidade                                    |     Produto     |                                        [Web#1](https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/1)                                         |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  40,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  114,
+        "text":  "| Documento de Plano de Custos                                                    |  Documentação   |                                       [Doc#40](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/40)                                        |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  35,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  115,
+        "text":  "| Refinamento da documentação de apoio à release (EAP, backlog e plano de custos) |  Documentação   |  [Doc#35](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/35), [Doc#40](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/40)   |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  40,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  115,
+        "text":  "| Refinamento da documentação de apoio à release (EAP, backlog e plano de custos) |  Documentação   |  [Doc#35](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/35), [Doc#40](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/40)   |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  37,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  117,
+        "text":  "| Templates de Issue e PR                                                         |  Documentação   | [Doc#37](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/37), [Doc#39 (PR)](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/pull/39) |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  4,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  118,
+        "text":  "| Edição de dados do usuário (Back-end)                                           | Desenvolvimento |                                        [Api#4](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/4)                                         |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  7,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  119,
+        "text":  "| Solicitação de alteração de CPF/CRM                                             | Desenvolvimento |                                        [Api#7](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/7)                                         |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  13,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  128,
+        "text":  "| Correção de bug na edição de admin cadastrado automaticamente                   |  Qualidade   | [Api#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/13) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  13,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  129,
+        "text":  "| Cadastro de exame                                                               |   Produto    | [Doc#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  14,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  130,
+        "text":  "| Upload de imagem do exame                                                       |   Produto    | [Doc#14](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  35,
+        "milestone":  "M2 - Conclusão da Autenticação e Início do Módulo de Exames (R1) (até 27/04/2026)",
+        "sprint":  "",
+        "line":  131,
+        "text":  "| Refinamento da documentação de apoio à release (EAP, backlog e plano de custos) | Documentação | [Doc#35](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/35) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  20,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  142,
+        "text":  "- No repositório de IA, não há issues abertas no momento; a integração segue pelas issues funcionais de produto ([Doc#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20) a [Doc#24](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/24))"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  24,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  142,
+        "text":  "- No repositório de IA, não há issues abertas no momento; a integração segue pelas issues funcionais de produto ([Doc#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20) a [Doc#24](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/24))"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  15,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  155,
+        "text":  "| Pré-processamento de imagem                    | Produto | [Doc#15](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  20,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  156,
+        "text":  "| Integração com modelo de IA                    | Produto | [Doc#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  21,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  157,
+        "text":  "| Recebimento e interpretação do resultado da IA | Produto | [Doc#21](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  22,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  165,
+        "text":  "| Classificação e associação do resultado ao exame | Produto | [Doc#22](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/22) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  23,
+        "milestone":  "M3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (até 11/05/2026)",
+        "sprint":  "",
+        "line":  166,
+        "text":  "| Tratamento de erros no pipeline de IA            | Produto | [Doc#23](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/23) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  16,
+        "milestone":  "M4 - Integração com IA e Início do Histórico de Exames (R2) (até 25/05/2026)",
+        "sprint":  "",
+        "line":  184,
+        "text":  "| Visualização do histórico de exames   |  Produto  | [Doc#16](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  19,
+        "milestone":  "M4 - Integração com IA e Início do Histórico de Exames (R2) (até 25/05/2026)",
+        "sprint":  "",
+        "line":  185,
+        "text":  "| Botão de \"Reportar Erro da IA\"        |  Produto  | [Doc#19](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/19) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  24,
+        "milestone":  "M4 - Integração com IA e Início do Histórico de Exames (R2) (até 25/05/2026)",
+        "sprint":  "",
+        "line":  186,
+        "text":  "| Validação da acurácia do modelo de IA | Qualidade | [Doc#24](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/24) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  42,
+        "milestone":  "M4 - Integração com IA e Início do Histórico de Exames (R2) (até 25/05/2026)",
+        "sprint":  "",
+        "line":  187,
+        "text":  "| Busca de médicos                      |  Produto  | [Doc#42](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/42) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  17,
+        "milestone":  "M4 - Integração com IA e Início do Histórico de Exames (R2) (até 25/05/2026)",
+        "sprint":  "",
+        "line":  195,
+        "text":  "| Busca de exames   | Produto | [Doc#17](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  18,
+        "milestone":  "M4 - Integração com IA e Início do Histórico de Exames (R2) (até 25/05/2026)",
+        "sprint":  "",
+        "line":  196,
+        "text":  "| Filtros de exames | Produto | [Doc#18](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18) |"
+    },
+    {
+        "repoTag":  "Api",
+        "number":  6,
+        "milestone":  "M5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (até 15/06/2026)",
+        "sprint":  "",
+        "line":  217,
+        "text":  "| Dashboard com métricas das análises    | Produto | [Api#6](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/6), [Doc#25](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/25) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  25,
+        "milestone":  "M5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (até 15/06/2026)",
+        "sprint":  "",
+        "line":  217,
+        "text":  "| Dashboard com métricas das análises    | Produto | [Api#6](https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/6), [Doc#25](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/25) |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  26,
+        "milestone":  "M5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (até 15/06/2026)",
+        "sprint":  "",
+        "line":  218,
+        "text":  "| Download de relatório                  | Produto |                                     [Doc#26](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/26)                                     |"
+    },
+    {
+        "repoTag":  "Doc",
+        "number":  27,
+        "milestone":  "M5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (até 15/06/2026)",
+        "sprint":  "",
+        "line":  219,
+        "text":  "| Compartilhamento de resultado via link | Produto |                                     [Doc#27](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/27)                                     |"
+    },
+    {
+        "repoTag":  "Web",
+        "number":  6,
+        "milestone":  "M5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (até 15/06/2026)",
+        "sprint":  "",
+        "line":  229,
+        "text":  "| Edição de dados do usuário (Front-end)                          | Desenvolvimento | [Web#6](https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/6) |"
+    }
+]

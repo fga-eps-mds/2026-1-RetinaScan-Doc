@@ -1,4 +1,4 @@
-﻿# Roadmap do Produto
+# Roadmap do Produto
 
 ## Introdução
 

@@ -9,6 +9,8 @@ theme:
     - admonition
     - pymdownx.details
     - pymdownx.superfences
+    - pymdownx.arithmatex:
+        generic: true
 
   palette:
     - scheme: default
@@ -37,10 +39,14 @@ theme:
     - content.code.annotation
     - content.code.copy
 
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 nav:
   - Home: "index.md"
   - Guia de Contribuição:
-      - Código de Conduta: "guia_de_contribuicao/codigo-de-conduta.md"
+      - Código de Conduta: "guia_de_contribuicao/codigo-de-conducta.md"
       - Política de Branches: "guia_de_contribuicao/politica-de-branches.md"
       - Política de Commits: "guia_de_contribuicao/politica-de-commits.md"
   - Planejamento:
@@ -57,13 +63,13 @@ nav:
       - Lean Inception: "produto/lean-inception.md"
       - Protótipo de Alta Fidelidade: "produto/prototipo-de-alta.md"
   - Projeto:
-      - Dashboard Analítico: indicadores.md
       - Arquitetura: "projeto/arquitetura.md"
       - EAP: "projeto/EAP.md"
       - Metodologias: "projeto/metodologias.md"
       - Modelagem do Banco de Dados: "projeto/modelagem-do-BD.md"
       - Modelos de Inteligência Artificial: "projeto/ia/modelos_de_ia.md"
       - Versionamento de Modelos: "projeto/ia/versionamento_modelos.md"
+      - Dashboard Analítico: indicadores.md
   - Atas de Reuniões:
       - Reunião 23.03.2026: "atas-reunioes/AtaReuniaoEPS-2026-03-23.md"
       - Reunião 01.04.2026: "atas-reunioes/AtaReuniaoEPS-2026-04-01.md"

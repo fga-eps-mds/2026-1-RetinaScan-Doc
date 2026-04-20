@@ -84,4 +84,4 @@ Referências: `docs/produto/lean-inception.md`.
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | :--: | :-- | :-- | :-- |
-| 1.0 | 19/04/2026 | Preenchimento do canvas MVP com resultados da Lean Inception | [Zenilda Vieira](https://github.com/ZenildaVieira) | [xxxx](xxxx) |
+| `1.0` | 19/04/2026 | Preenchimento do canvas MVP com resultados da Lean Inception | [Zenilda Vieira](https://github.com/ZenildaVieira) | [xxxx](xxxx) |

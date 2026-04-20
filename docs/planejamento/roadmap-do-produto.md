@@ -15,7 +15,7 @@ O projeto é organizado em sprints semanais agrupadas em quinzenas. Cada quinzen
 | 0 - Iniciação do Projeto e Definição do MVP                                      | 30/03/2026      | Lean Inception, definição do MVP, priorização inicial              |
 | 1 - Estruturação Inicial do Projeto e Primeira Release Minor (RM1)               | 13/04/2026      | Cadastro de ADMIN, documentação base, setup inicial                |
 | 2 - Conclusão da Autenticação e Início do Módulo de Exames (R1)                  | 27/04/2026      | Autenticação, cadastro/upload de exames, protótipo de alta         |
-| 3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3)                   | 12/05/2026      | Incrementos no cadastro/upload de exames, primeiras integrações IA |
+| 3 - Evolução do Módulo de Exames e Iterações com IA (RM2, RM3)                   | 11/05/2026      | Incrementos no cadastro/upload de exames, primeiras integrações IA |
 | 4 - Integração com IA e Início do Histórico de Exames (R2)                       | 25/05/2026      | Integração IA, início do histórico de exames                       |
 | 5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) | 15/06/2026      | Busca, filtros, reporte de erro IA, interpretação de resultados    |
 | 6 - Conclusão do Épico de IA e Entrega do MVP (R3)                               | 29/06/2026      | Classificação de resultados IA, entrega final do MVP               |

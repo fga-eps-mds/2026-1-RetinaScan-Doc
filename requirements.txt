@@ -1,2 +1,9 @@
 mkdocs
 mkdocs-material
+requests
+pandas
+matplotlib
+plotly
+nbconvert
+ipykernel
+jupyter

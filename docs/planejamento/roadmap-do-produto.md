@@ -270,7 +270,7 @@ Sprint de consolidação final do produto e preparação da apresentação. **En
 > **Marco:** Release Final ✓
 
 ### Milestone 7 - Ajustes Finais e Estabilização Pós-MVP (RM6) (até 06/07/2026)
-- 
+- Realizar ajustes e correções pós-apresentação, concluir o fechamento das issues pendentes e registrar as lições aprendidas para o encerramento do projeto.
 
 
 ##### Sprint 14 — 29/06 a 05/07/2026

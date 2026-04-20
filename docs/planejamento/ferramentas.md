@@ -8,14 +8,15 @@ As ferramentas listadas abaixo foram selecionadas para atender às necessidades 
 ## Ferramentas do Projeto
 
 Na Tabela 1 temos as seguintes ferramentas de acordo com sua função:
-- Comunicação e alinhamento: Discord, Microsoft Teams e WhatsApp.
-- Planejamento e documentação: Google Docs e Google Planilhas.
-- Design e comunicação visual: Figma e Canva.
-- Desenvolvimento e controle de versão: Visual Studio Code, GitHub e ZenHub.
-- Apoio operacional: When2meet e YouTube.
+* Comunicação e alinhamento: Discord, Microsoft Teams e WhatsApp.
+* Planejamento e documentação: Google Docs e Google Planilhas.
+* Design e comunicação visual: Figma e Canva.
+* Desenvolvimento e controle de versão: Visual Studio Code, GitHub e ZenHub.
+* Apoio operacional: YouTube.
 
-<table>
-    <caption><strong>Tabela 1.</strong> Ferramentas utilizadas pela equipe no projeto RetinaScan.</caption>
+<p style="text-align: center;"><strong>Tabela 1</strong> - Ferramentas utilizadas pela equipe no projeto RetinaScan.</p>
+
+<table style="margin-left: auto; margin-right: auto;">
     <tr>
         <td align="center"><strong>Ícone</strong></td>
         <td align="center"><strong>Ferramenta</strong></td>
@@ -67,11 +68,6 @@ Na Tabela 1 temos as seguintes ferramentas de acordo com sua função:
         <td style="vertical-align: middle;">Comunicação instantânea para avisos rápidos, lembretes e tratativas operacionais entre os integrantes do time.</td>
     </tr>
     <tr>
-        <td align="center"><img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_when2meet.png?raw=true" width="90px"/></td>
-        <td style="vertical-align: middle;">When2meet</td>
-        <td style="vertical-align: middle;">Levantamento de disponibilidade da equipe para definição de horários mais adequados para reuniões e cerimônias.</td>
-    </tr>
-    <tr>
         <td align="center"><img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_youtube.png?raw=true" width="90px"/></td>
         <td style="vertical-align: middle;">YouTube</td>
         <td style="vertical-align: middle;">Apoio ao aprendizado técnico por meio de tutoriais, demonstrações e referências complementares para o desenvolvimento.</td>
@@ -82,7 +78,7 @@ Na Tabela 1 temos as seguintes ferramentas de acordo com sua função:
         <td style="vertical-align: middle;">Gestão do fluxo de trabalho integrado ao GitHub, com organização de backlog, acompanhamento de sprints e progresso das tarefas.</td>
     </tr>
 </table>
-<font size="3" align="center"><p><b>Fonte:</b> <a href="https://github.com/ZenildaVieira">Zenilda Vieira</a>, 2026</p></font>
+<p style="text-align: center;"><strong>Fonte:</strong> <a href="https://github.com/ZenildaVieira">Zenilda Vieira</a>, 2026</p>
 
 
 

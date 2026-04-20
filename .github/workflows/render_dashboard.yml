@@ -2,7 +2,9 @@ name: Executar e Publicar Dashboard
 
 on:
   push:
-    branches: [ dashboard ]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   schedule:
     - cron: '0 3 * * *'  
 

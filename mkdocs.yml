@@ -57,6 +57,7 @@ nav:
       - Lean Inception: "produto/lean-inception.md"
       - Protótipo de Alta Fidelidade: "produto/prototipo-de-alta.md"
   - Projeto:
+      - Dashboard Analítico: projeto/indicadores.html
       - Arquitetura: "projeto/arquitetura.md"
       - EAP: "projeto/EAP.md"
       - Metodologias: "projeto/metodologias.md"

@@ -143,7 +143,7 @@ A representação visual da Persona 1 está na Figura 3.
 - editar dados sensíveis de usuários, como CRM e CPF.
 
 <div align="center">
-    <p><strong>Figura 4.</strong> Persona 4 (Administrador do Sistema).</p>
+    <p><strong>Figura 5.</strong> Persona 4 (Administrador do Sistema).</p>
     <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona4.PNG?raw=true" alt="Persona 4"/>
     <p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>

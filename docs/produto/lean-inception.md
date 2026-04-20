@@ -1,13 +1,13 @@
 # Lean Inception
 
-## 1. Introdução
+## Introdução
 
 Este documento consolida os resultados da Lean Inception do produto RetinaScan, seguindo a ordem das dinâmicas executadas pela equipe.
 
 Board de referência:
 https://www.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-FCTE-FM-01-2026-1
 
-## 2. Visão do Produto
+## Visão do Produto
 
 **Para** profissionais da saúde envolvidos na triagem oftalmológica da rede pública,
 **cujo processo** de triagem é lento, depende de análise posterior e dificulta a identificação rápida de alterações,
@@ -16,9 +16,9 @@ https://www.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-FCTE-FM
 **Diferentemente do** RETINA-AI e do EyeArt,
 **nosso produto** é voltado ao processo da saúde pública, priorizando os casos com maior urgência no mesmo fluxo da triagem.
 
-## 3. Produto É, Não É, Faz e Não Faz
+## Produto É, Não É, Faz e Não Faz
 
-### 3.1 É
+### É
 
 - ferramenta web;
 - solução baseada em IA;
@@ -28,7 +28,7 @@ https://www.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-FCTE-FM
 - voltado para a saúde pública;
 - plataforma de classificação binária.
 
-### 3.2 Não É
+### Não É
 
 - ferramenta para diagnóstico definitivo;
 - ferramenta para substituir profissionais de saúde;
@@ -37,7 +37,7 @@ https://www.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-FCTE-FM
 - ferramenta para uso do paciente;
 - ferramenta para identificação de doenças específicas.
 
-### 3.3 Faz
+### Faz
 
 - auxilia na triagem inicial de pacientes no sistema de saúde pública;
 - filtra os pacientes com anomalias;
@@ -45,7 +45,7 @@ https://www.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-FCTE-FM
 - permite revisão de casos com incerteza;
 - processa imagens anonimizadas.
 
-### 3.4 Não Faz
+### Não Faz
 
 - diagnóstico da anomalia;
 - diferenciação da gravidade do problema;
@@ -62,11 +62,11 @@ Conforme a Figura 1, a delimitação do produto explicita o escopo funcional e o
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 4. Objetivos do Produto
+## Objetivos do Produto
 
 Após a ideação, os objetivos foram organizados nos seguintes clusters:
 
-### 4.1 Redução da fila e tempo de espera
+### Redução da fila e tempo de espera
 
 - acelerar o encaminhamento de casos suspeitos para especialistas;
 - usar a triagem automatizada como ferramenta de detecção de alterações precoces;
@@ -74,24 +74,24 @@ Após a ideação, os objetivos foram organizados nos seguintes clusters:
 - agilizar o acesso ao profissional de saúde;
 - concentrar atendimentos em casos críticos.
 
-### 4.2 Rede pública
+### Rede pública
 
 - melhorar o processo de triagem;
 - apoiar o oftalmologista com IA confiável;
 - cobrir mais pacientes com o mesmo time.
 
-### 4.3 Segurança de dados e LGPD
+### Segurança de dados e LGPD
 
 - usar LGPD para proteção de dados dos pacientes;
 - garantir anonimidade das imagens;
 - proteger dados sensíveis dos pacientes.
 
-### 4.4 Qualidade técnica das imagens
+### Qualidade técnica das imagens
 
 - garantir qualidade das retinografias;
 - padronizar imagens para melhorar o desempenho do modelo de IA.
 
-### 4.5 Plataforma
+### Plataforma
 
 - permitir upload seguro e simples via web em qualquer unidade de saúde;
 - facilitar revisão humana de casos duvidosos na própria plataforma;
@@ -106,9 +106,9 @@ Os objetivos consolidados por cluster são apresentados na Figura 2.
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 5. Personas
+## Personas
 
-### 5.1 Persona 1 - Dra Meridite Cinza
+### Persona 1 - Dra Meridite Cinza
 
 **Perfil:** 40 anos, médica da família, casada, 4 filhos, sobrecarregada.
 
@@ -129,7 +129,7 @@ A representação visual da Persona 1 está na Figura 3.
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-### 5.2 Persona 2 - Derik Carneiro
+### Persona 2 - Derik Carneiro
 
 **Perfil:** técnico de enfermagem, 35 anos, casado, frustrado.
 
@@ -150,7 +150,7 @@ A representação visual da Persona 2 está na Figura 4.
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-### 5.3 Persona 3 - Leon Silva
+### Persona 3 - Leon Silva
 
 **Perfil:** 65 anos, diabético, 2 filhas, sociável, pratica exercícios.
 
@@ -171,7 +171,23 @@ A representação visual da Persona 3 está na Figura 5.
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 6. Jornada do Usuário
+### Persona 4 - Administrador do Sistema (ADMIN)
+
+**Perfil:** 45 anos, gestor de TI/saúde ou responsável de operação na rede pública, encarregado pelo gerenciamento dos usuários do sistema.
+
+**Comportamento:** organizado, criterioso, orientado a processos.
+
+**Necessidades:**
+
+- gerenciar contas, permissões e perfis (ADMIN, MÉDICO);
+
+<div align="center">
+    <p><strong>Figura 6.</strong> Persona 4 (Administrador do Sistema).</p>
+    <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/Persona4.PNG?raw=true" alt="Persona 4"/>
+    <p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
+</div>
+
+## Jornada do Usuário
 
 ### Jornada 1 - Triagem e Encaminhamento
 
@@ -199,25 +215,40 @@ O fluxo detalhado da jornada está ilustrado na Figura 6.
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 7. Brainstorming de Funcionalidades
+### Jornada 2 - Administração e Gestão do Sistema
+
+1. Acessa o sistema com a conta `ADMIN`.
+2. Cria, edita e gerencia contas de usuários, atribuindo perfis e permissões.
+3. Revisa solicitações de alteração (ex.: alteração de CPF/CRM).
+4. Finaliza sessão e registra atividade administrativa.
+
+O fluxo da jornada está ilustrado na Figura 7.
+
+<div align="center">
+    <p><strong>Figura 7.</strong> Jornada do Administrador.</p>
+    <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/lean-inception/jornada-administrador.PNG?raw=true" alt="Jornada do Administrador"/>
+    <p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
+</div>
+
+## Brainstorming de Funcionalidades
 
 As funcionalidades identificadas foram agrupadas por temas:
 
-### 7.1 Modelo de IA
+### Modelo de IA
 
 - modelo treinado com alta acurácia (>90%);
 - modelo de IA de processamento rápido (30s);
 - pré-processamento de imagem;
 - detecção de múltiplas condições de retina.
 
-### 7.2 Segurança
+### Segurança
 
 - login e cadastro do profissional da saúde;
 - registrar log de acesso;
 - registrar decisão e responsável (encaminhar ou não);
 - controlar acesso por perfil.
 
-### 7.3 Tratamento de imagem
+### Tratamento de imagem
 
 - upload de foto do exame;
 - banco de imagens enviadas;
@@ -226,7 +257,7 @@ As funcionalidades identificadas foram agrupadas por temas:
 - solicitar nova captura quando qualidade inferior ao limiar;
 - pré-processamento antes de enviar para IA.
 
-### 7.4 Página inicial
+### Página inicial
 
 - dashboard com métricas das análises anteriores;
 - histórico de análises;
@@ -235,7 +266,7 @@ As funcionalidades identificadas foram agrupadas por temas:
 - filtro de resultados por status (normal/alterado);
 - status de revisão (imagens que precisam de atenção).
 
-### 7.5 Página de resultado
+### Página de resultado
 
 - resultado da avaliação da IA;
 - download do relatório;
@@ -250,7 +281,7 @@ As funcionalidades levantadas e agrupadas na ideação estão apresentadas na Fi
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 8. Revisão Técnica, de Negócio e de UX
+## Revisão Técnica, de Negócio e de UX
 
 A revisão utilizou marcações visuais para priorização, esforço e confiança da equipe. O resultado consolidado indicou as funcionalidades mais críticas para compor os primeiros incrementos.
 
@@ -281,30 +312,30 @@ A priorização resultante da revisão técnica, de negócio e de UX é apresent
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 9. Sequenciador e MVP
+## Sequenciador e MVP
 
 Com base no sequenciador, os incrementos foram organizados em 5 ondas:
 
-### 9.1 Incremento 1 - Acesso e segurança básica
+### Incremento 1 - Acesso e segurança básica
 
 - gerenciamento de usuários pelo ADMIN;
 - login do profissional da saúde;
 - controle de acesso por perfil.
 
-### 9.2 Incremento 2 - Cadastro e processamento inicial
+### Incremento 2 - Cadastro e processamento inicial
 
 - registrar log de acesso;
 - cadastrar exame;
 - pré-processamento de imagem;
 - upload de foto do exame.
 
-### 9.3 Incremento 3 - Núcleo de IA
+### Incremento 3 - Núcleo de IA
 
 - modelo treinado com alta acurácia (90%);
 - resultado da avaliação da IA;
 - botão de "Reportar Erro da IA".
 
-### 9.4 Incremento 4 - Histórico e busca (MVP)
+### Incremento 4 - Histórico e busca (MVP)
 
 - histórico de análises;
 - busca de relatório;
@@ -312,7 +343,9 @@ Com base no sequenciador, os incrementos foram organizados em 5 ondas:
 
 **MVP definido até este ponto.**
 
-### 9.5 Incremento 5 - Evoluções pós-MVP
+**Issues relacionadas ao MVP:** [#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/3), [#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13), [#14](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14), [#15](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15), [#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20), [#21](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21), [#16](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16), [#17](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17), [#18](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18)
+
+### Incremento 5 - Evoluções pós-MVP
 
 - dashboard com métricas das análises anteriores;
 - download de relatório;
@@ -326,7 +359,12 @@ Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de 
 	<p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
 </div>
 
-## 10. Histórico de Versão
+## Canvas MVP
+
+O Canvas MVP preenchido está disponível em [docs/produto/mvp-canvas.md](mvp-canvas.md).
+
+
+## Histórico de Versão
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | :--: | :-- | :-- | :-- |

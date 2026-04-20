@@ -1,4 +1,3 @@
-
 name: Executar e Publicar Dashboard
 
 on:
@@ -23,7 +22,7 @@ jobs:
 
       - name: Gerar Dashboard Automático
         run: |
-          jupyter nbconvert --execute --to html docs/projeto/dashboard.ipynb --no-input --output indicadores --output-dir docs/projeto/
+          jupyter nbconvert --execute --to html docs/projeto/dashboard.ipynb --no-input --template basic --output indicadores --output-dir docs/projeto/
 
       - name: Deploy MkDocs
         run: |

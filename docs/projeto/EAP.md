@@ -14,32 +14,32 @@ A EAP do RetinaScan foi construída com base no Sequenciador definido durante o 
 
 ---
 
-#### 1.4 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03/2026)
+#### 1.1 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03/2026)
 
 Fase de abertura do projeto com definição de visão, escopo inicial, priorização e organização de base para execução.
 
 | Pacote de Trabalho | Tipo | Issue | Descrição |
 | :--- | :---: | :---: | :--- |
-| 1.4.1 Visão do Produto (Lean Inception) | Produto | — | Definição dos objetivos, proposta de valor e visão geral do sistema. |
-| 1.4.2 Personas e Jornadas de Usuário | Produto | — | Levantamento dos perfis de usuário e principais fluxos de uso do sistema. |
-| 1.4.3 Brainstorming e Revisão Técnica, de Negócio e UX | Produto | — | Ideação e avaliação das funcionalidades por valor, esforço e experiência do usuário. |
-| 1.4.4 Sequenciador, MVP e Priorização Inicial | Produto | — | Priorização das funcionalidades e definição do MVP para início das entregas. |
-| 1.4.5 Planejamento e Governança do Projeto | Gestão | — | Definição de metodologias, ferramentas, heatmap, tabela de conhecimentos, riscos e liderança rotativa. |
-| 1.4.6 Comunicação e Acompanhamento de Sprints | Gestão | — | Definição de canais e condução dos ritos Scrum com gestão do board. |
-| 1.4.7 Primeira experimentação técnica com IA | Qualidade | — | Exploração técnica inicial para preparar o pipeline de IA. |
+| 1.1.1 Visão do Produto (Lean Inception) | Produto | — | Definição dos objetivos, proposta de valor e visão geral do sistema. |
+| 1.1.2 Personas e Jornadas de Usuário | Produto | — | Levantamento dos perfis de usuário e principais fluxos de uso do sistema. |
+| 1.1.3 Brainstorming e Revisão Técnica, de Negócio e UX | Produto | — | Ideação e avaliação das funcionalidades por valor, esforço e experiência do usuário. |
+| 1.1.4 Sequenciador, MVP e Priorização Inicial | Produto | — | Priorização das funcionalidades e definição do MVP para início das entregas. |
+| 1.1.5 Planejamento e Governança do Projeto | Gestão | — | Definição de metodologias, ferramentas, heatmap, tabela de conhecimentos, riscos e liderança rotativa. |
+| 1.1.6 Comunicação e Acompanhamento de Sprints | Gestão | — | Definição de canais e condução dos ritos Scrum com gestão do board. |
+| 1.1.7 Primeira experimentação técnica com IA | Qualidade | — | Exploração técnica inicial para preparar o pipeline de IA. |
 
 ---
 
-#### 1.5 Milestone 1 — Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (30/03 – 13/04/2026)
+#### 1.2 Milestone 1 — Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (30/03 – 13/04/2026)
 
 Fase de estruturação do projeto com consolidação da base documental e primeira entrega técnica.
 
 | Pacote de Trabalho | Tipo | Issue | Descrição |
 | :--- | :---: | :---: | :--- |
-| 1.5.1 Levantamento e escrita do backlog do produto | Produto | — | Organização inicial das funcionalidades e critérios de priorização. |
-| 1.5.2 Aprovação do backlog com o Product Owner | Produto | — | Validação do escopo priorizado para as próximas releases. |
-| 1.5.3 Configuração dos repositórios de documentação e desenvolvimento | Infraestrutura | — | Estruturação dos repositórios e fluxo de colaboração da equipe. |
-| 1.5.4 Guia de Contribuição | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Definição de políticas de contribuição, commits, branches e conduta. |
+| 1.2.1 Levantamento e escrita do backlog do produto | Produto | — | Organização inicial das funcionalidades e critérios de priorização. |
+| 1.2.2 Aprovação do backlog com o Product Owner | Produto | — | Validação do escopo priorizado para as próximas releases. |
+| 1.2.3 Configuração dos repositórios de documentação e desenvolvimento | Infraestrutura | — | Estruturação dos repositórios e fluxo de colaboração da equipe. |
+| 1.2.4 Guia de Contribuição | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Definição de políticas de contribuição, commits, branches e conduta. |
 | 1.5.5 Arquitetura | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Documentação da arquitetura da solução e decisões técnicas iniciais. |
 | 1.5.6 Modelagem do Banco de Dados | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Modelagem conceitual/lógica inicial para suportar os módulos do sistema. |
 | 1.5.7 Metodologias | Documentação | [Doc#31](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31) | Registro das metodologias e práticas de desenvolvimento adotadas. |

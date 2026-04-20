@@ -19,7 +19,7 @@ O projeto é organizado em sprints semanais agrupadas em quinzenas. Cada quinzen
 | 4 - Integração com IA e Início do Histórico de Exames (R2)                       | 25/05/2026      | Integração IA, início do histórico de exames                       |
 | 5 - Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) | 15/06/2026      | Busca, filtros, reporte de erro IA, interpretação de resultados    |
 | 6 - Conclusão do Épico de IA e Entrega do MVP (R3)                               | 29/06/2026      | Classificação de resultados IA, entrega final do MVP               |
-| 7 - Ajustes Finais e Estabilização Pós-MVP (RM6)                                  | 06/07/2026      | Ajustes finais após a apresentação, correções, estabilização e encerramento |
+| 7 - Ajustes Finais e Estabilização Pós-MVP (RM6)                                 | 06/07/2026      | Ajustes finais após a apresentação, correções, estabilização e encerramento |
 
 ---
 

@@ -1,0 +1,2310 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../arquitetura/">
+      
+      
+        <link rel="next" href="../metodologias/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>EAP - RetinaScan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estrutura-analitica-do-projeto" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RetinaScan" class="md-header__button md-logo" aria-label="RetinaScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RetinaScan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EAP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetinaScan - Doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guia_de_contribuicao/codigo-de-conducta.md" class="md-tabs__link">
+          
+  
+  
+  Guia de Contribuição
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../planejamento/comunicacao/" class="md-tabs__link">
+          
+  
+  
+  Planejamento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../produto/backlog-do-produto/" class="md-tabs__link">
+          
+  
+  
+  Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../arquitetura/" class="md-tabs__link">
+          
+  
+  
+  Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../atas-reunioes/AtaReuniaoEPS-2026-03-23/" class="md-tabs__link">
+          
+  
+  
+  Atas de Reuniões
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RetinaScan" class="md-nav__button md-logo" aria-label="RetinaScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RetinaScan
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetinaScan - Doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guia de Contribuição
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia_de_contribuicao/codigo-de-conducta.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Código de Conduta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia_de_contribuicao/politica-de-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Política de Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia_de_contribuicao/politica-de-commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Política de Commits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Planejamento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/comunicacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comunicação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/ferramentas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/heatmap-de-horarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heatmap de Horários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/roadmap-do-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/tabela-de-conhecimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Conhecimentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/plano_de_ger_riscos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Gestão de Riscos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planejamento/plano_de_custos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/backlog-do-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/identidade-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidade Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/lean-inception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lean Inception
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/prototipo-de-alta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protótipo de Alta Fidelidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EAP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura Analítica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura Analítica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-retinascan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. RetinaScan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. RetinaScan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-milestone-0-iniciacao-do-projeto-e-definicao-do-mvp-2303-30032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-milestone-1-estruturacao-inicial-do-projeto-e-primeira-release-minor-rm1-3003-13042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Milestone 1 — Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (30/03 – 13/04/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-milestone-2-conclusao-da-autenticacao-e-inicio-do-modulo-de-exames-r1-1304-27042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Milestone 2 — Conclusão da Autenticação e Início do Módulo de Exames (R1) (13/04 – 27/04/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-milestone-3-evolucao-do-modulo-de-exames-e-iteracoes-com-ia-rm2-rm3-2704-11052026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Milestone 3 — Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (27/04 – 11/05/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-milestone-4-integracao-com-ia-e-inicio-do-historico-de-exames-r2-1105-25052026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Milestone 4 — Integração com IA e Início do Histórico de Exames (R2) (11/05 – 25/05/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-milestone-5-conclusao-do-historico-e-consulta-e-evolucao-da-integracao-com-ia-rm4-rm5-2505-15062026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Milestone 5 — Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (25/05 – 15/06/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-milestone-6-conclusao-do-epico-de-ia-e-entrega-do-mvp-r3-1506-29062026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Milestone 6 — Conclusão do Épico de IA e Entrega do MVP (R3) (15/06 – 29/06/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-milestone-7-ajustes-finais-e-estabilizacao-pos-mvp-rm6-2906-06072026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Milestone 7 — Ajustes Finais e Estabilização Pós-MVP (RM6) (29/06 – 06/07/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-da-eap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama da EAP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodologias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelagem-do-BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem do Banco de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/modelos_de_ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Inteligência Artificial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/versionamento_modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionamento de Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indicadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Analítico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-03-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 23.03.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-04-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 01.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-04-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 06.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-04-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 07.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-04-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 13.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-04-13-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 13.04.2026 com o PO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/AtaReuniaoEPS-2026-04-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reunião 20.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="estrutura-analitica-do-projeto">Estrutura Analítica do Projeto</h1>
+<h2 id="introducao">Introdução</h2>
+<p>A Estrutura Analítica do Projeto (EAP), também conhecida como WBS (<em>Work Breakdown Structure</em>), é uma decomposição hierárquica do escopo total do trabalho a ser executado pela equipe, com o objetivo de organizar e definir as entregas do projeto de forma clara e rastreável. Cada nível da EAP representa um refinamento do trabalho, partindo das grandes áreas até os pacotes de trabalho individuais.</p>
+<p>A EAP do RetinaScan foi construída com base no Sequenciador definido durante o Lean Inception, nos épicos do Backlog do Produto e nas sprints planejadas para o semestre.</p>
+<hr />
+<h2 id="estrutura-analitica">Estrutura Analítica</h2>
+<h3 id="1-retinascan">1. RetinaScan</h3>
+<hr />
+<h4 id="11-milestone-0-iniciacao-do-projeto-e-definicao-do-mvp-2303-30032026">1.1 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03/2026)</h4>
+<p>Fase de abertura do projeto com definição de visão, escopo inicial, priorização e organização de base para execução.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.1.1 Visão do Produto (Lean Inception)</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Definição dos objetivos, proposta de valor e visão geral do sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.2 Personas e Jornadas de Usuário</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Levantamento dos perfis de usuário e principais fluxos de uso do sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.3 Brainstorming e Revisão Técnica, de Negócio e UX</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Ideação e avaliação das funcionalidades por valor, esforço e experiência do usuário.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.4 Sequenciador, MVP e Priorização Inicial</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Priorização das funcionalidades e definição do MVP para início das entregas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.5 Planejamento e Governança do Projeto</td>
+<td style="text-align: center;">Gestão</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Definição de metodologias, ferramentas, heatmap, tabela de conhecimentos, riscos e liderança rotativa.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.6 Comunicação e Acompanhamento de Sprints</td>
+<td style="text-align: center;">Gestão</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Definição de canais e condução dos ritos Scrum com gestão do board.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.7 Primeira experimentação técnica com IA</td>
+<td style="text-align: center;">Qualidade</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Exploração técnica inicial para preparar o pipeline de IA.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="12-milestone-1-estruturacao-inicial-do-projeto-e-primeira-release-minor-rm1-3003-13042026">1.2 Milestone 1 — Estruturação Inicial do Projeto e Primeira Release Minor (RM1) (30/03 – 13/04/2026)</h4>
+<p>Fase de estruturação do projeto com consolidação da base documental e primeira entrega técnica.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.2.1 Levantamento e escrita do backlog do produto</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Organização inicial das funcionalidades e critérios de priorização.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.2.2 Aprovação do backlog com o Product Owner</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Validação do escopo priorizado para as próximas releases.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.2.3 Configuração dos repositórios de documentação e desenvolvimento</td>
+<td style="text-align: center;">Infraestrutura</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Estruturação dos repositórios e fluxo de colaboração da equipe.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.2.4 Guia de Contribuição</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Definição de políticas de contribuição, commits, branches e conduta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.5 Arquitetura</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Documentação da arquitetura da solução e decisões técnicas iniciais.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.6 Modelagem do Banco de Dados</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Modelagem conceitual/lógica inicial para suportar os módulos do sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.7 Metodologias</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Registro das metodologias e práticas de desenvolvimento adotadas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.8 EAP</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Estrutura analítica do projeto para organização do escopo.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.9 Roadmap do Produto</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Planejamento de entregas por milestones e sprints.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.10 Atas de Reuniões</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Registro de decisões e alinhamentos com equipe e PO.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.11 Identidade Visual e Protótipo</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/31">Doc#31</a></td>
+<td style="text-align: left;">Definição visual e prototipação de alta fidelidade do produto.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.12 Cadastro automático de ADMIN</td>
+<td style="text-align: center;">Desenvolvimento</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/5">Api#5</a></td>
+<td style="text-align: left;">Implementação do usuário ADMIN inicial do sistema.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="16-milestone-2-conclusao-da-autenticacao-e-inicio-do-modulo-de-exames-r1-1304-27042026">1.6 Milestone 2 — Conclusão da Autenticação e Início do Módulo de Exames (R1) (13/04 – 27/04/2026)</h4>
+<p>Fase de fechamento da autenticação, início do módulo de exames e integração das primeiras entregas de release.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.6.1 Login do usuário (back-end)</td>
+<td style="text-align: center;">Desenvolvimento</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/3">Api#3</a></td>
+<td style="text-align: left;">Implementação de autenticação via API.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.2 Cadastro de usuário pelo ADMIN (back-end e front-end)</td>
+<td style="text-align: center;">Desenvolvimento</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/2">Api#2</a>, <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/2">Web#2</a></td>
+<td style="text-align: left;">Cadastro de usuários com fluxo integrado entre API e interface.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.3 Gestão de usuários no back-end (edição e solicitação de CPF/CRM)</td>
+<td style="text-align: center;">Desenvolvimento</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/4">Api#4</a>, <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/7">Api#7</a></td>
+<td style="text-align: left;">Evolução do módulo de usuários para atualização de dados sensíveis.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.4 Consolidação do protótipo de alta fidelidade</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/1">Web#1</a></td>
+<td style="text-align: left;">Ajuste do protótipo para aderência ao fluxo funcional da release.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.5 Cadastro de exame</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13">Doc#13</a></td>
+<td style="text-align: left;">Registro de exames no sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.6 Upload de imagem do exame</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14">Doc#14</a></td>
+<td style="text-align: left;">Envio de imagem associada ao exame cadastrado.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.7 Correção de bug na edição de admin cadastrado automaticamente</td>
+<td style="text-align: center;">Qualidade</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/13">Api#13</a></td>
+<td style="text-align: left;">Correção de inconsistência no fluxo de edição do ADMIN.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.8 Refinamento da documentação de apoio à release</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/35">Doc#35</a>, <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/40">Doc#40</a></td>
+<td style="text-align: left;">Atualização da documentação para suportar a entrega da R1.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="17-milestone-3-evolucao-do-modulo-de-exames-e-iteracoes-com-ia-rm2-rm3-2704-11052026">1.7 Milestone 3 — Evolução do Módulo de Exames e Iterações com IA (RM2, RM3) (27/04 – 11/05/2026)</h4>
+<p>Fase de evolução técnica do pipeline de IA e do processamento de exames.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.7.1 Pré-processamento de imagem</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15">Doc#15</a></td>
+<td style="text-align: left;">Padronização das imagens para consumo da IA.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.7.2 Integração com modelo de IA</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20">Doc#20</a></td>
+<td style="text-align: left;">Integração entre sistema e serviço de inferência.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.7.3 Recebimento e interpretação do resultado da IA</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21">Doc#21</a></td>
+<td style="text-align: left;">Tratamento da resposta da IA para uso no sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.7.4 Classificação e associação do resultado ao exame</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/22">Doc#22</a></td>
+<td style="text-align: left;">Vinculação do resultado ao exame correspondente.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.7.5 Tratamento de erros no pipeline de IA</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/23">Doc#23</a></td>
+<td style="text-align: left;">Tratamento de falhas no fluxo de processamento.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="18-milestone-4-integracao-com-ia-e-inicio-do-historico-de-exames-r2-1105-25052026">1.8 Milestone 4 — Integração com IA e Início do Histórico de Exames (R2) (11/05 – 25/05/2026)</h4>
+<p>Fase de consolidação da integração com IA e habilitação da consulta de histórico.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.8.1 Visualização do histórico de exames</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16">Doc#16</a></td>
+<td style="text-align: left;">Exibição de exames realizados no histórico do usuário.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.8.2 Reporte de erro da IA</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/19">Doc#19</a></td>
+<td style="text-align: left;">Registro de inconsistências percebidas no resultado de IA.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.8.3 Validação da acurácia do modelo de IA</td>
+<td style="text-align: center;">Qualidade</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/24">Doc#24</a></td>
+<td style="text-align: left;">Validação de desempenho do modelo usado no produto.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.8.4 Busca de médicos</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/42">Doc#42</a></td>
+<td style="text-align: left;">Busca de médicos cadastrados pelo administrador.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.8.5 Busca de exames</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17">Doc#17</a></td>
+<td style="text-align: left;">Busca de exames por critérios de consulta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.8.6 Filtros de exames</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18">Doc#18</a></td>
+<td style="text-align: left;">Refinamento dos resultados exibidos no histórico.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="19-milestone-5-conclusao-do-historico-e-consulta-e-evolucao-da-integracao-com-ia-rm4-rm5-2505-15062026">1.9 Milestone 5 — Conclusão do Histórico e Consulta e Evolução da Integração com IA (RM4, RM5) (25/05 – 15/06/2026)</h4>
+<p>Fase de evolução de relatórios/métricas e refinamento das funcionalidades de consulta e IA.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.9.1 Dashboard com métricas das análises</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Api/issues/6">Api#6</a>, <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/25">Doc#25</a></td>
+<td style="text-align: left;">Visualização consolidada de indicadores de exames.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.9.2 Download de relatório</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/26">Doc#26</a></td>
+<td style="text-align: left;">Exportação de relatório de resultados.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.9.3 Compartilhamento de resultado via link</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/27">Doc#27</a></td>
+<td style="text-align: left;">Compartilhamento controlado por link.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.9.4 Refinamento de busca, filtros e consulta de exames</td>
+<td style="text-align: center;">Qualidade</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Ajustes funcionais no fluxo de histórico e consulta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.9.5 Evolução do reporte de erro e interpretação de resultados da IA</td>
+<td style="text-align: center;">Qualidade</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Refinamento do ciclo de retorno da IA no sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.9.6 Edição de dados do usuário (front-end)</td>
+<td style="text-align: center;">Desenvolvimento</td>
+<td style="text-align: center;"><a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Web/issues/6">Web#6</a></td>
+<td style="text-align: left;">Edição de dados de usuário na interface.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="110-milestone-6-conclusao-do-epico-de-ia-e-entrega-do-mvp-r3-1506-29062026">1.10 Milestone 6 — Conclusão do Épico de IA e Entrega do MVP (R3) (15/06 – 29/06/2026)</h4>
+<p>Fase de validação final da IA, revisão de documentação e preparação da entrega final do MVP.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.10.1 Validação final da classificação e associação de resultados da IA</td>
+<td style="text-align: center;">Qualidade</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Verificação final do comportamento do pipeline de IA para entrega.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.10.2 Revisão e atualização da documentação</td>
+<td style="text-align: center;">Documentação</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Atualização da documentação com o estado final da release.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.10.3 Preparação para a R3</td>
+<td style="text-align: center;">Gestão</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Organização da entrega final e alinhamento de apresentação.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.10.4 Consolidação final do produto e preparação da apresentação</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Consolidação do MVP para apresentação à banca.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="111-milestone-7-ajustes-finais-e-estabilizacao-pos-mvp-rm6-2906-06072026">1.11 Milestone 7 — Ajustes Finais e Estabilização Pós-MVP (RM6) (29/06 – 06/07/2026)</h4>
+<p>Fase de encerramento do projeto com estabilização e fechamento formal das atividades.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pacote de Trabalho</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Issue</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.11.1 Ajustes e correções pós-apresentação</td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Ajustes finais observados após a apresentação.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.11.2 Fechamento das issues e arquivamento dos repositórios</td>
+<td style="text-align: center;">Gestão</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Encerramento de pendências operacionais e organização do repositório final.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.11.3 Registro de lições aprendidas</td>
+<td style="text-align: center;">Gestão</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Registro das lições do semestre para retroalimentar próximos ciclos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="diagrama-da-eap">Diagrama da EAP</h2>
+<pre><code>RetinaScan
+├── 1.4 Milestone 0 — Iniciação do Projeto e Definição do MVP (23/03 – 30/03)
+│   ├── 1.4.1 Visão do Produto
+│   ├── 1.4.2 Personas e Jornadas
+│   ├── 1.4.3 Brainstorming e Revisão Técnica/Negócio/UX
+│   ├── 1.4.4 Sequenciador, MVP e priorização inicial
+│   ├── 1.4.5 Planejamento e governança do projeto
+│   ├── 1.4.6 Comunicação e acompanhamento de sprints
+│   └── 1.4.7 Experimentação técnica com IA
+├── 1.5 Milestone 1 — Estruturação Inicial e RM1 (30/03 – 13/04)
+│   ├── 1.5.1 Backlog e alinhamento com PO
+│   ├── 1.5.2 Configuração dos repositórios
+│   ├── 1.5.3 Preparação de base técnica
+│   ├── 1.5.4 Guia de Contribuição
+│   ├── 1.5.5 Arquitetura
+│   ├── 1.5.6 Modelagem do Banco de Dados
+│   ├── 1.5.7 Metodologias
+│   ├── 1.5.8 EAP
+│   ├── 1.5.9 Roadmap do Produto
+│   ├── 1.5.10 Atas de Reuniões
+│   ├── 1.5.11 Identidade Visual e Protótipo
+│   └── 1.5.12 Cadastro automático de ADMIN
+├── 1.6 Milestone 2 — Conclusão da Autenticação e Início do Módulo de Exames (13/04 – 27/04)
+│   ├── 1.6.1 Autenticação e cadastro de usuários
+│   ├── 1.6.2 Gestão de usuários (back-end)
+│   ├── 1.6.3 Protótipo de alta fidelidade
+│   ├── 1.6.4 Cadastro e upload de exame
+│   └── 1.6.5 Refinamentos e correções da release
+├── 1.7 Milestone 3 — Evolução do Módulo de Exames e Iterações com IA (27/04 – 11/05)
+│   ├── 1.7.1 Pré-processamento de imagem
+│   ├── 1.7.2 Integração e retorno da IA
+│   └── 1.7.3 Classificação e tratamento de erros
+├── 1.8 Milestone 4 — Integração com IA e Início do Histórico de Exames (11/05 – 25/05)
+│   ├── 1.8.1 Histórico e consulta de exames
+│   ├── 1.8.2 Reporte/validação da IA
+│   └── 1.8.3 Busca de médicos
+├── 1.9 Milestone 5 — Conclusão do Histórico/Consulta e Evolução da IA (25/05 – 15/06)
+│   ├── 1.9.1 Relatórios e métricas
+│   ├── 1.9.2 Refinamentos de histórico e IA
+│   └── 1.9.3 Gestão de usuários (front-end)
+├── 1.10 Milestone 6 — Conclusão do Épico de IA e Entrega do MVP (15/06 – 29/06)
+│   ├── 1.10.1 Validação final da IA
+│   ├── 1.10.2 Revisão documental
+│   ├── 1.10.3 Preparação para R3
+│   └── 1.10.4 Consolidação final do produto
+└── 1.11 Milestone 7 — Ajustes Finais e Estabilização Pós-MVP (29/06 – 06/07)
+    ├── 1.11.1 Ajustes pós-apresentação
+    ├── 1.11.2 Fechamento operacional do projeto
+    └── 1.11.3 Registro de lições aprendidas
+</code></pre>
+<hr />
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td>12/04/2026</td>
+<td>Criação do documento</td>
+<td><a href="https://github.com/ericcs10">Eric Camargo</a></td>
+<td><a href="xxxx">xxxx</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.1</code></td>
+<td>20/04/2026</td>
+<td>Alinhamento da EAP com milestones, sprints e entregas do roadmap do produto</td>
+<td><a href="https://github.com/zenildavieira">Zenilda Vieira</a></td>
+<td><a href="xxxx">xxxx</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1.2</code></td>
+<td>20/04/2026</td>
+<td>Consolidação dos blocos 1.1, 1.2 e 1.3 dentro de 1.4 e 1.5 para remover redundâncias</td>
+<td><a href="https://github.com/zenildavieira">Zenilda Vieira</a></td>
+<td><a href="xxxx">xxxx</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

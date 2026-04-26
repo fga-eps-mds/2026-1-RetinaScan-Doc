@@ -250,21 +250,20 @@ A revisão utilizou marcações visuais para priorização, esforço e confianç
 
 Funcionalidades destacadas na revisão:
 
-- gerenciamento de usuários pelo ADMIN;
-- login do profissional da saúde;
-- controlar acesso por perfil;
-- registrar log de acesso;
-- cadastrar exame;
-- upload de foto do exame;
+- gerenciamento de usuários (pelo ADMIN);
+- login e controle de acesso por perfil (criptografia);
+- registro de logse rastreabilidade;
+- cadastro de exame (LGPD e criptografia);
+- anonimização e upload de foto do exame (LGPD e criptografia);
 - pré-processamento de imagem;
-- modelo treinado com alta acurácia;
-- resultado da avaliação da IA;
-- botão "Reportar Erro da IA";
+- execução do modelo de IA;
+- geração de resultados (avaliação da IA se há ou não anomalia);
+- tratamento de inconsistências (ex: reporte de erro);
 - histórico de análises;
-- busca por relatório;
-- filtros de busca;
+- busca e visualização de exames;
+- consulta de resultados;
 - dashboard com métricas das análises anteriores;
-- download do relatório;
+- geração e download do relatório;
 - compartilhamento de resultado.
 
 A priorização resultante da revisão técnica, de negócio e de UX é apresentada na Figura 8.
@@ -281,37 +280,36 @@ Com base no sequenciador, os incrementos foram organizados em 5 ondas:
 
 ### Onda 1 - Acesso e segurança básica
 
-- gerenciamento de usuários pelo ADMIN;
-- login do profissional da saúde;
-- controle de acesso por perfil.
+- gerenciamento de usuários (pelo ADMIN);
+- login e controle de acesso por perfil (criptografia).
 
 ### Onda 2 - Cadastro e processamento inicial
 
-- registrar log de acesso;
-- cadastrar exame;
+- registro de logs e rastreabilidade;
+- cadastro de exame (LGPD e criptografia);
 - pré-processamento de imagem;
-- upload de foto do exame.
+- anonimização e upload de foto do exame (LGPD e criptografia).
 
 ### Onda 3 - Núcleo de IA
 
-- modelo treinado com alta acurácia (90%);
-- resultado da avaliação da IA;
-- botão de "Reportar Erro da IA".
+- execução do modelo de IA;
+- geração de resultados  (avaliação da IA se há ou não anomalia);
+- tratamento de inconsistências (ex: reporte de erro).
 
 ### Onda 4 - Histórico e busca (MVP)
 
 - histórico de análises;
-- busca de relatório;
-- filtros de busca.
+- Busca e visualização de exames;
+- Consulta de resultados.
 
 **MVP definido até este ponto.**
 
-**Issues relacionadas ao MVP:** [#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/3), [#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13), [#14](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14), [#15](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15), [#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20), [#21](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21), [#16](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16), [#17](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17), [#18](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18)
+**Principais issues relacionadas ao MVP:** [#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/3), [#13](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/13), [#14](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/14), [#15](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/15), [#20](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/20), [#21](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/21), [#16](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/16), [#17](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/17), [#18](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18)
 
 ### Onda 5 - Evoluções pós-MVP
 
 - dashboard com métricas das análises anteriores;
-- download de relatório;
+- geração e download de relatórios;
 - compartilhamento de resultado.
 
 Conforme a Figura 9, o sequenciador define os incrementos e delimita o ponto de corte do MVP.

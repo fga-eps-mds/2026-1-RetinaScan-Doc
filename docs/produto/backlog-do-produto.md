@@ -31,7 +31,7 @@ Detalhes operacionais (prioridade, critérios de aceitação, status, responsáv
 ## Relação com Releases
 
 - R1: foco em autenticação, cadastro/upload e processamento inicial de IA.
-- R2: consolidação de histórico, busca e filtros.
+- R2_MVP: consolidação de histórico, busca e filtros.
 - R3: evoluções de relatórios, métricas e compartilhamento.
 
 A distribuição detalhada de issues por release deve ser consultada diretamente no ZenHub.

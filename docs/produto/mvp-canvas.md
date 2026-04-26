@@ -27,14 +27,13 @@ Implementar um fluxo web mínimo que permita captura/upload de retinografias, pr
 2. Gestão de contas e permissões;
 3. Edição de dados sensíveis dos usuários.
 
-## Funcionalidades (MVP)
+## Funcionalidades
 
-- Autenticação e controle de perfis (ADMIN, MÉDICO) — issues: [#3](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/3), [#1](https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/1)
-- Cadastro de exame (#13) e upload de imagem (#14)
-- Validação e pré-processamento de imagem (#15)
-- Integração com modelo de IA e inferência (#20, #21)
-- Botão "Reportar Erro da IA" para feedback humano (#19)
-- Histórico pesquisável, busca e filtros (#16, #17, #18)
+- Gestão de acesso e segurança por perfis (criptografia)
+- Aquisição, cadastro e processamento de exames anonimizados (LGPD e criptografia)
+- Análise por Inteligência Artificial, integração com modelo de IA e inferência 
+- Visualização e Gestão de Resultados (MVP) 
+- Funcionalidades Avançadas (dashboard, relatórios e compartilhamento de resultados)
 
 ## Resultado Esperado
 
@@ -59,7 +58,7 @@ Implementar um fluxo web mínimo que permita captura/upload de retinografias, pr
 - Recursos mínimos sugeridos: 3–5 desenvolvedores (backend/frontend), 1 engenheiro de ML, 1 PO/QA.
 - Cronograma resumido (marcos principais):
   - R1 — Cadastro e Upload de Exames: 27/04/2026
-  - R2 — MVP (Busca, filtros, histórico): 25/05/2026
+  - R2_MVP — MVP (Busca, relatórios, histórico): 25/05/2026
   - R3 — Entrega do MVP (épico de IA concluído): 29/06/2026
   - Encerramento — RM6: 06/07/2026
 

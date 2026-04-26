@@ -55,7 +55,7 @@ nav:
       - Identidade Visual: "produto/identidade-visual.md"
       - Backlog do Produto: "produto/backlog-do-produto.md"
   - Planejamento:
-      - EAP: "projeto/EAP.md"
+      - EAP: "planejamento/EAP.md"
       - Roadmap do Produto: "planejamento/roadmap-do-produto.md"
       - Plano de Gestão de Riscos: "planejamento/plano_de_ger_riscos.md"
       - Plano de Custos: "planejamento/plano_de_custos.md"

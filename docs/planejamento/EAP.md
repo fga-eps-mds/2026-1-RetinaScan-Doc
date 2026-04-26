@@ -146,6 +146,6 @@ Alterações operacionais de sprint, status, responsáveis, issues ou PRs não d
 
 | Versão | Data       | Descrição            | Autor                                      | Revisor      |
 | :----: | ---------- | -------------------- | ------------------------------------------ | ------------ |
-| `1.0`  | 12/04/2026 | Criação do documento | [Eric Camargo](https://github.com/ericcs10) | [xxxx](xxxx) |
-| `1.1`  | 20/04/2026 | Alinhamento da EAP com milestones, sprints e entregas do roadmap do produto | [Zenilda Vieira](https://github.com/zenildavieira) | [xxxx](xxxx) |
-| `1.2`  | 20/04/2026 | Consolidação dos blocos 1.1, 1.2 e 1.3 dentro de 1.4 e 1.5 para remover redundâncias | [Zenilda Vieira](https://github.com/zenildavieira) | [xxxx](xxxx) |
+| `1.0`  | 12/04/2026 | Criação do documento | [Eric Camargo](https://github.com/ericcs10) | [Elias Oliveira](https://github.com/EliasOliver21) |
+| `1.1`  | 20/04/2026 | Alinhamento da EAP com milestones, sprints e entregas do roadmap do produto | [Zenilda Vieira](https://github.com/zenildavieira) | [Elias Oliveira](https://github.com/EliasOliver21) |
+| `1.2`  | 20/04/2026 | Consolidação dos blocos 1.1, 1.2 e 1.3 dentro de 1.4 e 1.5 para remover redundâncias | [Zenilda Vieira](https://github.com/zenildavieira) | [Elias Oliveira](https://github.com/EliasOliver21) |

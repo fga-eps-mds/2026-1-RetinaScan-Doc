@@ -65,7 +65,7 @@ nav:
       - Decisões do Projeto: "projeto/decisoes.md"
       - Modelos de Inteligência Artificial: "projeto/ia/modelos_de_ia.md"
       - Versionamento de Modelos: "projeto/ia/versionamento_modelos.md"
-      - Dashboard Analítico: "indicadores.md"
+      - Dashboard Analítico: indicadores.md
   - Guia de Contribuição:
       - Código de Conduta: "guia_de_contribuicao/codigo-de-conduta.md"
       - Política de Branches: "guia_de_contribuicao/politica-de-branches.md"

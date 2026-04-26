@@ -1,0 +1,40 @@
+name: Executar e Publicar Dashboard
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+
+      - name: Limpar outputs do notebook
+        run: |
+          jupyter nbconvert --clear-output --inplace analytics/dashboard.ipynb
+
+      - name: Executar Notebook
+        run: |
+          jupyter nbconvert --to notebook --execute analytics/dashboard.ipynb --inplace
+
+      - name: Converter para Markdown (Ocultando o Código)
+        run: |
+          jupyter nbconvert --to markdown analytics/dashboard.ipynb --no-input --output-dir docs/
+          mv docs/dashboard.md docs/indicadores.md
+
+      - name: Deploy MkDocs
+        run: |
+          mkdocs gh-deploy --force

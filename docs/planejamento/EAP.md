@@ -126,6 +126,7 @@ Objetivo: realizar ajustes finais após a apresentação e encerrar formalmente 
     ├── 1.4.3 Revisão Final dos Repositórios
     ├── 1.4.4 Registro de Lições Aprendidas
     └── 1.4.5 Encerramento Formal
+```
 
 ---
 

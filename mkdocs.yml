@@ -46,11 +46,8 @@ extra_javascript:
 nav:
   - Home: "index.md"
   - Metodologia: 
-      - Métodos: "projeto/metodologias.md"
-      - Ferramentas: "planejamento/ferramentas.md"
-      - Comunicação: "planejamento/comunicacao.md"
-      - Heatmap de Horários: "planejamento/heatmap-de-horarios.md"
-      - Tabela de Conhecimentos: "planejamento/tabela-de-conhecimentos.md"
+      - Metodologia Aplicada: "metodologia/metodologia-aplicada.md"
+      - Comunicação Operacional: "metodologia/comunicacao-operacional.md"
   - Produto:
       - Lean Inception: "produto/lean-inception.md"
       - Canvas MVP: "produto/canvas-mvp.md"

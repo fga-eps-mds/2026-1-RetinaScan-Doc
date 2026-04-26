@@ -9,3 +9,7 @@ ipykernel
 jupyter
 kaleido
 numpy
+openpyxl
+seaborn
+nbformat
+python-dateutil

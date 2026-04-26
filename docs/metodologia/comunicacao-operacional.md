@@ -12,18 +12,17 @@ Este documento consolida como a equipe operacionaliza a metodologia através de 
 
 | Ícone | Ferramenta | Finalidade | Tipo de Comunicação | Tempo de Resposta |
 |------|-----------|-----------|---|---|
-| <img src="../assets/imagens/ferramentas/logo_discord.png" alt="Logo do Discord" width="56px" /> | **Discord** | Reuniões síncronas, sprints, alinhamentos técnicos com time e PO | Síncrona/Assíncrona | Até 24h |
-| <img src="../assets/imagens/ferramentas/logo_Microsoft_Teams.png" alt="Logo do Microsoft Teams" width="56px" /> | **Microsoft Teams** | Reuniões formais, validação com PO, gravação de apresentações | Síncrona | Agendado |
-| <img src="../assets/imagens/ferramentas/logo_whatsapp.png" alt="Logo do WhatsApp" width="56px" /> | **WhatsApp** | Avisos rápidos, decisões operacionais, daily assíncrona | Assíncrona | Até 4h |
-| <img src="../assets/imagens/ferramentas/logo_zenhub.png" alt="Logo do ZenHub" width="56px" /> | **ZenHub** | Gestão do backlog, sprint planning, Kanban integrado ao GitHub | Rastreabilidade | - |
-| <img src="../assets/imagens/ferramentas/logo_github.png" alt="Logo do GitHub" width="56px" /> | **GitHub** | Versionamento, PRs com revisão de código, CI/CD | Rastreabilidade | - |
-| <img src="../assets/imagens/ferramentas/logo_vscode.png" alt="Logo do Visual Studio Code" width="56px" /> | **Visual Studio Code** | Ambiente principal de desenvolvimento, edição de código e integração com controle de versão | Desenvolvimento | - |
-| <img src="../assets/imagens/ferramentas/logo_googledocs.png" alt="Logo do Google Docs" width="56px" /> | **Google Docs** | Escrita colaborativa de atas, artefatos em construção | Colaboração tempo-real | - |
-| <img src="../assets/imagens/ferramentas/logo_google_planilhas.jpg" alt="Logo do Google Planilhas" width="56px" /> | **Google Planilhas** | Controle de EVM-Ágil, distribuição de atividades, heatmap | Dados compartilhados | - |
-| <img src="../assets/imagens/ferramentas/logo_figma.png" alt="Logo do Figma" width="32px" /> | **Figma** | Prototipação de telas, validação de fluxo de navegação | Colaboração visual | - |
-| <img src="../assets/imagens/ferramentas/logo_canva.png" alt="Logo do Canva" width="56px" /> | **Canva** | Materiais visuais para apresentações e comunicação | Design rápido | - |
-| <img src="../assets/imagens/ferramentas/logo_when2meet.png" alt="Logo do When2Meet" width="56px" /> | **When2Meet** | Levantamento de disponibilidade da equipe para reuniões e cerimônias | Planejamento de agenda | - |
-| <img src="../assets/imagens/ferramentas/logo_youtube.png" alt="Logo do YouTube" width="56px" /> | **YouTube** | Apoio ao aprendizado técnico por meio de tutoriais e referências | Assíncrona | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_discord.png?raw=true" alt="Logo do Discord" width="56px" /> | **Discord** | Reuniões síncronas, sprints, alinhamentos técnicos com time e PO | Síncrona/Assíncrona | Até 24h |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_Microsoft_Teams.png?raw=true" alt="Logo do Microsoft Teams" width="56px" /> | **Microsoft Teams** | Reuniões formais, validação com PO, gravação de apresentações | Síncrona | Agendado |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_whatsapp.png?raw=true" alt="Logo do WhatsApp" width="56px" /> | **WhatsApp** | Avisos rápidos, decisões operacionais, daily assíncrona | Assíncrona | Até 4h |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_zenhub.png?raw=true" alt="Logo do ZenHub" width="56px" /> | **ZenHub** | Gestão do backlog, sprint planning, Kanban integrado ao GitHub | Rastreabilidade | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_github.png?raw=true" alt="Logo do GitHub" width="56px" /> | **GitHub** | Versionamento, PRs com revisão de código, CI/CD | Rastreabilidade | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_vscode.png?raw=true" alt="Logo do Visual Studio Code" width="56px" /> | **Visual Studio Code** | Ambiente principal de desenvolvimento, edição de código e integração com controle de versão | Desenvolvimento | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_googledocs.png?raw=true" alt="Logo do Google Docs" width="56px" /> | **Google Docs** | Escrita colaborativa de atas, artefatos em construção | Colaboração tempo-real | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_google_planilhas.jpg?raw=true" alt="Logo do Google Planilhas" width="56px" /> | **Google Planilhas** | Controle de EVM-Ágil, distribuição de atividades, heatmap | Dados compartilhados | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_figma.png?raw=true" alt="Logo do Figma" width="32px" /> | **Figma** | Prototipação de telas, validação de fluxo de navegação | Colaboração visual | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_canva.png?raw=true" alt="Logo do Canva" width="56px" /> | **Canva** | Materiais visuais para apresentações e comunicação | Design rápido | - |
+| <img src="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/blob/main/docs/assets/imagens/ferramentas/logo_youtube.png?raw=true" alt="Logo do YouTube" width="56px" /> | **YouTube** | Apoio ao aprendizado técnico por meio de tutoriais e referências | Assíncrona | - |
 
 ---
 

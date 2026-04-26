@@ -4,3 +4,4 @@ venv
 ./site
 site
 .idea
+/tmp

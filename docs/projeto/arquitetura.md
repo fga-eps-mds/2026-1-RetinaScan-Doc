@@ -11,9 +11,13 @@ componentes de implantação e no fluxo de processamento das inferências.
 
 O escopo cobre:
 
-1. arquitetura de infraestrutura e comunicação entre serviços;
-2. visão de implementação baseada na estrutura de diretórios do projeto;
-3. decisões técnicas de persistência e processamento assíncrono.
+1. visão lógica da solução e comunicação entre componentes;
+2. visão de processos para execução das inferências;
+3. visão de implementação baseada na estrutura de diretórios do projeto;
+4. visão de implantação da infraestrutura em produção;
+5. visão de dados e persistência, substituindo a visão de casos de uso.
+
+O documento está organizado segundo o modelo 4+1 adaptado para o contexto do projeto: visão lógica, visão de processos, visão de implementação, visão de implantação e visão de dados.
 
 ### 1.3 Definições e Acrônimos
 
@@ -23,11 +27,9 @@ O escopo cobre:
 - IA: Inteligência Artificial.
 - Broker: serviço intermediário de mensageria para filas.
 
-## 2. Representação Geral da Arquitetura
+## 2. Visão Lógica
 
-![Arquitetura RetinaScan](../assets/imagens/arquitetura.jpeg)
-
-**Fonte:** Equipe RetinaScan, 2026.
+A visão lógica descreve os componentes principais da solução e seus papéis funcionais.
 
 A arquitetura está organizada em uma VPS com Docker Swarm e rede overlay,
 contendo os seguintes componentes:
@@ -41,7 +43,7 @@ contendo os seguintes componentes:
 7. PostgreSQL: persistência relacional dos dados de domínio.
 8. MinIO: armazenamento de objetos para imagens e artefatos.
 
-## 3. Tecnologias e Papéis
+### 2.1 Tecnologias e papéis
 
 | Tecnologia | Papel na arquitetura |
 | ---------- | -------------------- |
@@ -55,7 +57,20 @@ contendo os seguintes componentes:
 | MinIO | Armazenamento de imagens e arquivos |
 | Docker Swarm | Orquestração dos serviços na VPS |
 
-## 4. Fluxo Arquitetural
+### 2.2 Requisitos e restrições de arquitetura
+
+1. Todas as entradas externas devem passar pelo Nginx com HTTPS.
+2. O processamento de inferência deve ser assíncrono para evitar bloqueio de API.
+3. O backend principal deve permanecer desacoplado do runtime do modelo.
+4. Dados transacionais devem permanecer em banco relacional.
+5. Arquivos de imagem devem ser armazenados em serviço de objetos dedicado.
+6. A solução deve permitir evolução modular por serviço.
+
+## 3. Visão de Processos
+
+A visão de processos descreve o fluxo operacional entre serviços e filas de execução.
+
+### 3.1 Fluxo arquitetural
 
 1. O cliente envia requisições HTTPS para o Nginx.
 2. O Nginx direciona chamadas para o Backend Node.
@@ -65,16 +80,9 @@ contendo os seguintes componentes:
 6. O Celery Worker consome a fila, executa o modelo PyTorch e devolve resultado.
 7. Metadados são gravados no PostgreSQL e arquivos no MinIO.
 
-## 5. Requisitos e Restrições de Arquitetura
+## 4. Visão de Implementação
 
-1. Todas as entradas externas devem passar pelo Nginx com HTTPS.
-2. O processamento de inferência deve ser assíncrono para evitar bloqueio de API.
-3. O backend principal deve permanecer desacoplado do runtime do modelo.
-4. Dados transacionais devem permanecer em banco relacional.
-5. Arquivos de imagem devem ser armazenados em serviço de objetos dedicado.
-6. A solução deve permitir evolução modular por serviço.
-
-## 6. Visão de Implementação
+A visão de implementação descreve a organização interna do código e suas camadas.
 
 A implementação segue a estrutura abaixo:
 
@@ -99,7 +107,7 @@ src
    |- unit
 ```
 
-### 6.1 Camada api
+### 4.1 Camada api
 
 Responsável pela borda HTTP da aplicação:
 
@@ -107,7 +115,7 @@ Responsável pela borda HTTP da aplicação:
 2. middlewares: aplicam autenticação, autorização e validações transversais.
 3. routes: definem endpoints e composição de rotas.
 
-### 6.2 Camada infra
+### 4.2 Camada infra
 
 Responsável por detalhes técnicos de infraestrutura:
 
@@ -115,7 +123,7 @@ Responsável por detalhes técnicos de infraestrutura:
 2. database: conexão e acesso ao PostgreSQL.
 3. storage: integração com MinIO.
 
-### 6.3 Camada modules
+### 4.3 Camada modules
 
 Responsável pelo domínio de negócio, com separação por contexto:
 
@@ -123,12 +131,22 @@ Responsável pelo domínio de negócio, com separação por contexto:
 2. repositories: persistência orientada ao domínio.
 3. use-cases: casos de uso e orquestração da lógica de aplicação.
 
-### 6.4 Camada tests
+### 4.4 Camada tests
 
 1. unit: valida regras isoladas de domínio e aplicação.
 2. integration: valida integração entre API, banco e serviços.
 
-## 7. Dados e Persistência
+## 5. Visão de Implantação
+
+A visão de implantação descreve a topologia de execução em produção.
+
+![Arquitetura RetinaScan](../assets/imagens/arquitetura.jpeg)
+
+**Fonte:** Equipe RetinaScan, 2026.
+
+## 6. Visão de Dados
+
+No processo da disciplina, a visão de dados substitui a visão de casos de uso para representar o domínio e a persistência da solução.
 
 O domínio de dados da solução está detalhado em Modelagem do Banco de Dados,
 incluindo entidades como Usuario, Paciente, Atendimento, Exame, Imagem,
@@ -140,7 +158,7 @@ Nesta arquitetura:
 2. MinIO armazena artefatos binários (imagens e derivados).
 3. O vínculo entre registros do banco e arquivos no storage garante rastreio fim a fim.
 
-## 8. Decisões Arquiteturais
+## 7. Decisões Arquiteturais
 
 | Decisão | Justificativa | Impacto |
 | ------- | ------------- | ------- |
@@ -150,7 +168,7 @@ Nesta arquitetura:
 | Redis + Celery | Permite processamento assíncrono resiliente | Melhor tempo de resposta da API |
 | PostgreSQL + MinIO | Separação entre dado transacional e binário | Melhor desempenho e manutenção |
 
-## 9. Riscos e Mitigações
+## 8. Riscos e Mitigações
 
 1. Fila assíncrona congestionada em picos.
 Mitigação: escalar workers e aplicar monitoramento de fila.
@@ -166,3 +184,4 @@ Mitigação: validação transacional de vínculo entre banco e storage.
 | Versão | Data       | Descrição | Autor        | Revisor      |
 | :----: | ---------- | --------- | ------------ | ------------ |
 | `1.0`  | 12/04/2026 | Criação do documento de arquitetura | [Yan Luca Viana](https://github.com/yan-luca) |  |
+| `1.1`  | 26/04/2026 | Reestruturação do documento para o formato 4+1  (lógica, processos, implementação, implantação e dados) | [Zenilda Vieira](https://github.com/zenildavieira) e Github Copilot|  |

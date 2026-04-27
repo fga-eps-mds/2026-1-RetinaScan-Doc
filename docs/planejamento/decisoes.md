@@ -10,7 +10,8 @@ Este registro será incrementado ao final de cada ciclo de entrega, conectando a
 
 <details>
 <summary><b>Clique para ver os detalhes da Release 1</b></summary>
-<br>
+
+<div>
 
 ### 1.1. Aspectos Gerenciais
 
@@ -38,17 +39,19 @@ Nessa terceira sprint, desenvolvemos o **dashboard analítico** e ele nos ajudou
 
 <img width="498" alt="image" src="https://github.com/user-attachments/assets/17a571ba-a22f-4411-ba0d-d6ecf3449c13" />
 
----
+<hr>
 
-<img width="482" alt="image" src="https://github.com/user-attachments/assets/166021f6-5468-4ebb-b762-a9d23d4bdfe9" />
+<img width="482" src="https://github.com/user-attachments/assets/166021f6-5468-4ebb-b762-a9d23d4bdfe9" />
 
----
+<hr>
 
-<img width="488" alt="image" src="https://github.com/user-attachments/assets/c31feef3-095e-43c0-a8fe-25264b2e4764" />
+<img width="488" src="https://github.com/user-attachments/assets/c31feef3-095e-43c0-a8fe-25264b2e4764" />
 
----
+<hr>
 
 * **Expansão de Escopo:** Durante o desenvolvimento, notamos algumas lacunas na jornada de usuário e pretendemos aumentar o nosso escopo incluindo: **sistema de alertas/notificações** e **sistema de recuperação de senha**.
+
+</div>
 
 </details>
 

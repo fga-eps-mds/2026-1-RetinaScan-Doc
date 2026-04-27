@@ -9,7 +9,7 @@ Este registro será incrementado ao final de cada ciclo de entrega, conectando a
 ## 1. Ciclo da Release 1 (27/04/2026)
 
 <details>
-<summary><b>Clique para expandir os detalhes da Release 1</b></summary>
+<summary><b>Clique para ver os detalhes da Release 1</b></summary>
 
 ### 1.1. Aspectos Gerenciais
 
@@ -18,6 +18,8 @@ Este registro será incrementado ao final de cada ciclo de entrega, conectando a
 <img width="632" height="117" alt="image" src="https://github.com/user-attachments/assets/808f2577-3f3a-42fb-ab14-6f050f10002e" />
 
 **Comunicação e Daily:** Também foi notado durante esse período a dificuldade da comunicação em períodos em que o grupo não está reunido. Por isso, nas próximas sprints iremos aderir a um grupo de **"Daily"** para que, dessa forma, o grupo inteiro esteja ciente de quando uma atividade foi começada ou de quando um integrante esteja enfrentando dificuldades.
+
+**Riscos:** No gerenciamento de riscos, subestimamos muito o impacto que a "dependencia entre atividades" (R09) poderia ter na nossa sprint. Para os próximo ciclos de desenvolvimento iremos fazer ajustes no cronograma e no backlog, além de aumentar o impacto desse risco na nossa planilha de gerenciamento. 
 
 **Realocação de Esforço:** Com o final dessa etapa inicial de trabalho, o trabalho de documentação ficará mais leve. Dessa forma, colocaremos mais membros do grupo para trabalhar em questões de código.
 

@@ -61,6 +61,7 @@ nav:
       - Plano de Custos: "planejamento/plano_de_custos.md"
       - Gráfico de Gantt: "planejamento/grafico_de_gantt.md"
       - EVM: "planejamento/EVM.md"
+      - Decisões: "planejamento/decisoes.md"
       - Dashboard: indicadores.md
   - Projeto:
       - Arquitetura: "projeto/arquitetura.md"

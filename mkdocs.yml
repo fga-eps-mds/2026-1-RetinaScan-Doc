@@ -59,7 +59,7 @@ nav:
       - Roadmap do Produto: "planejamento/roadmap-do-produto.md"
       - Plano de Gestão de Riscos: "planejamento/plano_de_ger_riscos.md"
       - Plano de Custos: "planejamento/plano_de_custos.md"
-      - Dashboard Analítico: indicadores.md
+      - Dashboard: indicadores.md
   - Projeto:
       - Arquitetura: "projeto/arquitetura.md"
       - Modelagem do Banco de Dados: "projeto/modelagem-do-BD.md"

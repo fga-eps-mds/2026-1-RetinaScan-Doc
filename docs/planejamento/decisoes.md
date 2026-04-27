@@ -10,6 +10,7 @@ Este registro será incrementado ao final de cada ciclo de entrega, conectando a
 
 <details>
 <summary><b>Clique para ver os detalhes da Release 1</b></summary>
+<br>
 
 ### 1.1. Aspectos Gerenciais
 
@@ -27,7 +28,7 @@ Este registro será incrementado ao final de cada ciclo de entrega, conectando a
 
 **Densidade de Issues:** Como essas primeiras sprints foram sprints de organização (criação de issues), notamos que a nossa **densidade de issues ficou em 50%**. Acreditamos que esse comportamento se deve ao grande número de issues criadas para o desenvolvimento do backlog, porém iremos observar se esse número irá aumentar.
 
-<img width="644" height="538" alt="image" src="https://github.com/user-attachments/assets/697bbe90-8435-435e-9e63-a809894372e3" />
+<img width="322" alt="image" src="https://github.com/user-attachments/assets/697bbe90-8435-435e-9e63-a809894372e3" />
 
 ### 1.2. Decisões Técnicas
 
@@ -35,15 +36,15 @@ Nessa terceira sprint, desenvolvemos o **dashboard analítico** e ele nos ajudou
 
 * **Manutenibilidade e Comentários:** A equipe ficou muito focada em testes e em qualidade (com a ajuda do **Sonar**), mas esquecemos de focar na manutenibilidade do produto, conseguindo atingir uma **métrica 0 no quesito "comentários"**. O objetivo dessa nova sprint é aumentar em **30%** a quantidade de comentários nos dois repositórios (api/web). Dessa forma, esperamos não apenas aumentar a nota em manutenibilidade, mas aumentar a qualidade do nosso produto que atingiu a pontuação **0.8 de 1.0**.
 
-<img width="996" height="502" alt="image" src="https://github.com/user-attachments/assets/17a571ba-a22f-4411-ba0d-d6ecf3449c13" />
+<img width="498" alt="image" src="https://github.com/user-attachments/assets/17a571ba-a22f-4411-ba0d-d6ecf3449c13" />
 
 ---
 
-<img width="964" height="505" alt="image" src="https://github.com/user-attachments/assets/166021f6-5468-4ebb-b762-a9d23d4bdfe9" />
+<img width="482" alt="image" src="https://github.com/user-attachments/assets/166021f6-5468-4ebb-b762-a9d23d4bdfe9" />
 
 ---
 
-<img width="977" height="501" alt="image" src="https://github.com/user-attachments/assets/c31feef3-095e-43c0-a8fe-25264b2e4764" />
+<img width="488" alt="image" src="https://github.com/user-attachments/assets/c31feef3-095e-43c0-a8fe-25264b2e4764" />
 
 ---
 

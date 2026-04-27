@@ -59,6 +59,8 @@ nav:
       - Roadmap do Produto: "planejamento/roadmap-do-produto.md"
       - Plano de Gestão de Riscos: "planejamento/plano_de_ger_riscos.md"
       - Plano de Custos: "planejamento/plano_de_custos.md"
+      - Gráfico de Gantt: "planejamento/grafico_de_gantt.md"
+      - EVM: "planejamento/EVM.md"
       - Dashboard: indicadores.md
   - Projeto:
       - Arquitetura: "projeto/arquitetura.md"

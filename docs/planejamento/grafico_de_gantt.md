@@ -3,7 +3,7 @@
 Abaixo, a planilha de controle que mapeia a duração de cada Sprint e os marcos de entrega oficiais.
 
 <iframe width="100%" height="500"
-src="https://unbbr-my.sharepoint.com/:x:/r/personal/221037975_aluno_unb_br/_layouts/15/Doc.aspx?sourcedoc=%7B59B86746-1FAA-4E3A-9C39-16BA33088DFC%7D&file=Pasta%2022.xlsx&action=embedview&wdAllowInteractivity=True&wdDownloadButton=True">
+src="https://docs.google.com/spreadsheets/d/e/1SFXz6NGWQmrmhtxFJyr1ym671M2QX8tPrloJuFD_Wuw/pubhtml?gid=1408461646&single=true&widget=true&headers=false">
 </iframe>
 
 ---

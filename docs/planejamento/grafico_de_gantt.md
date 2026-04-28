@@ -2,7 +2,7 @@
 
 Abaixo, a planilha de controle que mapeia a duração de cada Sprint e os marcos de entrega oficiais.
 
-<iframe width="100%" height="500" src="https://unbbr-my.sharepoint.com/:x:/g/personal/221037975_aluno_unb_br/IQBGZ7hZqh86Tpw5FrozCI38Ab3Pe04pfubKXW3thZhCXok"></iframe>
+<iframe width="100%" height="500" src="https://unbbr-my.sharepoint.com/:x:/g/personal/221037975_aluno_unb_br/IQBGZ7hZqh86Tpw5FrozCI38Ab3Pe04pfubKXW3thZhCXok?e=9NyUXu&nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMH0"></iframe>
 
 ---
 

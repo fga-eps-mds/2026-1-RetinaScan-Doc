@@ -3,7 +3,7 @@
 Abaixo, a planilha de controle que mapeia a duração de cada Sprint e os marcos de entrega oficiais.
 
 <iframe width="100%" height="500"
-src="https://docs.google.com/spreadsheets/d/e/1SFXz6NGWQmrmhtxFJyr1ym671M2QX8tPrloJuFD_Wuw/pubhtml?gid=1408461646&single=true&widget=true&headers=false">
+src="https://docs.google.com/spreadsheets/d/1SFXz6NGWQmrmhtxFJyr1ym671M2QX8tPrloJuFD_Wuw/edit?usp=sharing">
 </iframe>
 
 ---

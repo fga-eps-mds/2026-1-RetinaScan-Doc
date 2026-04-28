@@ -6,7 +6,7 @@ Este documento detalha o acompanhamento do Valor Agregado (EVM) do projeto. O ob
 
 Abaixo, apresentamos a planilha de controle onde os dados de Story Points (SP) e Custo Real em Horas (CR) são consolidados. 
 
-<iframe width="100%" height="500" src="https://unbbr-my.sharepoint.com/:x:/r/personal/221037975_aluno_unb_br/_layouts/15/Doc.aspx?sourcedoc=%7B675EE983-88AF-4D1E-A3A3-387136772361%7D&file=Book%202.xlsx&action=embedview&wdAllowInteractivity=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+<iframe width="100%" height="500" src="https://docs.google.com/spreadsheets/d/1-KmcaBvAI1N2Zs6MmV2NKpG1vi9Zx7r5-po9scwXBUw/edit?usp=sharing"></iframe>
 
 ---
 

@@ -10,6 +10,14 @@ Este registro será incrementado ao final de cada ciclo de entrega, conectando a
 
 ### 1.1. Aspectos Gerenciais
 
+**Comunicação e Daily:** Também foi notado durante esse período a dificuldade da comunicação em períodos em que o grupo não está reunido. Por isso, nas próximas sprints iremos usar o grupo de **"Daily"** com mais frequência para que, dessa forma, o grupo inteiro esteja ciente de quando uma atividade foi começada ou de quando um integrante esteja enfrentando dificuldades.
+
+**Riscos:** No gerenciamento de riscos, subestimamos muito o impacto que a "dependencia entre atividades" (R09) poderia ter na nossa sprint. Para os próximo ciclos de desenvolvimento iremos fazer ajustes no cronograma e no backlog, além de aumentar o impacto desse risco na nossa planilha de gerenciamento. 
+
+**Realocação de Esforço:** Com o final dessa etapa inicial de trabalho, o trabalho de documentação ficará mais leve. Dessa forma, colocaremos mais membros do grupo para trabalhar em questões de código.
+
+**Gestão de Sprints no Zenhub:** Durante as sprints iniciais, a equipe teve algumas dificuldades com a nova plataforma **Zenhub** em mudar a configuração do tempo das sprints, o que levou a equipe a depender do rótulo dessas sprints para se organizar durante a rotina intensa de desenvolvimento em que não era possível parar o fornecimento de sprints. Agora que realizamos a release, pretendemos resetar o padrão automático de sprints do Zenhub para que possamos redefinir o tempo de sprint para uma semana ao invés de duas, como era da nossa vontade desde o início.
+
 **Densidade de Issues:** Como essas primeiras sprints foram sprints de organização (criação de issues), notamos que a nossa **densidade de issues ficou em 50%**. Acreditamos que esse comportamento se deve ao grande número de issues criadas para o desenvolvimento do backlog, porém iremos observar se esse número irá aumentar.
 
 <img width="322" alt="image" src="https://github.com/user-attachments/assets/697bbe90-8435-435e-9e63-a809894372e3" />

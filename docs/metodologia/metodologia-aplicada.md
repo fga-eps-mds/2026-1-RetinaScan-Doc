@@ -100,9 +100,9 @@ A combinação escolhida visa equilibrar organização, flexibilidade e qualidad
 |----------|---------|---------|---|
 | 1ª | 30/03-13/04 | RM1 (13/04) | [Gustavo Costa](https://github.com/cwtshh) e [Iderlan Junio](https://github.com/IderlanJ) |
 | 2ª | 13/04-27/04 | **R1 (27/04)** | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51)|
-| 3ª | 27/04-11/05 | RM2 (04/05), RM3 (11/05) | [Zenilda Vieira](https://github.com/ZenildaVieira) e [Cecília Quaresma](https://github.com/cqcoding) |
+| 3ª | 27/04-11/05 | RM2 (04/05), RM3 (11/05) | [Harleny Angélica](https://github.com/Angelicahaas) e [Cecília Quaresma](https://github.com/cqcoding) |
 | 4ª | 11/05-25/05 |**R2_MVP (25/05)** | [Elias Oliveira](https://github.com/EliasOliver21) e [Yan Luca](https://github.com/yan-luca) |
-| 5ª | 25/05-08/06 | RM4 (01/06) | [Eric Camargo](https://github.com/Ericcs10) e [Harleny Angélica](https://github.com/Angelicahaas) |
+| 5ª | 25/05-08/06 | RM4 (01/06) | [Eric Camargo](https://github.com/Ericcs10) |
 | 6ª | 08/06-22/06 | RM5 (15/06) | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
 | 7ª | 22/06-06/07 | **R3 (29/06)**, RM6 (06/07) | A definir |
 
@@ -237,4 +237,5 @@ Resultado
 | Versão | Data | Descrição | Autor | Revisor |
 |:----:|------|----------|-------|---------|
 | `1.0`  | 12/04/2026 | Criação do documento metodologias.md original                          | [Eric Camargo](https://github.com/ericcs10) | [Zenilda Vieira](https://github.com/zenildavieira) |
-| `2.0` | 26/04/2026 | Refatoração: Metodologia como APLICAÇÃO, não definições | [Zenilda Vieira](https://github.com/zenildavieira) e GitHub Copilot | |
+| `2.0` | 26/04/2026 | Refatoração: Metodologia como APLICAÇÃO, não definições | [Zenilda Vieira](https://github.com/zenildavieira) e GitHub Copilot | [Harleny Angélica](https://github.com/Angelicahaas) |
+| `3.0` | 26/04/2026 | Mundança na liderança rotativa | [Harleny Angélica](https://github.com/Angelicahaas)| |

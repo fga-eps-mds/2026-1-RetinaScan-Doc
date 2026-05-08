@@ -38,7 +38,7 @@
         "milestone": null,
         "comments": 0,
         "created_at": "2026-05-05T00:34:05Z",
-        "updated_at": "2026-05-05T00:34:05Z",
+        "updated_at": "2026-05-07T13:56:11Z",
         "closed_at": null,
         "assignee": null,
         "author_association": "MEMBER",
@@ -7053,7 +7053,29 @@
         "labels": [],
         "state": "open",
         "locked": false,
-        "assignees": [],
+        "assignees": [
+            {
+                "login": "Angelicahaas",
+                "id": 101184511,
+                "node_id": "U_kgDOBgfz_w",
+                "avatar_url": "https://avatars.githubusercontent.com/u/101184511?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/Angelicahaas",
+                "html_url": "https://github.com/Angelicahaas",
+                "followers_url": "https://api.github.com/users/Angelicahaas/followers",
+                "following_url": "https://api.github.com/users/Angelicahaas/following{/other_user}",
+                "gists_url": "https://api.github.com/users/Angelicahaas/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/Angelicahaas/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/Angelicahaas/subscriptions",
+                "organizations_url": "https://api.github.com/users/Angelicahaas/orgs",
+                "repos_url": "https://api.github.com/users/Angelicahaas/repos",
+                "events_url": "https://api.github.com/users/Angelicahaas/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/Angelicahaas/received_events",
+                "type": "User",
+                "user_view_type": "public",
+                "site_admin": false
+            }
+        ],
         "milestone": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/milestones/5",
             "html_url": "https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/milestone/5",
@@ -7094,9 +7116,29 @@
         },
         "comments": 0,
         "created_at": "2026-04-11T23:24:28Z",
-        "updated_at": "2026-05-05T00:25:13Z",
+        "updated_at": "2026-05-06T00:51:28Z",
         "closed_at": null,
-        "assignee": null,
+        "assignee": {
+            "login": "Angelicahaas",
+            "id": 101184511,
+            "node_id": "U_kgDOBgfz_w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/101184511?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Angelicahaas",
+            "html_url": "https://github.com/Angelicahaas",
+            "followers_url": "https://api.github.com/users/Angelicahaas/followers",
+            "following_url": "https://api.github.com/users/Angelicahaas/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Angelicahaas/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Angelicahaas/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Angelicahaas/subscriptions",
+            "organizations_url": "https://api.github.com/users/Angelicahaas/orgs",
+            "repos_url": "https://api.github.com/users/Angelicahaas/repos",
+            "events_url": "https://api.github.com/users/Angelicahaas/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Angelicahaas/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+        },
         "author_association": "MEMBER",
         "type": null,
         "active_lock_reason": null,
@@ -7112,7 +7154,7 @@
             "blocking": 0,
             "total_blocking": 0
         },
-        "body": "## Descri\u00e7\u00e3o\n\nEu, como m\u00e9dico, desejo aplicar filtros no hist\u00f3rico de exames para que eu possa refinar os resultados exibidos.\n\nNessa tarefa, o sistema deve permitir a filtragem de exames com base em crit\u00e9rios definidos.\n\n## Pr\u00e9-requisitos\n* fga-eps-mds/2026-1-RetinaScan-Web#26 \n\n## Crit\u00e9rios de aceita\u00e7\u00e3o t\u00e9cnicos\n\n- [ ] O sistema deve permitir aplicar filtros\n- [ ] O sistema deve atualizar a listagem conforme os filtros aplicados\n- [ ] O sistema deve permitir remover filtros aplicados\n- [ ] O sistema deve manter consist\u00eancia nos resultados exibidos\n\n\n",
+        "body": "## Pr\u00e9-requisitos\n* fga-eps-mds/2026-1-RetinaScan-Web#26 \n\n## Checklist T\u00e9cnico\n\n- [ ] O sistema deve permitir aplicar filtros de data e de prioridade\n- [ ] O sistema deve atualizar a listagem conforme os filtros aplicados\n- [ ] O sistema deve permitir remover filtros aplicados\n- [ ] O sistema deve manter consist\u00eancia nos resultados exibidos\n\n\n",
         "closed_by": null,
         "reactions": {
             "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/18/reactions",
@@ -7564,9 +7606,9 @@
         "type": null,
         "active_lock_reason": null,
         "sub_issues_summary": {
-            "total": 2,
+            "total": 3,
             "completed": 2,
-            "percent_completed": 100
+            "percent_completed": 66
         },
         "parent_issue_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/51",
         "issue_dependencies_summary": {

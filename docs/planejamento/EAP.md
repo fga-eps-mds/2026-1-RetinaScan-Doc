@@ -124,6 +124,10 @@ Este documento deve ser atualizado somente quando houver mudança estrutural no 
 
 Alterações operacionais de sprint, status, responsáveis, issues ou PRs não devem ser duplicadas neste documento.
 
+## Referências
+
+> [1] Project Management Institute. A Guide to the Project Management Body of Knowledge (PMBOK Guide). 7. ed. Newtown Square: PMI, 2021. Disponível em:https://www.pmi.org/pmbok-guide-standards/foundational/pmbok
+
 ## Histórico de Versão
 
 | Versão | Data       | Descrição            | Autor                                      | Revisor      |

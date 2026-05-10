@@ -61,6 +61,59 @@ Todos os cálculos apresentados anteriormente na Estimativa de Custos estão det
 
 Com isso, é possível ver que o custo total do projeto RetinaScan é de **R$68,710.19**.
 
+## Pressupostos e Ajustes Estruturais
+
+Este documento de custos é de natureza acadêmica descritiva e reflete uma estimativa teórica baseada em pressupostos iniciais. Ajustes estruturais significativos (como mudanças no número de integrantes ou ativação/desativação de componentes de infra) são registrados aqui.
+
+### Pressupostos Iniciais (Baseline)
+
+O cálculo total de **R$68,710.19** foi consolidado com as seguintes premissas:
+
+- **Período:** 17 semanas de desenvolvimento (1º semestre de 2026)
+- **Equipe:** 11 integrantes alocados à disciplina EPS
+- **Carga de trabalho:** 2 horas diárias por integrante (14 horas/semana)
+- **Infraestrutura:** VPS (Contabo) e hospedagem (Hostinger) ativas a partir da semana 1
+- **Computadores de IA:** 2 máquinas de alta performance consumindo energia durante desenvolvimento
+- **Cotação cambial:** USD 1,00 = R$ 5,00 (referência de 18/04/2026)
+
+Estes pressupostos refletem o planejamento inicial e servem como ponto de referência. Mudanças estruturais relevantes devem ser registradas na tabela abaixo para permitir rastreabilidade e justificativa de variações.
+
+### Tabela de Ajustes Estruturais
+
+| Data | Tipo de Ajuste | Descrição | Impacto (R$) | Novo Total (R$) | Responsável | Justificativa |
+| :---: | :---: | :--- | :---: | :---: | :---: | :--- |
+| 29/04/2026 | Saída de pessoal | Um integrante saiu do projeto | -5,632.29 | 63,077.90 | [Elias Oliveira](https://github.com/EliasOliver21) | Redução de 11 para 10 integrantes |
+
+### Notas Importantes
+
+- Este documento não realiza controle contábil real de desembolsos, pois trata-se de um projeto acadêmico.
+- O valor consolidado na planilha oficial (iframe) reflete o cálculo teórico em vigor.
+- Alterações estruturais que impactem significativamente a estimativa (>5%) devem ser documentadas na tabela acima e no histórico de versão.
+- Detalhes operacionais de sprints, responsáveis por tarefas e status de implementação devem ser mantidos no ZenHub/GitHub para evitar duplicação.
+
+## Responsáveis e Processo de Validação
+
+### Responsáveis
+
+| Função | Responsável | Contato |
+| :--- | :--- | :--- |
+| Manutenção da planilha de custos | [André Maia](https://github.com/andre-maia51) | Atualizar cálculos e evidências; reportar mudanças estruturais |
+| Aprovação de ajustes estruturais | [Vinícius Rispoli](https://github.com/...) (Product Owner) | Validar impacto de mudanças e aprovar novas estimativas |
+
+### Processo de Aprovação
+
+1. **Identificação de mudança:** um membro do time identifica uma mudança estrutural que impacta custos (ex: saída de integrante, ativação de infra).
+2. **Documentação:** responsável pela planilha documenta o impacto na tabela de ajustes estruturais com data, descrição e cálculo revisado.
+3. **Validação:** Product Owner revisa e aprova (ou questiona) a mudança em discussão assíncrona.
+4. **Registro:** após aprovação, a entrada é confirmada na tabela; o histórico de versão é atualizado com citação ao commit/issue que motivou a mudança.
+5. **Comunicação:** a revisão é comunicada ao time via Sprint Review ou documento atualizado no repositório.
+
+### Frequência de Revisão
+
+- **Semanalmente:** revisão planejada para identificar mudanças estruturais pendentes.
+- **Sob demanda:** quando houver evento significativo (saída/entrada de integrante, mudança de infraestrutura).
+- **Sprint Review:** resumo de ajustes consolidados e comunicação ao time.
+
 
 ## Referências Bibliográficas
 
@@ -84,5 +137,6 @@ Com isso, é possível ver que o custo total do projeto RetinaScan é de **R$68,
 
 | Versão | Data       | Descrição | Autor        | Revisor      |
 | :----: | ---------- | --------- | ------------ | ------------ |
-| `1.0`  | 18/04/2026 | Criação do documento de planejamento de riscos      | [André Maia](https://github.com/andre-maia51) | [xxxx](xxxx) |
-| `1.1`  | 21/04/2026 | Correção do custo de hora de trabalho e referências      | [André Maia](https://github.com/andre-maia51) | [xxxx](xxxx) |
+| `1.0`  | 18/04/2026 | Criação do documento de planejamento de riscos      | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |
+| `1.1`  | 21/04/2026 | Correção do custo de hora de trabalho e referências      | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |
+| `1.2`  | 10/05/2026 | Refatoração para pressupostos/ajustes estruturais, adição de responsáveis e processo de validação, referência PMBOK      | [Elias Oliveira](https://github.com/EliasOliver21) | [](https://github.com/...) |

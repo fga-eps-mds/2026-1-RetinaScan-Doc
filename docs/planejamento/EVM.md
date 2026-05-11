@@ -27,6 +27,10 @@ Até o momento, os dados revelam:
 
 A continuidade deste preenchimento permitirá que, nas próximas Sprints, possamos ajustar o planejamento para evitar sobrecarga e manter a qualidade das entregas.
 
+## 4. Referências
+
+> [1] Project Management Institute. A Guide to the Project Management Body of Knowledge (PMBOK Guide). 7. ed. Newtown Square: PMI, 2021. Disponível em: https://www.pmi.org/pmbok-guide-standards/foundational/pmbok
+
 ## Histórico de versões
 | Versão | Data | Modificação | Autor |
 |--|--|--|--|

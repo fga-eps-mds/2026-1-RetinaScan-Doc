@@ -1,11 +1,16 @@
+import os
+
 REPO_BASE_NAME = 'fga-eps-mds-2026-1-RetinaScan-'
 REPOS_LANGUAGE = {
     'Web': 'ts',
     'Api': 'py',
 }
 
-SONAR_FILES_PATH = '../analytics/raw-data/fga-eps-mds-*.json'
-ISSUES_FILES_PATH = '../analytics/raw-data/GitHub_API-Issues-*.json'
+_CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.dirname(os.path.dirname(_CURRENT_DIR))
+
+SONAR_FILES_PATH = os.path.join(_REPO_ROOT, 'analytics', 'raw-data', 'fga-eps-mds-*.json')
+ISSUES_FILES_PATH = os.path.join(_REPO_ROOT, 'analytics', 'raw-data', 'GitHub_API-Issues-*.json')
 
 SONAR_METRIC_LIST = [
     'files', 'functions', 'complexity', 'comment_lines_density', 

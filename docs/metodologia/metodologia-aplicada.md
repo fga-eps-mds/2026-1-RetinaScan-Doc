@@ -114,9 +114,9 @@ A combinação escolhida visa equilibrar organização, flexibilidade e qualidad
 | 2ª | 13/04-27/04 | **R1 (27/04)** | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51)|
 | 3ª | 27/04-11/05 | RM2 (04/05), RM3 (11/05) | [Harleny Angélica](https://github.com/Angelicahaas) e [Cecília Quaresma](https://github.com/cqcoding) |
 | 4ª | 11/05-25/05 |**R2_MVP (25/05)** | [Elias Oliveira](https://github.com/EliasOliver21) e [Yan Luca](https://github.com/yan-luca) |
-| 5ª | 25/05-08/06 | RM4 (01/06) | [Eric Camargo](https://github.com/Ericcs10) |
-| 6ª | 08/06-22/06 | RM5 (15/06) | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
-| 7ª | 22/06-06/07 | **R3 (29/06)**, RM6 (06/07) | A definir |
+| 5ª | 25/05-08/06 | RM4 (01/06) | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
+| 6ª | 08/06-22/06 | RM5 (15/06) | [Gustavo Costa](https://github.com/cwtshh) e [Iderlan Junio](https://github.com/IderlanJ) |
+| 7ª | 22/06-06/07 | **R3 (29/06)**, RM6 (06/07) | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51) |
 
 **Impacto:** Distribui responsabilidade, desenvolve liderança, reduz dependência de um indivíduo.
 

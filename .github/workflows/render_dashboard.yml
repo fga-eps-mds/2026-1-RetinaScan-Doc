@@ -5,6 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *'
 
 permissions:
   contents: write
@@ -15,6 +17,8 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
+        with:
+          ref: main 
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -26,14 +30,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Executar e Converter Notebook (Indicadores)
+      - name: Gerar Dados do ZenHub (Analytics JSON)
+        env:
+          ZENHUB_TOKEN: ${{ secrets.ZENHUB_TOKEN }}
         run: |
-          jupyter nbconvert --clear-output --inplace analytics/dashboard.ipynb
-          jupyter nbconvert --to notebook --execute analytics/dashboard.ipynb --inplace
-          mkdir -p docs
-          jupyter nbconvert --to markdown analytics/dashboard.ipynb --no-input --output-dir docs/
+          python generate_dashboard_data.py
+
+      - name: Commit e Push dos Dados e Anotações Atualizadas
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           
-          mv docs/dashboard.md docs/indicadores.md
+          git add zenhub_analytics.json analytics/raw-data/zenhub_analytics.json historico_analises/ || true
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "bot: dados do zenhub e históricos de análises atualizados [skip ci]"
+            git push origin main
+          else
+            echo "Nenhuma alteração de dados detectada."
+          fi
 
       - name: Deploy MkDocs (GitHub Pages)
         run: |

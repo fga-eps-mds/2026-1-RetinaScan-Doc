@@ -5,3 +5,7 @@ venv
 site
 .idea
 /tmp
+
+.env
+.env.local
+*.env

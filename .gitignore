@@ -9,3 +9,9 @@ site
 .env
 .env.local
 *.env
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/

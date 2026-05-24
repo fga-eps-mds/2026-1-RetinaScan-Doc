@@ -1,6 +1,5 @@
 # Canvas MVP — RetinaScan
 
-
 ## Personas Segmentadas
 
 - Dra Meridite Cinza — Médica da família: decisora clínica, precisa de triagem rápida e orientações claras;
@@ -9,8 +8,6 @@
 ## Proposta do MVP
 
 Implementar um fluxo web mínimo que permita captura/upload de retinografias, pré-processamento, inferência por modelo de IA e histórico pesquisável, com autenticação e gestão básica de usuários (ADMIN). Objetivo: reduzir tempo de triagem e priorizar casos suspeitos.
-
-
 
 ## Jornadas
 
@@ -62,21 +59,13 @@ Implementar um fluxo web mínimo que permita captura/upload de retinografias, pr
   - R3 — Entrega do MVP (épico de IA concluído): 29/06/2026
   - Encerramento — RM6: 06/07/2026
 
+## Board do Canvas MVP
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-RetinaScan-2026?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 
 ---
 
 Referências: `docs/produto/lean-inception.md`.
-
-## Imagens do Canvas MVP
-
-<div align="center">
-  <p><strong>Canvas MVP — versão 1</strong></p>
-  <img src="../assets/imagens/lean-inception/canvas-MVP-1.PNG" alt="Canvas MVP 1" style="max-width:90%"/>
-  <p><strong>Canvas MVP — versão 2</strong></p>
-  <img src="../assets/imagens/lean-inception/canvas-MVP-2.PNG" alt="Canvas MVP 2" style="max-width:90%"/>
-  <p><strong>Fonte:</strong> Elaboração própria, 2026.</p>
-</div>
-
 
 
 ## Histórico de Versão

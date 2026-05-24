@@ -62,7 +62,6 @@ nav:
       - Gráfico de Gantt: "planejamento/grafico_de_gantt.md"
       - EVM: "planejamento/EVM.md"
       - Decisões: "planejamento/decisoes.md"
-      - Dashboard: indicadores.md
   - Projeto:
       - Arquitetura: "projeto/arquitetura.md"
       - Modelagem do Banco de Dados: "projeto/modelagem-do-BD.md"

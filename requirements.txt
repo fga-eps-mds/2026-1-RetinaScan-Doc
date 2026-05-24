@@ -13,3 +13,7 @@ openpyxl
 seaborn
 nbformat
 python-dateutil
+streamlit
+plotly
+watchdog
+python-dotenv

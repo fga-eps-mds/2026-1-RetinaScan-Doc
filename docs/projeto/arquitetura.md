@@ -80,67 +80,134 @@ A visão de processos descreve o fluxo operacional entre serviços e filas de ex
 6. O Celery Worker consome a fila, executa o modelo PyTorch e devolve resultado.
 7. Metadados são gravados no PostgreSQL e arquivos no MinIO.
 
+### 3.2 Diagrama de Atividades
+
+![Diagram de Atividades](../assets/imagens/arquitetura/diagrama_atividades.png)
+**Fonte:** [André Maia](https://github.com/andre-maia51), 2026.
+
 ## 4. Visão de Implementação
-
+     
 A visão de implementação descreve a organização interna do código e suas camadas.
-
+   
 A implementação segue a estrutura abaixo:
 
-```text
-env
-src
-|- api
-|  |- controllers
-|  |- middlewares
-|  |- routes
-|- infra
-|  |- container
-|  |- database
-|  |- storage
-|- modules
-|  |- users
-|     |- domain
-|     |- repositories
-|     |- use-cases
-|- tests
-   |- integration
-   |- unit
-```
+``` 
+  env
+  src
+  |- api
+  |  |- docs
+  |  |- middlewares
+  |  |- routes
+  |  |- types
+  |- infra
+  |  |- auth
+  |  |- container
+  |  |- database
+  |  |  |- drizzle
+  |  |     |- migrations
+  |  |     |- repositories
+  |  |     |- schema
+  |  |- health
+  |  |- http
+  |  |- logger
+  |  |- queue
+  |  |  |- workers
+  |  |- shared
+  |  |- storage
+  |- lib
+  |- modules
+  |  |- exam
+  |  |  |- patient
+  |  |  |  |- use-cases
+  |  |  |- use-cases
+  |  |- users
+  |     |- domain
+  |     |- repositories
+  |     |- use-cases
+  |- shared
+  |  |- errors
+  |  |- services
+  |  |- validators
+  |- tests
+     |- helpers
+     |  |- builders
+     |- integration
+     |  |- repositories
+     |  |- setup
+     |- unit
+        |- api
+        |- infra
+        |- modules
+        |- shared
+``` 
 
 ### 4.1 Camada api
 
-Responsável pela borda HTTP da aplicação:
+Responsável pela borda HTTP da aplicação (Fastify):
 
-1. controllers: recebem requisições e orquestram casos de uso.
-2. middlewares: aplicam autenticação, autorização e validações transversais.
-3. routes: definem endpoints e composição de rotas.
+- `routes`: definem endpoints, validação via Zod e composição de rotas; cada rota orquestra parsing
+da requisição e chamada do caso de uso resolvido pelo container, sem regra de negócio.
+- `middlewares`: aplicam autenticação, autorização e o tratamento global de erros, traduzindo
+exceções de domínio para respostas HTTP.
+- `docs`: configuração do Swagger exposto em `/docs`.
+- `types`: tipos compartilhados da camada HTTP.
 
 ### 4.2 Camada infra
 
-Responsável por detalhes técnicos de infraestrutura:
+Responsável por detalhes técnicos de infraestrutura e pelas implementações concretas das interfaces declaradas no domínio:
 
-1. container: configuração de execução e empacotamento.
-2. database: conexão e acesso ao PostgreSQL.
-3. storage: integração com MinIO.
+- `auth`: implementação do serviço de autenticação sobre better-auth.
+- `container`: ponto único de injeção de dependências (awilix); registra repositórios e serviços
+como singletons e casos de uso como escopo por requisição.
+- `database`: conexão Drizzle ORM com PostgreSQL, organizada em schema (definição das tabelas),
+migrations (versionamento) e repositories (implementações concretas das interfaces dos módulos).
+- `health`: endpoint e verificações de saúde da aplicação.
+- `http`: cliente HTTP de saída (axios) para integrações com serviços externos.
+- `logger`: configuração do logger estruturado.
+- `queue`: fila assíncrona baseada em BullMQ, com workers responsáveis pelo consumo de jobs (ex.:
+notificações e integrações com o serviço de inferência).
+- `shared`: serviços transversais de criptografia e mascaramento de dados sensíveis.
+- `storage`: integração com MinIO para upload, download e geração de URLs assinadas.
 
 ### 4.3 Camada modules
 
-Responsável pelo domínio de negócio, com separação por contexto:
+Responsável pelo domínio de negócio, com separação por contexto delimitado. Cada módulo expõe entidades, interfaces de repositório e casos de uso; as implementações concretas dos repositórios vivem em `infra/database/drizzle/repositories`, preservando a inversão de dependência.
 
-1. domain: entidades, regras e contratos.
-2. repositories: persistência orientada ao domínio.
-3. use-cases: casos de uso e orquestração da lógica de aplicação.
+- `exam`: domínio principal da solução. Reúne entidades (Exame, Imagem, ResultadoIa, ExameIaError, Comorbidade), suas interfaces de repositório e os casos de uso de exame (upload de imagens, recuperação de detalhes, registro de erros de inferência, etc.). O submódulo patient agrupa os
+casos de uso relacionados a pacientes vinculados ao exame.
+- `users`: domínio de usuários, organizado em domain (entidades e contratos), repositories (interfaces) e use-cases (orquestração da lógica de aplicação).
 
-### 4.4 Camada tests
+### 4.4 Camada lib
+  
+Contém integrações de bibliotecas externas configuradas uma única vez para a aplicação, como a instância do better-auth consumida pelo AuthService.
 
-1. unit: valida regras isoladas de domínio e aplicação.
-2. integration: valida integração entre API, banco e serviços.
+### 4.5 Camada shared
+
+Reúne contratos e utilitários compartilhados entre módulos e camadas:
+
+- `errors`: hierarquia de erros de domínio (NotFoundError, UnauthorizedError, ConflictError, entre outros) traduzidos para HTTP pelo middleware global.
+- `services`: interfaces de serviços transversais (AuthService, StorageService, CryptographyService, MaskingService) consumidas pelos casos de uso e implementadas em infra/.
+- `validators`: validações reutilizáveis de domínio.
+
+### 4.6 Camada tests
+
+Estrutura os três níveis de teste praticados no projeto:
+
+- `unit`: valida regras isoladas de casos de uso, validações e utilitários, com mocks das interfaces de repositório e serviços. Organizada espelhando a estrutura de src/ (api, infra, modules,
+shared).
+- `integration`: valida a integração entre rotas, casos de uso, repositórios reais e serviços de infraestrutura.
+- `helpers/builders`: utiliza o design pattern de builder para construção de estado de teste
+
+### 4.7 Diagrama de Pacotes
+
+![Diagram de Pacotes](../assets/imagens/arquitetura/diagrama_pacotes.png)
+**Fonte:** [André Maia](https://github.com/andre-maia51), 2026.
 
 ## 5. Visão de Implantação
 
 A visão de implantação descreve a topologia de execução em produção.
 
-![Arquitetura RetinaScan](../assets/imagens/arquitetura.jpeg)
+![Arquitetura RetinaScan](../assets/imagens/arquitetura/aquitetura.png)
 
 **Fonte:** Equipe RetinaScan, 2026.
 
@@ -185,3 +252,4 @@ Mitigação: validação transacional de vínculo entre banco e storage.
 | :----: | ---------- | --------- | ------------ | ------------ |
 | `1.0`  | 12/04/2026 | Criação do documento de arquitetura | [Yan Luca Viana](https://github.com/yan-luca) |  |
 | `1.1`  | 26/04/2026 | Reestruturação do documento para o formato 4+1  (lógica, processos, implementação, implantação e dados) | [Zenilda Vieira](https://github.com/zenildavieira) e Github Copilot|  |
+| `1.2`  | 24/05/2026 | Refatoração da visão de implementação e adição de diagramas | [André Maia](https://github.com/andre-maia51)| [Natália De Morais](https://github.com/Natyrodrigues)  |

@@ -113,7 +113,7 @@ Os riscos foram divididos nessas seguintes categorias:
 
 ## Gráfico Impacto X Probabilidade de cada Risco por Sprint
 
-<iframe width="1200" height="850" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=530026924&amp;format=interactive"></iframe>
+<iframe width="1200" height="650" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=530026924&amp;format=interactive"></iframe>
 
 ## Gráfico Impacto X Probabilidade Total por Sprint
 

@@ -51,7 +51,7 @@ O deploy está sendo feito em uma VPS na plataforma Contabo [<a href=./#referenc
 
 ## Planilha de Custos
 
-Todos os cálculos apresentados anteriormente na Estimativa de Custos estão detalhados na planilha a seguir:
+A planilha de custos a seguir apresenta todos os cálculos realizados com base na Estimativa de Custos de forma detalhada, com as aplicações de ajustes estruturais que podem vir a ocorrer no decorrer do projeto.
 
 
 <iframe width="1080" height="600" src="https://docs.google.com/spreadsheets/d/1CG2dsizofQNfcRwA9jol768X84Ri4lx42UIi6piAg54/edit?usp=sharing"></iframe>
@@ -59,7 +59,6 @@ Todos os cálculos apresentados anteriormente na Estimativa de Custos estão det
 **Fonte:** [André Maia](https://github.com/andre-maia51), 2026. Disponível em: [custos_FCTE-FM-01](https://docs.google.com/spreadsheets/d/1CG2dsizofQNfcRwA9jol768X84Ri4lx42UIi6piAg54/edit?usp=sharing)
 
 
-Com isso, é possível ver que o custo total do projeto RetinaScan é de **R$68,710.19**.
 
 ## Pressupostos e Ajustes Estruturais
 
@@ -67,10 +66,10 @@ Este documento de custos é de natureza acadêmica descritiva e reflete uma esti
 
 ### Pressupostos Iniciais (Baseline)
 
-O cálculo total de **R$68,710.19** foi consolidado com as seguintes premissas:
+O cálculo total incial do RetinaScan apresenta um custo inicial de **R$68,710.19** que foi consolidado com as seguintes premissas:
 
 - **Período:** 17 semanas de desenvolvimento (1º semestre de 2026)
-- **Equipe:** 11 integrantes alocados à disciplina EPS
+- **Equipe:** 12 integrantes alocados à disciplina EPS
 - **Carga de trabalho:** 2 horas diárias por integrante (14 horas/semana)
 - **Infraestrutura:** VPS (Contabo) e hospedagem (Hostinger) ativas a partir da semana 1
 - **Computadores de IA:** 2 máquinas de alta performance consumindo energia durante desenvolvimento
@@ -82,7 +81,7 @@ Estes pressupostos refletem o planejamento inicial e servem como ponto de refer�
 
 | Data | Tipo de Ajuste | Descrição | Impacto (R$) | Novo Total (R$) | Responsável | Justificativa |
 | :---: | :---: | :--- | :---: | :---: | :---: | :--- |
-| 29/04/2026 | Saída de pessoal | Um integrante saiu do projeto | -5,632.29 | 63,077.90 | [Elias Oliveira](https://github.com/EliasOliver21) | Redução de 11 para 10 integrantes |
+| 29/04/2026 | Saída de pessoal | Um integrante saiu do projeto a partir da semana 8 | - R$3,277.34 | **R$65,432.85** | [Elias Oliveira](https://github.com/EliasOliver21) | Redução de 12 para 11 integrantes |
 
 ### Notas Importantes
 
@@ -139,4 +138,5 @@ Estes pressupostos refletem o planejamento inicial e servem como ponto de refer�
 | :----: | ---------- | --------- | ------------ | ------------ |
 | `1.0`  | 18/04/2026 | Criação do documento de planejamento de riscos      | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |
 | `1.1`  | 21/04/2026 | Correção do custo de hora de trabalho e referências      | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |
-| `1.2`  | 10/05/2026 | Refatoração para pressupostos/ajustes estruturais, adição de responsáveis e processo de validação, referência PMBOK      | [Elias Oliveira](https://github.com/EliasOliver21) | [](https://github.com/...) |
+| `1.2`  | 10/05/2026 | Refatoração para pressupostos/ajustes estruturais, adição de responsáveis e processo de validação, referência PMBOK      | [Elias Oliveira](https://github.com/EliasOliver21) | [André Maia](https://github.com/andre-maia51) |
+| `1.3`  | 15/05/2026 | Correção dos valores da seção de pressupostos e ajustes estruturais     | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |

@@ -25,7 +25,19 @@ A combinação escolhida visa equilibrar organização, flexibilidade e qualidad
 
 ---
 
-### 2. Scrum Adaptado: Estrutura Semanal
+### 2. Integração de Escopo, Cronograma e Custo
+
+**O que fazemos:** Aplicamos os preceitos do *Guia PMBOK®* para a gestão integrada das linhas de base do projeto. Em vez de usar um modelo preditivo em cascata, adaptamos a relação teórica fundamental do PMBOK entre escopo, tempo e custo para o nosso contexto ágil e acadêmico, utilizando a Estrutura Analítica do Projeto (EAP) como o núcleo de conexão das nossas entregas semanais.
+
+**Como na prática:**
+- **Escopo (Criar a EAP):** O PMBOK define a EAP como a decomposição hierárquica do escopo total para criar entregas e pacotes de trabalho gerenciáveis. Na prática, estruturamos o primeiro nível da nossa EAP em blocos paralelos (Gestão, Documentação, Dashboard e o Desenvolvimento de Software dividido nas Releases R1, R2_MVP, R3 e RM6). Os pacotes de trabalho no nível mais baixo formam as fronteiras do produto, isolando os detalhes operacionais.
+- **Tempo (Cronograma):** Segundo o guia, os pacotes de trabalho da EAP fornecem a base para a definição, o sequenciamento e a estimativa das atividades do cronograma. No RetinaScan, cada pacote de trabalho documentado na EAP é desdobrado em atividades menores (*issues*) no ZenHub/GitHub. Essas atividades são agendadas e puxadas para execução dentro dos nossos ciclos curtos (Sprints semanais), formando o modelo real do nosso cronograma.
+- **Custo e Controle (Gerenciamento do Valor Agregado):** O PMBOK determina que o Gerenciamento do Valor Agregado (GVA) integra a linha de base do escopo à do cronograma e à dos custos para formar a *Linha de Base da Medição do Desempenho*. Nós adaptamos esse conceito utilizando a nossa planilha de **EVM-Ágil**. Todo o "custo" (esforço alocado em pontos ou horas) das *issues* concluídas nas Sprints é somado e amarrado aos pacotes de trabalho da EAP, permitindo a medição contínua do Valor Planejado (VP), Custo Real (CR) e Valor Agregado (VA).
+- **Entrega:** Uma Linha de Base da Medição do Desempenho viva e rastreável, onde a EAP atua como mapa central conectando o que deve ser feito (escopo visual), quando será feito nas *issues* do ZenHub (cronograma) e a saúde do projeto pelo EVM-Ágil (custo/desempenho).
+
+**Impacto:** Essa adaptação garante que a flexibilidade da nossa execução diária (Scrum/Kanban) não perca o rigor gerencial. A equipe absorve requisitos iterativos, mas as decisões sobre prazos, produtividade e desvios continuam embasadas em métricas sólidas (GVA e EAP).
+
+### 3. Scrum Adaptado: Estrutura Semanal
 
 **O que fazemos:** Organizamos o desenvolvimento em ciclos de **1 semana (Sprint)**, com cerimônias no mesmo dia (segunda-feira, horário da aula).
 
@@ -71,7 +83,7 @@ A combinação escolhida visa equilibrar organização, flexibilidade e qualidad
 
 ---
 
-### 3. Kanban: Fluxo Visual de Trabalho
+### 4. Kanban: Fluxo Visual de Trabalho
 
 **O que fazemos:** Complementar Scrum com Kanban para visualizar e otimizar o fluxo em tempo real.
 
@@ -86,7 +98,7 @@ A combinação escolhida visa equilibrar organização, flexibilidade e qualidad
 
 ---
 
-### 4. Liderança Rotativa por Quinzena
+### 5. Liderança Rotativa por Quinzena
 
 **O que fazemos:** Ao invés de PM/Scrum Master fixo, rodamos liderança a cada 2 semanas.
 
@@ -102,9 +114,9 @@ A combinação escolhida visa equilibrar organização, flexibilidade e qualidad
 | 2ª | 13/04-27/04 | **R1 (27/04)** | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51)|
 | 3ª | 27/04-11/05 | RM2 (04/05), RM3 (11/05) | [Harleny Angélica](https://github.com/Angelicahaas) e [Cecília Quaresma](https://github.com/cqcoding) |
 | 4ª | 11/05-25/05 |**R2_MVP (25/05)** | [Elias Oliveira](https://github.com/EliasOliver21) e [Yan Luca](https://github.com/yan-luca) |
-| 5ª | 25/05-08/06 | RM4 (01/06) | [Eric Camargo](https://github.com/Ericcs10) |
-| 6ª | 08/06-22/06 | RM5 (15/06) | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
-| 7ª | 22/06-06/07 | **R3 (29/06)**, RM6 (06/07) | A definir |
+| 5ª | 25/05-08/06 | RM4 (01/06) | [Arthur Ribeiro](https://github.com/artrsousa1) e [Vinícius Roriz](https://github.com/vnsrz) |
+| 6ª | 08/06-22/06 | RM5 (15/06) | [Gustavo Costa](https://github.com/cwtshh) e [Iderlan Junio](https://github.com/IderlanJ) |
+| 7ª | 22/06-06/07 | **R3 (29/06)**, RM6 (06/07) | [Natália Rodrigues](https://github.com/Natyrodrigues) e [André Maia](https://github.com/andre-maia51) |
 
 **Impacto:** Distribui responsabilidade, desenvolve liderança, reduz dependência de um indivíduo.
 
@@ -239,3 +251,5 @@ Resultado
 | `1.0`  | 12/04/2026 | Criação do documento metodologias.md original                          | [Eric Camargo](https://github.com/ericcs10) | [Zenilda Vieira](https://github.com/zenildavieira) |
 | `2.0` | 26/04/2026 | Refatoração: Metodologia como APLICAÇÃO, não definições | [Zenilda Vieira](https://github.com/zenildavieira) e GitHub Copilot | [Harleny Angélica](https://github.com/Angelicahaas) |
 | `3.0` | 26/04/2026 | Mundança na liderança rotativa | [Harleny Angélica](https://github.com/Angelicahaas)| |
+| `4.0` | 24/05/2026 | Adição da seção sobre a aplicação do PMBOK | [André Maia](https://github.com/andre-maia51)| |
+

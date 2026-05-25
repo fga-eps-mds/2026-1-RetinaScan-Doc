@@ -39,6 +39,10 @@ Detalhes técnicos completos em [Arquitetura](docs/projeto/arquitetura.md).
   - [Política de Branches](docs/guia_de_contribuicao/politica-de-branches.md)
   - [Política de Commits](docs/guia_de_contribuicao/politica-de-commits.md)
 
+ ## Dashboard Analítico
+
+O dashboard analítico da equipe se encontra no link a seguir: [Dashboard Analítico](https://2026-1-retinascan-doc.streamlit.app/)
+
 ## Equipe
 
 A composição da equipe está disponível em [docs/index.md](docs/index.md).

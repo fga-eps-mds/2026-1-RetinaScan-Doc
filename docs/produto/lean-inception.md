@@ -4,8 +4,7 @@
 
 Este documento consolida os resultados da Lean Inception do produto RetinaScan, seguindo a ordem das dinâmicas executadas pela equipe.
 
-Board de referência:
-https://www.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-FCTE-FM-01-2026-1
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/KNKoP3IksUy3l2ifxMCK6R/Vis%C3%A3o-do-Produto-RetinaScan-2026?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 
 ## Visão do Produto
 

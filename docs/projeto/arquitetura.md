@@ -83,6 +83,7 @@ A visão de processos descreve o fluxo operacional entre serviços e filas de ex
 ### 3.2 Diagrama de Atividades
 
 ![Diagram de Atividades](../assets/imagens/arquitetura/diagrama_atividades.png)
+
 **Fonte:** [André Maia](https://github.com/andre-maia51), 2026.
 
 ## 4. Visão de Implementação
@@ -201,6 +202,7 @@ shared).
 ### 4.7 Diagrama de Pacotes
 
 ![Diagram de Pacotes](../assets/imagens/arquitetura/diagrama_pacotes.png)
+
 **Fonte:** [André Maia](https://github.com/andre-maia51), 2026.
 
 ## 5. Visão de Implantação

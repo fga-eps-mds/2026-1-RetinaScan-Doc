@@ -266,7 +266,7 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
   <div class="db-accent"></div>
   <div>
     <p class="db-title">Eixo Projeto — Agile EVM &amp; acompanhamento de releases</p>
-    <p class="db-sub">MeasureSoftGram 2026.1 · Release Major 1</p>
+    <p class="db-sub">Release Major 2</p>
   </div>
   <div class="db-badge">Sprint atual: __SPRINT_ATUAL_NOME__</div>
 </div>

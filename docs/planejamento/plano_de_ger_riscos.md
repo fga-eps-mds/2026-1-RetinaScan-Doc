@@ -111,6 +111,14 @@ Os riscos foram divididos nessas seguintes categorias:
 
 <iframe width="700" height="400" src="https://docs.google.com/spreadsheets/d/1J1RfDBU82Kv7Slv5gsDqED5zfFmU3313uKn5vsFBtzo/preview"></iframe>
 
+## Gráfico Impacto X Probabilidade de cada Risco por Sprint
+
+<iframe width="700" height="400" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=530026924&amp;format=interactive"></iframe>
+
+## Gráfico Impacto X Probabilidade Total por Sprint
+
+<iframe width="700" height="400" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=432665490&amp;format=interactive"></iframe>
+
 ## Conclusão
 
 A gestão de riscos é essencial no desenvolvimento de software para garantir que possíveis problemas sejam identificados e tratados antes de impactarem significativamente o projeto. Este Plano de Gestão de Riscos fornece uma abordagem sistemática para identificar, analisar e mitigar riscos, minimizando incertezas e maximizando as chances de sucesso. Com a categorização detalhada dos riscos, suas causas e consequências, e a elaboração de estratégias de prevenção e solução, o plano assegura que a equipe esteja preparada para enfrentar desafios e realizar entregas com qualidade e dentro do prazo. A revisão contínua e a participação ativa da equipe são fundamentais para adaptar-se a novos riscos e ajustar estratégias conforme necessário, garantindo uma trajetória segura e eficiente rumo à entrega de um produto final de alta qualidade.
@@ -123,3 +131,5 @@ A gestão de riscos é essencial no desenvolvimento de software para garantir qu
 | Versão | Data | Modificação | Autor |
 |--|--|--|--|
 |1.0|12/04/2026 | Criação do documento | Natália De Morais |
+|2.0|12/04/2026 | Adicionando Gráficos e explicação | Natália De Morais |
+

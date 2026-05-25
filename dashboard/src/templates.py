@@ -275,7 +275,7 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
   <div class="kpi"><div class="kpi-label">BAC (SP planejados)</div><div class="kpi-val" style="color:var(--color-text-primary)">__KPI_BAC__</div></div>
   <div class="kpi"><div class="kpi-label">EV acumulado</div><div class="kpi-val" style="color:#185FA5">__KPI_EV__</div></div>
   <div class="kpi"><div class="kpi-label">SPI</div><div class="kpi-val" style="color:#3B6D11">__KPI_SPI__</div></div>
-  <div class="kpi"><div class="kpi-label">Velocity (último sprint)</div><div class="kpi-val" style="color:#185FA5">__KPI_VELOCITY__ SP</div></div>
+  <div class="kpi"><div class="kpi-label">Velocity (sprint atual)</div><div class="kpi-val" style="color:#185FA5">__KPI_VELOCITY__ SP</div></div>
   <div class="kpi"><div class="kpi-label">Score ZenHub</div><div class="kpi-val" style="color:#639922">__KPI_SCORE__</div></div>
 </div>
 

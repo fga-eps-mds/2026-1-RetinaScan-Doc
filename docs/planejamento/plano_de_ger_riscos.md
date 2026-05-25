@@ -113,15 +113,19 @@ Os riscos foram divididos nessas seguintes categorias:
 
 ## Gráfico Impacto X Probabilidade de cada Risco por Sprint
 
-<iframe width="700" height="400" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=530026924&amp;format=interactive"></iframe>
+<iframe width="1000" height="1000" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=530026924&amp;format=interactive"></iframe>
 
 ## Gráfico Impacto X Probabilidade Total por Sprint
 
-<iframe width="700" height="400" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=432665490&amp;format=interactive"></iframe>
+<iframe width="750" height="500" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcx0WF_Lat5NBavHkjFcXvUssIwzXaiNEsM-MsNpvdrFtm-wJKzbDK7ath9_Eadlu75onUk8B5IGTV/pubchart?oid=432665490&amp;format=interactive"></iframe>
 
 ## Conclusão
 
-A gestão de riscos é essencial no desenvolvimento de software para garantir que possíveis problemas sejam identificados e tratados antes de impactarem significativamente o projeto. Este Plano de Gestão de Riscos fornece uma abordagem sistemática para identificar, analisar e mitigar riscos, minimizando incertezas e maximizando as chances de sucesso. Com a categorização detalhada dos riscos, suas causas e consequências, e a elaboração de estratégias de prevenção e solução, o plano assegura que a equipe esteja preparada para enfrentar desafios e realizar entregas com qualidade e dentro do prazo. A revisão contínua e a participação ativa da equipe são fundamentais para adaptar-se a novos riscos e ajustar estratégias conforme necessário, garantindo uma trajetória segura e eficiente rumo à entrega de um produto final de alta qualidade.
+No que tange aos riscos gerenciais, observa-se uma variação pontual no R02 (Saída de algum integrante do projeto) na Sprint 7. O aumento na probabilidade desse evento deve-se ao fato de esta ter sido a última semana letiva disponível para o trancamento de disciplinas na universidade, configurando um período crítico para a estabilidade da equipe. Em contrapartida, uma evolução positiva foi registrada a partir da Sprint 4 no risco externo R06 (Indisponibilidade do cliente ou de especialistas); a integração efetiva do Dr. Tiago nas reuniões semanais mitigou a probabilidade de falta de alinhamento, gerando um impacto positivo no andamento das atividades e facilitando o esclarecimento contínuo de requisitos.
+
+A oscilação do risco gerencial R04 (Alteração no escopo do projeto) reflete diretamente a dinâmica de descoberta do projeto e o relacionamento com o cliente. Na Sprint 5, a identificação da necessidade de manipulação do formato de imagem DICOM gerou uma elevação temporária no score do risco. Embora a equipe tenha projetado uma estabilização na Sprint 6, a proximidade do fechamento da Release 2 (R2) na Sprint 7 trouxe uma nova solicitação por parte dos clientes, o que alterou significativamente o planejamento inicial e elevou os índices de probabilidade e impacto.
+
+Por fim, os reflexos dessa mudança de escopo (R04) foram projetados para as sprints subsequentes, mantendo o nível de impacto fixado em seu grau máximo (5). Essa decisão gerencial preventiva baseia-se na necessidade de revalidar histórias de usuário e critérios de aceitação, o que consome tempo e esforço. Além disso, uma alteração estrutural nas etapas finais do ciclo de desenvolvimento impõe o risco de não cumprimento de algumas funcionalidades previamente planejadas. Portanto, manter o score elevado serve como um alerta estratégico para manter o time preparado e mitigar potenciais impactos em outras entregas do projeto.
 
 ## Referências
 

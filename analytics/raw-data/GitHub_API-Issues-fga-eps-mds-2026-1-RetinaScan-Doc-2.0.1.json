@@ -909,7 +909,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [],
@@ -953,7 +963,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-25T16:28:02Z",
-    "updated_at": "2026-05-25T18:38:16Z",
+    "updated_at": "2026-05-31T22:26:46Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "MEMBER",
@@ -1032,7 +1042,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [],
@@ -1076,7 +1096,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-25T16:26:57Z",
-    "updated_at": "2026-05-25T18:43:20Z",
+    "updated_at": "2026-05-31T22:27:02Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "MEMBER",
@@ -1698,6 +1718,15 @@
         "color": "a2eeef",
         "default": true,
         "description": "New feature or request"
+      },
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
       }
     ],
     "state": "closed",
@@ -1786,7 +1815,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-20T12:46:11Z",
-    "updated_at": "2026-05-27T19:51:18Z",
+    "updated_at": "2026-05-31T22:15:15Z",
     "closed_at": "2026-05-27T19:51:18Z",
     "assignee": {
       "login": "cwtshh",
@@ -2147,7 +2176,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [
@@ -2255,7 +2294,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-18T15:04:40Z",
-    "updated_at": "2026-05-25T19:43:14Z",
+    "updated_at": "2026-05-31T22:25:45Z",
     "closed_at": null,
     "assignee": {
       "login": "cwtshh",
@@ -2354,7 +2393,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "closed",
     "locked": false,
     "assignees": [
@@ -2462,7 +2511,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-18T14:50:24Z",
-    "updated_at": "2026-05-27T19:51:17Z",
+    "updated_at": "2026-05-31T22:15:50Z",
     "closed_at": "2026-05-27T19:51:17Z",
     "assignee": {
       "login": "Angelicahaas",
@@ -2992,7 +3041,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [
@@ -3100,7 +3159,7 @@
     },
     "comments": 0,
     "created_at": "2026-05-11T15:38:42Z",
-    "updated_at": "2026-05-25T19:42:56Z",
+    "updated_at": "2026-05-31T22:26:20Z",
     "closed_at": null,
     "assignee": {
       "login": "cqcoding",
@@ -8017,7 +8076,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "closed",
     "locked": false,
     "assignees": [
@@ -8146,7 +8215,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-19T17:01:38Z",
-    "updated_at": "2026-05-20T13:41:40Z",
+    "updated_at": "2026-05-31T22:16:51Z",
     "closed_at": "2026-05-20T13:41:40Z",
     "assignee": {
       "login": "Angelicahaas",
@@ -9883,7 +9952,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [],
@@ -9927,7 +10006,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-11T23:58:27Z",
-    "updated_at": "2026-05-25T19:44:37Z",
+    "updated_at": "2026-05-31T22:28:13Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "MEMBER",
@@ -10006,7 +10085,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [],
@@ -10050,7 +10139,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-11T23:55:28Z",
-    "updated_at": "2026-05-25T19:43:52Z",
+    "updated_at": "2026-05-31T22:28:04Z",
     "closed_at": null,
     "assignee": null,
     "author_association": "MEMBER",
@@ -11003,7 +11092,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "open",
     "locked": false,
     "assignees": [
@@ -11090,7 +11189,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-11T23:28:38Z",
-    "updated_at": "2026-05-25T01:19:56Z",
+    "updated_at": "2026-05-31T22:28:47Z",
     "closed_at": null,
     "assignee": {
       "login": "Natyrodrigues",
@@ -11365,7 +11464,17 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "labels": [],
+    "labels": [
+      {
+        "id": 11105923649,
+        "node_id": "LA_kwDOR2Tni88AAAAClfbyQQ",
+        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/US",
+        "name": "US",
+        "color": "cfb4f6",
+        "default": false,
+        "description": ""
+      }
+    ],
     "state": "closed",
     "locked": false,
     "assignees": [
@@ -11452,7 +11561,7 @@
     },
     "comments": 0,
     "created_at": "2026-04-11T23:21:23Z",
-    "updated_at": "2026-05-25T01:11:10Z",
+    "updated_at": "2026-05-31T22:20:13Z",
     "closed_at": "2026-05-18T01:33:10Z",
     "assignee": {
       "login": "IderlanJ",

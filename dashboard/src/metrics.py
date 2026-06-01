@@ -1,7 +1,7 @@
 # src/metrics.py
 import pandas as pd
 from .config import WEIGHT_CODE_QUALITY, WEIGHT_TESTING_STATUS, WEIGHT_PSC1, WEIGHT_PSC2, WEIGHT_PC1, WEIGHT_PC2
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 def get_files_sub_df(df: pd.DataFrame) -> pd.DataFrame:
     files_df = df[df['qualifier'] == 'FIL']
@@ -122,8 +122,9 @@ def build_aggregated_metrics_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     
     return metrics_df
 
+
 def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
-    """Calcula métricas dinâmicas de EVM com base no histórico real do ZenHub."""
+    """Calcula as métricas de AgileEVM estendendo o fechamento lógico das sprints até terça-feira."""
     def parse_iso(dt_str):
         if not dt_str: return datetime.min.replace(tzinfo=timezone.utc)
         return datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
@@ -131,23 +132,34 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
     sprints_lista = []
     for name, info in sprints_raw.items():
         if info.get("start_at") and info.get("end_at"):
+            pontos_concluidos = float(info.get("delivered_story_points", info.get("delivered_sp", 0)))
+            
+            start_at = parse_iso(info["start_at"])
+            end_at_original = parse_iso(info["end_at"])
+            
+            end_at_com_tolerancia = end_at_original + timedelta(days=2)
+            
             sprints_lista.append({
                 "name": name,
-                "start_at": parse_iso(info["start_at"]),
-                "end_at": parse_iso(info["end_at"]),
-                "completed_sp": float(info.get("completed_issues_count", 0)), 
-                "delivered_sp": float(info.get("delivered_story_points", info.get("delivered_sp", 0))),
-                "state": info.get("state", "CLOSED").upper()
+                "start_at": start_at,
+                "end_at_original": end_at_original,
+                "end_at": end_at_com_tolerancia, 
+                "pc_n": pontos_concluidos,         
+                "delivered_sp": pontos_concluidos, 
+                "pa_n": float(info.get("points_added", 0)), 
+                "state_raw": info.get("state", "CLOSED").upper()
             })
             
     sprints_lista = sorted(sprints_lista, key=lambda x: x["start_at"])
     
-    bac = sum(s["delivered_sp"] for s in sprints_lista)
-    if bac == 0: bac = 60.0 
+
+    PS = 5.0      # Sprints planejadas para a R3
+    PRP_0 = 79.0   # US planejadas para a R3
     
+    bac = PRP_0  
     hoje = datetime.now(timezone.utc)
     
-    burnup_labels = ["S0"]
+    burnup_labels = ["S7"]
     burnup_pv = [0]
     burnup_ev = [0]
     burnup_ideal = [0]
@@ -159,56 +171,78 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
     spi_labels = []
     spi_data = []
     
-    acumulado_pv = 0
-    acumulado_ev = 0
-    sprints_concluidas_count = 0
     sprint_atual_nome = "Não identificada"
     ultima_velocity = 0.0
+    spi_atual = 1.0
 
-    passo_ideal = bac / len(sprints_lista) if sprints_lista else 15.0
+    total_pa = 0.0  
+    total_rpc = 0.0 
 
     for idx, s in enumerate(sprints_lista):
-        s_label = f"S{idx+1}"
+        n = idx + 1  
+        num_sprint_real = 8 + idx
+        s_label = f"S{num_sprint_real}" 
         
-        if s["state"] == "ACTIVE" or (s["start_at"] <= hoje <= s["end_at"]):
+        is_sprint_ativa = s["start_at"] <= hoje <= s["end_at"]
+        
+        if is_sprint_ativa:
+            s["state"] = "ACTIVE"
             sprint_atual_nome = s["name"]
+        elif hoje > s["end_at"]:
+            s["state"] = "CLOSED"
+        else:
+            s["state"] = "FUTURE"
 
+        due_formatado = s["end_at"].strftime("%d/%m")
+        
         start_txt = s["start_at"].strftime("%b%d")
-        end_txt = s["end_at"].strftime("%b%d")
-        burnup_labels.append(f"{s_label}\\n{start_txt}")
-        velocity_labels.append(f"{start_txt}\\n{end_txt}")
+        end_txt = s["end_at_original"].strftime("%b%d") 
         
-        acumulado_pv += s["delivered_sp"] if s["delivered_sp"] > 0 else passo_ideal
-        burnup_pv.append(round(acumulado_pv, 1))
+        burnup_labels.append(f"{s_label}\n{start_txt}")
+        velocity_labels.append(f"{start_txt}\n{end_txt}")
         
-        burnup_ideal.append(round((idx + 1) * passo_ideal, 1))
+        # --- CÁLCULO DO AGILE EVM ---
+        total_pa += s["pa_n"]
+        prp_n = PRP_0 + total_pa
         
-        if s["start_at"] <= hoje or s["state"] == "ACTIVE":
-            acumulado_ev += s["delivered_sp"]
-            burnup_ev.append(round(acumulado_ev, 1))
+        ppc = n / PS                                
+        burnup_ideal.append(round(ppc * bac, 1))
+        
+        pv_oficial = ppc * bac
+        burnup_pv.append(round(pv_oficial, 1))
+        
+        if hoje >= s["start_at"]:
+            total_rpc += s["pc_n"]
             
-            velocity_data.append(s["delivered_sp"])
+            apc_n = total_rpc / prp_n if prp_n > 0 else 0.0
+            ev_oficial = apc_n * bac
+            burnup_ev.append(round(ev_oficial, 1))
+            
+            velocity_data.append(s["pc_n"])
             velocity_colors.append("#185FA5") 
             
-            spi = acumulado_ev / acumulado_pv if acumulado_pv > 0 else 1.0
+            spi = ev_oficial / pv_oficial if pv_oficial > 0 else 1.0
             spi_data.append(round(spi, 2))
             spi_labels.append(s_label)
             
             if s["state"] != "ACTIVE":
-                ultima_velocity = s["delivered_sp"]
+                ultima_velocity = s["pc_n"]
         else:
             burnup_ev.append(None)
             velocity_data.append(0)
             velocity_colors.append("#D3D1C7") 
 
-    spi_atual = spi_data[-1] if spi_data else 1.0
+    if spi_data:
+        spi_atual = spi_data[-1]
+
     score_zenhub = int(spi_atual * 100)
     if score_zenhub > 100: score_zenhub = 100
+    if score_zenhub < 0: score_zenhub = 0
 
     return {
         "sprint_atual_nome": sprint_atual_nome,
         "bac": round(bac, 1),
-        "ev_acumulado": round(acumulado_ev, 1),
+        "ev_acumulado": round(burnup_ev[len(spi_data)] if spi_data else 0.0, 1),
         "spi_atual": spi_atual,
         "ultima_velocity": ultima_velocity,
         "score_zenhub": score_zenhub,

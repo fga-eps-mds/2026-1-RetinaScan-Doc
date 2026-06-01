@@ -217,6 +217,7 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
     </html>
     """
 
+
 PROJECT_EVM_TEMPLATE = """
 <!DOCTYPE html>
 <html>
@@ -242,15 +243,22 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
 .kpi { background:var(--color-background-secondary); border-radius:4px; padding:12px 14px; border: 0.5px solid var(--color-border-tertiary); }
 .kpi-label { font-size:11px; color:var(--color-text-secondary); margin-bottom:4px; }
 .kpi-val { font-size:22px; font-weight:500; }
-.card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:8px; padding:1rem 1.25rem; }
+
+.card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:8px; padding:1rem 1.25rem; margin-bottom: 1rem; }
 .card-title { font-size:13px; font-weight:500; color:var(--color-text-primary); margin:0 0 10px; }
 .legend { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:8px; font-size:11px; color:var(--color-text-secondary); }
 .legend span { display:flex; align-items:center; gap:5px; }
 .legend b { width:20px; height:3px; display:inline-block; border-radius:2px; }
+
 .sprint-table { width:100%; font-size:12px; border-collapse:collapse; }
-.sprint-table th { text-align:left; font-weight:500; color:var(--color-text-secondary); padding:4px 8px 6px; border-bottom:0.5px solid var(--color-border-tertiary); font-size:11px; }
-.sprint-table td { padding:5px 8px; border-bottom:0.5px solid var(--color-border-tertiary); color:var(--color-text-primary); }
+.sprint-table th { text-align:left; font-weight:500; color:var(--color-text-secondary); padding:6px 8px; border-bottom:1px solid var(--color-border-tertiary); font-size:11px; background: var(--color-background-secondary); }
+.sprint-table td { padding:6px 8px; border-bottom:0.5px solid var(--color-border-secondary); color:var(--color-text-primary); }
 .sprint-table tr:last-child td { border-bottom:none; }
+
+.formula-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 11.5px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 12px; border-radius: 6px; border: 0.5px solid var(--color-border-tertiary); margin-bottom: 0.5rem; }
+.formula-item { padding: 4px; line-height: 1.4; }
+.formula-item code { background: #eef1f6; padding: 2px 5px; border-radius: 3px; font-family: monospace; color: #0c447c; font-weight: bold; font-size: 11px; }
+
 .pill { font-size:10px; padding:2px 7px; border-radius:10px; font-weight:500; }
 .pill-ok { background:#EAF3DE; color:#27500A; }
 .pill-warn { background:#FAEEDA; color:#633806; }
@@ -266,7 +274,7 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
   <div class="db-accent"></div>
   <div>
     <p class="db-title">Eixo Projeto — Agile EVM &amp; acompanhamento de releases</p>
-    <p class="db-sub">Release Major 2</p>
+    <p class="db-sub">Release Major 3</p>
   </div>
   <div class="db-badge">Sprint atual: __SPRINT_ATUAL_NOME__</div>
 </div>
@@ -275,8 +283,48 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
   <div class="kpi"><div class="kpi-label">BAC (SP planejados)</div><div class="kpi-val" style="color:var(--color-text-primary)">__KPI_BAC__</div></div>
   <div class="kpi"><div class="kpi-label">EV acumulado</div><div class="kpi-val" style="color:#185FA5">__KPI_EV__</div></div>
   <div class="kpi"><div class="kpi-label">SPI</div><div class="kpi-val" style="color:#3B6D11">__KPI_SPI__</div></div>
-  <div class="kpi"><div class="kpi-label">Velocity (sprint atual)</div><div class="kpi-val" style="color:#185FA5">__KPI_VELOCITY__ SP</div></div>
+  <div class="kpi"><div class="kpi-label">Velocity (última sprint)</div><div class="kpi-val" style="color:#185FA5">__KPI_VELOCITY__ SP</div></div>
   <div class="kpi"><div class="kpi-label">Score ZenHub</div><div class="kpi-val" style="color:#639922">__KPI_SCORE__</div></div>
+</div>
+
+<div class="card">
+  <p class="card-title" style="margin-bottom: 8px;">Memória de Cálculo &amp; Fórmulas Utilizadas</p>
+  <div class="formula-box">
+    <div class="formula-item">
+      <code>BAC</code> <b>Budget at Completion</b> = Total de Story Points planejados para o escopo inicial da Release 3.
+    </div>
+    <div class="formula-item">
+      <code>PV</code> <b>Planned Value</b> = <i>BAC</i> &times; <i>PPC</i> <br>
+      <small style="color:var(--color-text-tertiary)">(Onde Progresso Planejado <i>PPC</i> = Sprint Atual / Total de Sprints)</small>
+    </div>
+    <div class="formula-item">
+      <code>EV</code> <b>Earned Value</b> = <i>BAC</i> &times; <i>APC</i> <br>
+      <small style="color:var(--color-text-tertiary)">(Onde Progresso Real <i>APC</i> = Pontos Entregues Acumulados / Escopo Atualizado)</small>
+    </div>
+    <div class="formula-item">
+      <code>SPI</code> <b>Schedule Performance Index</b> = <i>EV</i> / <i>PV</i> <br>
+      <small style="color:var(--color-text-tertiary)">(Mede a eficiência do cronograma. Valores &ge; 1.0 indicam adiantamento)</small>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="card-title">Tabela de Rastreabilidade do Agile EVM</p>
+  <table class="sprint-table" style="margin-top: 5px;">
+    <thead>
+      <tr>
+        <th>Sprint</th>
+        <th>Planejado (PPC &rarr; PV)</th>
+        <th>Entregue Acumulado (APC &rarr; EV)</th>
+        <th>Ideal Teórico</th>
+        <th>Velocity (Sprint)</th>
+        <th>SPI (Eficiência)</th>
+      </tr>
+    </thead>
+    <tbody>
+      __TABELA_DADOS_GRAFICO_LINHAS__
+    </tbody>
+  </table>
 </div>
 
 <div style="display:grid; grid-template-columns:3fr 2fr; gap:14px; margin-bottom:1rem;">
@@ -285,7 +333,7 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
     <div class="legend">
       <span><b style="background:#B5D4F4"></b> PV (planejado)</span>
       <span><b style="background:#185FA5"></b> EV (realizado)</span>
-      <span><b style="background:#D85A30; border-top:2px dashed #D85A30; height:0"></b> Ideal</span>
+      <span><b style="background:#D3D1C7; border-top:2px dashed #D3D1C7; height:0"></b> Ideal</span>
     </div>
     <div style="position:relative;width:100%;height:190px;">
       <canvas id="burnupC" role="img"></canvas>
@@ -304,7 +352,7 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
     <p class="card-title">SPI por sprint</p>
     <div class="legend">
       <span><b style="background:#185FA5"></b> SPI</span>
-      <span><b style="background:#D3D1C7; border-top:2px dashed #D3D1C7; height:0"></b> Referência 1.0</span>
+      <span><b style="background:#B4B2A9; border-top:2px dashed #B4B2A9; height:0"></b> Referência 1.0</span>
     </div>
     <div style="position:relative;width:100%;height:150px;">
       <canvas id="spiC" role="img"></canvas>
@@ -333,8 +381,8 @@ new Chart(document.getElementById('burnupC'), {
   data:{
     labels: __BURNUP_LABELS__,
     datasets:[
-      { label:'PV', data: __BURNUP_PV__, borderColor:'#B5D4F4', backgroundColor:'rgba(181,212,244,0.15)', borderWidth:2, pointRadius:3, pointBackgroundColor:'#B5D4F4', tension:0.1 },
-      { label:'EV', data: __BURNUP_EV__, borderColor:'#185FA5', backgroundColor:'rgba(24,95,165,0.08)', borderWidth:2.5, pointRadius:4, pointBackgroundColor:'#185FA5', tension:0.1 },
+      { label:'PV', data: __BURNUP_PV__, borderColor:'#B5D4F4', backgroundColor:'rgba(181,212,244,0.15)', borderWidth:2, pointRadius:4, pointBackgroundColor:'#B5D4F4', tension:0.1 },
+      { label:'EV', data: __BURNUP_EV__, borderColor:'#185FA5', backgroundColor:'rgba(24,95,165,0.08)', borderWidth:2.5, pointRadius:5, pointBackgroundColor:'#185FA5', tension:0.1, spanGaps: true },
       { label:'Ideal', data: __BURNUP_IDEAL__, borderColor:'#D3D1C7', borderWidth:1.5, borderDash:[5,4], pointRadius:0, fill:false, tension:0 }
     ]
   },

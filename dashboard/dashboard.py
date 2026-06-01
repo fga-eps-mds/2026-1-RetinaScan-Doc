@@ -95,6 +95,55 @@ def render_project_metrics_tab():
 
     evm = calculate_scrum_evm_metrics(sprints_raw)
     
+    linhas_dados_grafico = ""
+    
+    PS = 5.0  # Total de sprints planejadas para a R3
+    
+    for i in range(1, len(evm["burnup_labels"])):
+        # Pega o nome limpo da Sprint (ex: "S8")
+        s_nome = evm["burnup_labels"][i].split('\n')[0]  
+        
+        # n indica a sequência da sprint na Release 3 (1 para S8, 2 para S9...)
+        n = i  
+        
+        ppc_porcentagem = (n / PS) * 100
+        ppc_str = f"{ppc_porcentagem:.1f}%"
+        
+        pv_val = evm["burnup_pv"][i]
+        ideal_val = evm["burnup_ideal"][i]
+        
+        idx_arrays = i - 1
+        
+        if evm["burnup_ev"][i] is not None:
+            ev_val = f"{evm['burnup_ev'][i]} SP"
+            
+            apc_porcentagem = (evm["burnup_ev"][i] / evm["bac"]) * 100
+            apc_str = f"{apc_porcentagem:.1f}%"
+        else:
+            ev_val = "-"
+            apc_str = "-"
+            
+        if idx_arrays < len(evm["velocity_data"]):
+            vel_val = f"{evm['velocity_data'][idx_arrays]} SP"
+        else:
+            vel_val = "-"
+            
+        if idx_arrays < len(evm["spi_data"]):
+            spi_val = f"{evm['spi_data'][idx_arrays]:.2f}"
+        else:
+            spi_val = "-"
+
+        linhas_dados_grafico += f"""
+        <tr>
+            <td><b>{s_nome}</b></td>
+            <td><span style="color:#6c757d;">{ppc_str}</span> &rarr; <b>{pv_val} SP</b></td>
+            <td><span style="color:#6c757d;">{apc_str}</span> &rarr; <b>{ev_val}</b></td>
+            <td>{ideal_val} SP</td>
+            <td>{vel_val}</td>
+            <td><b>{spi_val}</b></td>
+        </tr>
+        """
+
     linhas_html = ""
     hoje = datetime.now(timezone.utc)
     
@@ -124,6 +173,8 @@ def render_project_metrics_tab():
         .replace("__KPI_VELOCITY__", str(int(evm["ultima_velocity"])))
         .replace("__KPI_SCORE__", str(evm["score_zenhub"]))
         
+        .replace("__TABELA_DADOS_GRAFICO_LINHAS__", linhas_dados_grafico)
+        
         .replace("__BURNUP_LABELS__", json.dumps(evm["burnup_labels"]))
         .replace("__BURNUP_PV__", json.dumps(evm["burnup_pv"]))
         .replace("__BURNUP_EV__", json.dumps(evm["burnup_ev"]))
@@ -140,7 +191,7 @@ def render_project_metrics_tab():
         .replace("__TABELA_LINHAS__", linhas_html)
     )
 
-    st.components.v1.html(html_pronto, height=580, scrolling=True)
+    st.components.v1.html(html_pronto, height=850, scrolling=True)
 
     st.markdown("---")
     st.markdown("### 📝 Parecer de Gestão do Cronograma (Agile EVM)")
@@ -177,15 +228,21 @@ def render_project_metrics_tab():
     st.subheader("ℹ️ Memória de Cálculo e Critérios do Agile EVM")
     st.markdown(
         """
-        As métricas exibidas no painel acima são computadas de forma dinâmica e automatizada pelo ecossistema do dashboard, 
-        extraindo o histórico de Sprints e Marcos em tempo real:
+        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço:
 
-        * **BAC (Budget at Completion):** É o escopo total estimado para a release. Definido matematicamente pela somatória de todos os *Story Points* ($SP$) planejados ao longo do cronograma:
-          $$BAC = \sum (SP_{Sprints})$$
-        * **PV (Planned Value):** Representa o volume de pontos acumulados que a equipe deveria ter entregue linearmente até a data atual.
-        * **EV (Earned Value):** Volume real acumulado de escopo entregue pelo time (Sprints finalizadas ou sob execução).
-        * **SPI (Schedule Performance Index):** Eficiência do cronograma ($SPI = EV / PV$).
-        * **Milestones / Sprints — Status:** Cronograma unificado que mescla as iterações de desenvolvimento (Sprints) e as entregas de valor (Milestones), calculando dias de atraso dinamicamente caso um marco expire sem conclusão.
+        * **BAC (Budget at Completion):** Orçamento total planejado de pontos da Release, definido pelo escopo inicial de pontos planejados ($PRP_0$):
+        $$BAC = PRP_0$$
+        * **PRP_n (Planned Release Points):** Escopo total atualizado da release na Sprint $n$, considerando os pontos adicionados ou removidos ($PA$) até a iteração:
+        $$PRP_n = PRP_0 + \sum_{k=1}^{n} PA_k$$
+        * **PPC (Planned Percent Complete):** Proporção do tempo planejado decorrido até o sprint $n$ sobre o total de sprints planejados ($PS$):
+        $$PPC = \\frac{n}{PS}$$
+        * **APC (Actual Percent Complete):** Proporção real de escopo de *User Stories* efetivamente entregue e homologado ($RPC_n$) sobre o escopo atual total do projeto ($PRP_n$):
+        $$APC_n = \\frac{RPC_n}{PRP_n}$$
+        * **PV (Planned Value):** Valor planejado acumulado oficial baseado no cronograma temporal:
+        $$PV = PPC \\times BAC$$
+        * **EV (Earned Value):** Valor Agregado real baseado na entrega efetiva de valor de negócio homologado:
+        $$EV = APC_n \\times BAC$$
+        * **SPI (Schedule Performance Index):** Eficiência do cronograma medido pela razão métrica oficial do artigo ($SPI = EV / PV$).
         """
     )
 

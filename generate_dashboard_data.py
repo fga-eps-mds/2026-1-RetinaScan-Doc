@@ -10,11 +10,9 @@ ZENHUB_TOKEN = os.getenv("ZENHUB_TOKEN")
 ZENHUB_URL = "https://api.zenhub.com/public/graphql"
 WORKSPACE_ID = "69bd9cee544e2d00306abb69"
 
-# 🔥 CONFIGURAÇÃO DOS FILTROS DA R3
 TAG_USER_STORY = "US" 
 TERMO_RELEASE = "R3" 
 
-# 🗓️ INTERVALO DE DATAS DA R3 (Garante pegar as 5 sprints sem depender do texto do nome)
 DATA_INICIO_R3 = datetime(2026, 5, 25, 0, 0, 0, tzinfo=timezone.utc)
 DATA_FIM_R3    = datetime(2026, 6, 28, 23, 59, 59, tzinfo=timezone.utc)
 
@@ -105,11 +103,9 @@ try:
         velocity_by_sprint = {}
         sprints_validas_nomes = set() # Guarda o nome exato das sprints que estão no período da R3
         
-        # 1. FILTRAGEM DINÂMICA DE SPRINTS POR DATA
         for sprint in sprints_list:
             start_at_str = sprint.get("startAt")
             if start_at_str:
-                # Converte o timestamp do Zenhub para objeto datetime
                 sprint_start = datetime.fromisoformat(start_at_str.replace("Z", "+00:00"))
                 
                 # Se a sprint começou dentro do período da R3, ela é válida
@@ -189,7 +185,6 @@ try:
                 if target_pipe in clean_pipelines:
                     clean_pipelines[target_pipe].append(issue_obj)
                 
-                # Acumula velocidade se a sprint calculada for uma das sprints válidas da R3
                 if state == "CLOSED" and issue.get("closedAt"):
                     for s_name in card_sprints:
                         if s_name in velocity_by_sprint:

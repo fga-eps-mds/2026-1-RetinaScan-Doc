@@ -1,0 +1,93 @@
+## Ata de reunião 19 - 01/06/2026
+
+Retrospectiva da Sprint 7 e Planejamento da Sprint 8
+
+## Local
+
+Reunião realizada no modelo assíncrono via Teams
+
+## Participantes
+
+**Product Owner**: Vinícius Rispoli de Carvalho
+
+**Tabela 1:** Membros da equipe participantes da reunião
+
+| Matrícula |                Aluno               | Presente |
+| :-------: | :--------------------------------: | :------: |
+| 222037648 |     André Cláudio Maia da Cunha    |     ✓    |
+| 221007850 |       Arthur Ribeiro e Sousa       |     ✓    |
+| 221021901 |   Cecília Ernesto Silva Quaresma   |          |
+| 221007706 |       Elias Faria de Oliveira      |          |
+| 211061814 |       Gustavo Costa de Jesus       |     ✓    |
+| 211061832 |  Harleny Angéllica Araújo de Sousa |          |
+| 211062947 |   Iderlan Junio Cardoso da Silva   |          |
+| 221037975 |     Natália Rodrigues de Morais    |          |
+| 190020814 |    Vinícius Roriz Meireles Silva   |     ✓    |
+| 211031889 | Yan Luca Viana de Araújo Fontenele |          |
+
+**Fonte:** Vinícius Roriz, 2026
+
+## Início e término
+
+Na tabela 2 consta o horário de início e o horário de término previsto da reunião, assim como o horário que foi efetivamente realizado.
+
+**Tabela 2:** Horários
+
+| Hora de Início  | Hora de Término |
+| :-------------- | :-------------: |
+| Previsto 20:30  |      21:30      |
+| Realizado 20:38 |      21:05      |
+
+**Fonte:** Vinícius Roriz, 2026
+
+## Pauta
+
+* Retrospectiva da Sprint 7
+* Planejamento da Sprint 8
+
+## Desenvolvimento / Discussões
+
+### 1. Retrospectiva da Sprint 7
+
+* **Demonstração de Funcionalidades:** Foram apresentadas as entregas concluídas no ciclo:
+  * Novo fluxo de cadastro de exames (`#82 Refatoração na ordem de cadastro de exame`);
+  * Implementação do sistema de logs (`#77 Sistemas de Log`);
+  * Fluxo de recuperação de credenciais/senha (`#81 Recuperação de Senha`).
+
+
+* **Homologação e Próximos Passos:** O roteiro de testes foi compartilhado com o prof. Vinicius para validação interna e posterior apresentação alinhada com Rodolfo.
+
+### 2. Planejamento da Sprint 8
+
+Definição do escopo de desenvolvimento para a próxima semana, com foco prioritário em:
+
+* Criação e modelagem do perfil de usuário para médico especialista;
+* Migração da infraestrutura do serviço de Inteligência Artificial para o Google Cloud.
+
+#### 2.1 Feedback e Regras de Negócio
+
+Vinicius propôs duas abordagens para a lógica de visualização e delegação de exames pelo sistema:
+
+1. **Acesso Universal com Bloqueio de Concorrência:** Todos os médicos especialistas visualizam a listagem completa de exames, ordenada de forma cronológica decrescente. Para evitar conflitos de edição, o sistema deve indicar visualmente se um exame já está sendo analisado por outro profissional, bloqueando temporariamente sua abertura.
+2. **Distribuição Equitativa:** Divisão automatizada e igualitária da carga total de exames entre os especialistas cadastrados.
+
+**Direcionamento:** Após debate, a equipe considerou a **Opção 1** (Acesso Universal) como a mais adequada para o fluxo atual de trabalho pelos seguintes motivos:
+
+* **Evita ociosidade:** Se um médico especialista for mais rápido ou tiver maior disponibilidade no dia, ele pode continuar laudando sem ficar preso a uma cota limitadora.
+* **Prevenção de exames "presos":** Na distribuição igualitária, se um especialista precisar se ausentar por imprevistos, problemas técnicos ou licença médica, a fila dele ficaria congelada, atrasando diagnósticos. No acesso universal, qualquer outro profissional assume o caso imediatamente.
+
+Contudo, a decisão foi mantida em aberto, aguardando o parecer e validação final do Dr. Thiago para ser consolidada.
+
+## Conclusão
+
+A reunião foi produtiva e cumpriu o objetivo de validar os avanços técnicos da Sprint 7, demonstrando a maturidade das funcionalidades de segurança e auditoria (logs e recuperação de senha).
+
+Com o alinhamento da Sprint 8, a equipe de desenvolvimento inicia o novo ciclo focada em duas frentes críticas: a expansão de perfis de acesso no sistema e a escalabilidade da infraestrutura de IA no ambiente em nuvem. 
+
+As definições de produto trazidas pelo feedback do Prof. Vinicius dão um direcionamento claro para as regras de negócio de triagem, restando apenas o alinhamento com o Dr. Thiago para o fechamento definitivo do escopo de delegação.
+
+## Histórico de Versão
+
+| Versão | Data       | Descrição                       | Autor          | Revisor |
+| :----: | ---------- | ------------------------------- | -------------- | ------- |
+|  `1.0` | 01/06/2026 | Adição da ata de reunião        | Vinícius Roriz | Arthur Ribeiro |

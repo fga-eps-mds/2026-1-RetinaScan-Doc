@@ -65,6 +65,7 @@ nav:
       - Arquitetura: "projeto/arquitetura.md"
       - Modelagem do Banco de Dados: "projeto/modelagem-do-BD.md"
       - Modelos de Inteligência Artificial: "projeto/ia/modelos_de_ia.md"
+      - Migração da IA para Google Cloud: "projeto/ia/migracao_para_gcloud.md"
       - Versionamento de Modelos: "projeto/ia/versionamento_modelos.md"
   - Guia de Contribuição:
       - Código de Conduta: "guia_de_contribuicao/codigo-de-conduta.md"

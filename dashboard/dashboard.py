@@ -44,7 +44,7 @@ def render_dashboard_layout(repo_key, dict_metrics):
     ultima_sprint = df_atual.iloc[-1]
     
     html_rendered = build_product_html_template(repo_key, ultima_sprint)
-    st.components.v1.html(html_rendered, height=460, scrolling=False)
+    st.components.v1.html(html_rendered, height=650, scrolling=True)
     
     render_product_plots(df_atual)
 
@@ -81,10 +81,65 @@ def render_dashboard_layout(repo_key, dict_metrics):
     
     st.markdown("---")
     
-    st.subheader("📋 Tabela Consolidada de Versões")
-    tabela_exibicao = df_atual[['version', 'datetime_str', 'Maintainability', 'Reliability', 'total', 'ncloc']].copy()
-    tabela_exibicao.columns = ['Versão', 'Data do Dump', 'Manutenibilidade', 'Confiabilidade', 'Score Total', 'NCLOC']
-    st.dataframe(tabela_exibicao.sort_index(ascending=False), use_container_width=True, hide_index=True)
+    st.subheader("📋 Tabela Consolidada de Versões e Auditoria Q-Rapids")
+    
+    colunas_auditoria = [
+        'version', 'datetime_str', 'ncloc',
+        'complexity', 'comments', 'duplication',      
+        'test_success', 'fast_tests', 'coverage',     
+        'Maintainability', 'Reliability', 'total'     
+    ]
+    
+    colunas_presentes = [col for col in colunas_auditoria if col in df_atual.columns]
+    tabela_exibicao = df_atual[colunas_presentes].copy()
+    
+    mapeamento_nomes = {
+        'version': 'Versão',
+        'datetime_str': 'Data do Dump',
+        'ncloc': 'Ncloc',
+        'complexity': 'Complexity',
+        'comments': 'Comments',
+        'duplication': 'Duplication',
+        'test_success': 'Test Success',
+        'fast_tests': 'Fast Tests',
+        'coverage': 'Coverage',
+        'Maintainability': 'Maintainability',
+        'Reliability': 'Reliability',
+        'total': 'Score Total'
+    }
+    tabela_exibicao.columns = [mapeamento_nomes[col] for col in tabela_exibicao.columns]
+    
+    config_colunas = {}
+    
+    colunas_float = [
+        'Complexity', 'Comments', 'Duplication',
+        'Test Success', 'Fast Tests', 'Coverage',
+        'Maintainability', 'Reliability', 'Score Total'
+    ]
+    
+    for col in colunas_float:
+        if col in tabela_exibicao.columns:
+            config_colunas[col] = st.column_config.NumberColumn(col, format="%.2f")
+            
+    if 'Ncloc' in tabela_exibicao.columns:
+        config_colunas['Ncloc'] = st.column_config.NumberColumn('Ncloc', format="%.0f")
+        
+    st.dataframe(
+        tabela_exibicao.sort_index(ascending=False), 
+        use_container_width=True, 
+        hide_index=True,
+        column_config=config_colunas
+    )
+
+    csv_dados = tabela_exibicao.sort_index(ascending=False).to_csv(index=False, sep=";", encoding="utf-8-sig")
+
+    st.download_button(
+        label="📥 Exportar Tabela para Excel (CSV)",
+        data=csv_dados,
+        file_name=f"auditoria_qrapids_{repo_key.lower()}_{data_hoje}.csv",
+        mime="text/csv",
+        key=f"btn_export_csv_{repo_key}"
+    )
 
 def render_project_metrics_tab():
     sprints_raw = load_zenhub_sprints_raw()
@@ -174,6 +229,8 @@ def render_project_metrics_tab():
         .replace("__KPI_SCORE__", str(evm["score_zenhub"]))
         
         .replace("__TABELA_DADOS_GRAFICO_LINHAS__", linhas_dados_grafico)
+
+        .replace("__TABELA_AUDITORIA_EVM__", evm["tabela_auditoria_evm"])
         
         .replace("__BURNUP_LABELS__", json.dumps(evm["burnup_labels"]))
         .replace("__BURNUP_PV__", json.dumps(evm["burnup_pv"]))
@@ -203,26 +260,36 @@ def render_project_metrics_tab():
     pasta_destino = os.path.join(raiz_do_projeto, NOME_PASTA_NOTAS)
     os.makedirs(pasta_destino, exist_ok=True)
     
-    data_hoje = datetime.now().strftime("%Y-%m-%d")
-    arquivo_notas_evm = os.path.join(pasta_destino, f"{data_hoje}_analise_projeto_evm.txt")
-    
     texto_salvo_evm = ""
-    if os.path.exists(arquivo_notas_evm):
+    arquivo_notas_evm = None
+    
+    arquivos_historico = sorted(glob(os.path.join(pasta_destino, "*_analise_projeto_evm.txt")))
+    
+    if arquivos_historico:
+        arquivo_notas_evm = arquivos_historico[-1]
         with open(arquivo_notas_evm, "r", encoding="utf-8") as f:
             texto_salvo_evm = f.read()
+    else:
+        data_hoje = datetime.now().strftime("%Y-%m-%d")
+        arquivo_notas_evm = os.path.join(pasta_destino, f"{data_hoje}_analise_projeto_evm.txt")
             
     comentario_evm = st.text_area(
-        label="Espaço para justificativas diárias de desvios de prazo (SPI < 1.0) ou alterações de escopo:",
+        label="Espaço para pareceres técnicos (Apenas salvar localmente. Para atualizar na nuvem, faça o commit do arquivo gerado):",
         value=texto_salvo_evm,
-        placeholder="Ex: O atraso verificado na Sprint 3 decorreu do impedimento técnico com o deploy do SonarQube...",
+        placeholder="Ex: O atraso verificado na Sprint 3 decorreu do impedimento técnico...",
         height=120,
         key="txt_evm"
     )
     
-    if st.button("💾 Salvar Análise do Projeto", key="btn_evm"):
-        with open(arquivo_notas_evm, "w", encoding="utf-8") as f:
+    if st.button("💾 Salvar Análise do Projeto (Local)", key="btn_evm"):
+        data_hoje = datetime.now().strftime("%Y-%m-%d")
+        arquivo_para_salvar = os.path.join(pasta_destino, f"{data_hoje}_analise_projeto_evm.txt")
+        
+        with open(arquivo_para_salvar, "w", encoding="utf-8") as f:
             f.write(comentario_evm)
-        st.success(f"Parecer salvo em: `{NOME_PASTA_NOTAS}/{os.path.basename(arquivo_notas_evm)}`")
+            
+        st.success(f"Parecer salvo em: `{NOME_PASTA_NOTAS}/{os.path.basename(arquivo_para_salvar)}`")
+        st.info("Gere o commit e dê push nesse arquivo para que ele apareça atualizado na nuvem!")
 
     st.markdown("---")
     st.subheader("ℹ️ Memória de Cálculo e Critérios do Agile EVM")

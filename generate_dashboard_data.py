@@ -190,6 +190,7 @@ try:
                         if s_name in velocity_by_sprint:
                             velocity_by_sprint[s_name]["delivered_story_points"] += points
                             velocity_by_sprint[s_name]["completed_issues_count"] += 1
+                            break
 
         github_milestones = sorted(list(milestones_dict.values()), key=lambda x: x["number"])
 

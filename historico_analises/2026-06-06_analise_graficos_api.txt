@@ -1,0 +1,2 @@
+Sprint 8:
+Todas as métricas base de qualidade e testes (Complexity, Duplication, Test Success, Fast Tests e Coverage) estão no topo com nota 1.0. No entanto, a métrica de comentários (Comments) decaiu de 0.013 para 0.01 e, nesta última semana, consolidou-se em 0.006. É essa queda decimal que está penalizando o cálculo do fator de Maintainability (travado em 0.33), impedindo o Score Total de subir.

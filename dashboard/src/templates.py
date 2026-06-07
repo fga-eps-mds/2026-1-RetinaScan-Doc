@@ -1,3 +1,4 @@
+# No seu arquivo de visualização/dashboard (onde está o build_product_html_template)
 import streamlit as st
 
 def inject_custom_css():
@@ -11,6 +12,15 @@ def inject_custom_css():
     .kgq{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:1.25rem}
     .kpq{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px}
     .knum{font-size:20px;font-weight:500}
+    
+    /* CLASSES PARA A NOVA MEMÓRIA DE CÁLCULO INTEGRADA */
+    .f-card {background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:1.25rem}
+    .f-title {font-size:12px;font-weight:600;color:var(--color-text-primary);margin:0 0 10px 0;text-transform:uppercase;letter-spacing:0.5px}
+    .f-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:12px;font-size:11px;color:var(--color-text-secondary);background:var(--color-background-secondary);padding:12px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary)}
+    .f-item {line-height:1.5}
+    .f-item code {background:#EEEDFE;padding:2px 5px;border-radius:3px;font-family:monospace;color:#3C3489;font-weight:600;font-size:10.5px}
+    .f-math {font-family:"Courier New", monospace;font-weight:bold;color:var(--color-text-primary);display:block;margin:4px 0}
+    
     .qcard{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem}
     .qct{font-size:13px;font-weight:500;color:var(--color-text-primary);margin:0 0 12px}
     .si-row{display:flex;align-items:stretch;gap:12px;margin-bottom:1rem}
@@ -37,7 +47,6 @@ def inject_custom_css():
 
 def get_semaphore_color(value: float, max_value: float = 1.0) -> tuple:
     pct = value / max_value if max_value > 0 else 0
-    
     if pct >= 0.75:
         return "#1D9E75", "dot-green"
     elif pct >= 0.50:
@@ -75,54 +84,66 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
         --color-text-primary: #212529;
         --color-text-secondary: #495057;
         --color-text-tertiary: #6c757d;
-        --border-radius-md: 6px;
-        --border-radius-lg: 8px;
     }}
-    body {{
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        margin: 0; padding: 10px; background: transparent; color: var(--color-text-primary);
-    }}
-    .qh{{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;padding-top:0.5rem}}
-    .qa{{width:8px;height:36px;background:#534AB7;border-radius:3px;flex-shrink:0}}
-    .qt{{font-size:16px;font-weight:500;margin:0}}
-    .qs{{font-size:12px;color:var(--color-text-secondary);margin:0}}
-    .qb{{margin-left:auto;font-size:11px;background:#EEEDFE;color:#3C3489;padding:3px 10px;border-radius:var(--border-radius-md)}}
-    .kgq{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:1.25rem}}
-    .kpq{{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px;border: 0.5px solid var(--color-border-tertiary);}}
-    .knum{{font-size:20px;font-weight:500}}
-    .qcard{{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem}}
-    .qct{{font-size:13px;font-weight:500;color:var(--color-text-primary);margin:0 0 12px}}
-    .si-row{{display:flex;align-items:stretch;gap:12px;margin-bottom:1rem}}
-    .si-label{{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);font-size:11px;font-weight:500;color:var(--color-text-secondary);display:flex;align-items:center;justify-content:center;padding:4px 0;min-width:22px;border-right:2px solid var(--color-border-secondary)}}
-    .si-body{{flex:1;display:flex;flex-direction:column;gap:6px}}
-    .factor-row{{display:grid;grid-template-columns:140px 1fr;gap:8px;align-items:start}}
-    .factor-label{{font-size:11px;color:var(--color-text-secondary);padding-top:4px;line-height:1.4}}
-    .metrics-group{{display:flex;flex-direction:column;gap:4px}}
-    .metric-item{{display:flex;align-items:center;gap:8px}}
-    .m-dot{{width:10px;height:10px;border-radius:50%;flex-shrink:0}}
-    .dot-green{{background:#1D9E75}}
-    .dot-yellow{{background:#EF9F27}}
-    .dot-red{{background:#E24B4A}}
-    .m-name{{font-size:11px;color:var(--color-text-primary);flex:1}}
-    .m-val{{font-size:11px;font-weight:500;min-width:36px;text-align:right}}
-    .m-bar-wrap{{width:80px;height:6px;background:var(--color-background-secondary);border-radius:3px;overflow:hidden;border:0.5px solid var(--color-border-tertiary)}}
-    .m-bar{{height:100%;border-radius:3px}}
-    .divider{{height:0.5px;background:var(--color-border-tertiary);margin:6px 0}}
-    .legend-row{{display:flex;gap:14px;font-size:11px;color:var(--color-text-secondary);margin-bottom:10px;align-items:center}}
-    .legend-row span{{display:flex;align-items:center;gap:5px}}
-    .legend-row b{{width:10px;height:10px;border-radius:50%;display:inline-block}}
+    body {{ font-family: sans-serif; margin: 0; padding: 10px; background: transparent; }}
+    
+    .db-header {{ display:flex; align-items:center; gap:10px; margin-bottom:1.25rem; padding-top:1rem; }}
+    .db-accent {{ width:8px; height:36px; background:#534AB7; border-radius:3px; flex-shrink:0; }}
+    .db-title {{ font-size:16px; font-weight:500; color:var(--color-text-primary); margin:0; }}
+    .db-sub {{ font-size:12px; color:var(--color-text-secondary); margin:0; }}
+    .db-badge {{ margin-left:auto; font-size:11px; background:#EEEDFE; color:#3C3489; padding:3px 10px; border-radius:4px; }}
+    
+    .kpi-grid {{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:1.25rem; }}
+    .kpi {{ background:var(--color-background-secondary); border-radius:4px; padding:12px 14px; border: 0.5px solid var(--color-border-tertiary); }}
+    .kpi-label {{ font-size:11px; color:var(--color-text-secondary); margin-bottom:4px; }}
+    .kpi-val {{ font-size:22px; font-weight:500; }}
+
+    .card {{ background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:8px; padding:1rem 1.25rem; margin-bottom: 1rem; }}
+    .card-title {{ font-size:13px; font-weight:500; color:var(--color-text-primary); margin:0; }}
+    
+    /* CAIXA DA MEMÓRIA DE CÁLCULO IDENTICA AO DO EVM */
+    .formula-box {{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 11.5px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 12px; border-radius: 6px; border: 0.5px solid var(--color-border-tertiary); margin-bottom: 0.5rem; }}
+    .formula-item {{ padding: 4px; line-height: 1.4; }}
+    .formula-item code {{ background: #EEEDFE; padding: 2px 5px; border-radius: 3px; font-family: monospace; color: #3C3489; font-weight: bold; font-size: 11px; }}
+
+    .si-row {{ display: flex; align-items: stretch; gap: 12px; margin-top: 10px; }}
+    .si-label {{ writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-size: 11px; font-weight: 500; color: var(--color-text-secondary); display: flex; align-items: center; justify-content: center; padding: 4px 0; min-width: 22px; border-right: 2px solid var(--color-border-secondary); }}
+    .si-body {{ flex: 1; display: flex; flex-direction: column; gap: 6px; }}
+    
+    .factor-row {{ display: grid; grid-template-columns: 140px 1fr; gap: 8px; align-items: start; }}
+    .factor-label {{ font-size: 11px; color: var(--color-text-secondary); padding-top: 4px; line-height: 1.4; }}
+    .metrics-group {{ display: flex; flex-direction: column; gap: 4px; }}
+    .metric-item {{ display: flex; align-items: center; gap: 8px; }}
+    
+    .m-dot {{ width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }}
+    .dot-green {{ background: #1D9E75; }}
+    .dot-yellow {{ background: #EF9F27; }}
+    .dot-red {{ background: #E24B4A; }}
+    
+    .m-name {{ font-size: 11px; color: var(--color-text-primary); flex: 1; }}
+    .m-val {{ font-size: 11px; font-weight: 500; min-width: 36px; text-align: right; }}
+    .m-bar-wrap {{ width: 80px; height: 6px; background: var(--color-background-secondary); border-radius: 3px; overflow: hidden; border: 0.5px solid var(--color-border-tertiary); }}
+    .m-bar {{ height: 100%; border-radius: 3px; }}
+    .divider {{ height: 0.5px; background: var(--color-border-tertiary); margin: 6px 0; }}
+    
+    .legend {{ display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; font-size: 11px; color: var(--color-text-secondary); }}
+    .legend span {{ display: flex; align-items: center; gap: 5px; }}
+    .legend b {{ width: 10px; height: 10px; display: inline-block; border-radius: 50%; }}
     </style>
     </head>
     <body>
-    <div class="qh">
-      <div class="qa"></div>
+
+    <div class="db-header">
+      <div class="db-accent"></div>
       <div>
-        <p class="qt">Eixo Produto — modelo Q-Rapids sobre dados SonarQube / GitHub</p>
-        <p class="qs">Métricas do repositório <strong>{repo_key}</strong> · {int(ultima_sprint['ncloc'])} NCLOC · Versão: {ultima_sprint['version']}</p>
+        <p class="db-title">Eixo Produto — modelo Q-Rapids sobre dados SonarQube / GitHub</p>
+        <p class="db-sub">Métricas do repositório <strong>{repo_key}</strong> · {int(ultima_sprint['ncloc'])} NCLOC</p>
       </div>
+      <div class="db-badge">Versão atual: {ultima_sprint['version']}</div>
     </div>
-    <div class="kgq">
-      <div class="kpq">
+
+    <div class="kpi-grid">
+      <div class="kpi">
         <div class="klq">Indicador estratégico</div>
         <div class="kvq">Product Quality (Total Score)</div>
         <div class="knum" style="color:{cor_total}">{ultima_sprint['total']:.2f}</div>
@@ -130,7 +151,8 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
             <div style="width:{width_total:.1f}%;height:100%;background:{cor_total};border-radius:2px"></div>
         </div>
       </div>
-      <div class="kpq">
+
+      <div class="kpi">
         <div class="klq">Fator de Qualidade</div>
         <div class="kvq">Maintainability (Manutenibilidade)</div>
         <div class="knum" style="color:{cor_maint}">{ultima_sprint['Maintainability']:.2f}</div>
@@ -138,7 +160,8 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
             <div style="width:{width_maint:.1f}%;height:100%;background:{cor_maint};border-radius:2px"></div>
         </div>
       </div>
-      <div class="kpq">
+
+      <div class="kpi">
         <div class="klq">Fator de Qualidade</div>
         <div class="kvq">Reliability (Confiabilidade)</div>
         <div class="knum" style="color:{cor_rel}">{ultima_sprint['Reliability']:.2f}</div>
@@ -147,38 +170,61 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
         </div>
       </div>
     </div>
-    
-    <div class="legend-row">
-      <span><b class="dot-green"></b> verde ≥ 0.75 (aprovado)</span>
-      <span><b class="dot-yellow"></b> amarelo 0.50–0.74 (atenção)</span>
-      <span><b class="dot-red"></b> vermelho &lt; 0.50 (crítico)</span>
+
+    <div class="card">
+      <p class="card-title" style="margin-bottom: 8px;">Memória de Cálculo &amp; Fórmulas Utilizadas</p>
+      <div class="formula-box">
+        <div class="formula-item">
+          <code>Code Quality</code> = (Complexity * 0.33) + (Comments * 0.33) + (Duplication * 0.33) <br>
+          <small style="color:var(--color-text-tertiary)">Mapeia a conformidade de arquivos (FIL) para complexidade &le; 10, comentários 10-30% e duplicação &lt; 5%.</small>
+        </div>
+        <div class="formula-item">
+          <code>Testing Status</code> = (Test Success * 0.25) + (Fast Tests * 0.25) + (Coverage * 0.50) <br>
+          <small style="color:var(--color-text-tertiary)">Mapeia suítes de testes (UTS) 100% estáveis, execuções rápidas (&lt; 5 min) e arquivos com cobertura &gt; 60%.</small>
+        </div>
+        <div class="formula-item">
+          <code>Maintainability</code> = Code Quality &times; 0.50 <br>
+          <small style="color:var(--color-text-tertiary)">Fator de peso regulamentado pela constante PC1 sobre os indicadores de qualidade de código.</small>
+        </div>
+        <div class="formula-item">
+          <code>Reliability</code> = Testing Status &times; 0.50 <br>
+          <small style="color:var(--color-text-tertiary)">Fator de peso regulamentado pela constante PC2 sobre o ecossistema de testes.</small>
+        </div>
+      </div>
     </div>
-    
-    <div class="qcard">
-      <p class="qct">Fatores e métricas avaliadas — Product Quality</p>
+
+    <div class="card">
+      <p class="card-title" style="margin-bottom: 10px;">Fatores e métricas avaliadas — Product Quality</p>
+      
+      <div class="legend" style="margin-bottom: 12px;">
+        <span><b class="dot-green"></b> verde &ge; 0.75 (aprovado)</span>
+        <span><b class="dot-yellow"></b> amarelo 0.50–0.74 (atenção)</span>
+        <span><b class="dot-red"></b> vermelho &lt; 0.50 (crítico)</span>
+      </div>
+      
       <div class="si-row">
-        <div class="si-label" style="border-color:#534AB7">Product Quality</div>
+        <div class="si-label">Product Quality</div>
         <div class="si-body">
         
           <div class="factor-row">
-            <div class="factor-label">Code Quality<br><span style="font-size:10px;color:var(--color-text-tertiary)">Maintainability · SonarQube</span></div>
+            <div class="factor-label">Code Quality<br><small style="color:var(--color-text-tertiary)">Maintainability · SonarQube</small></div>
             <div class="metrics-group">
               <div class="metric-item">
                 <span class="m-dot {class_comp}"></span>
-                <span class="m-name">Complexity — arquivos não complexos (ciclomática/função ≤ 10)</span>
-                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['complexity']*100:.0f}%;background:{"#1D9E75" if class_comp=="dot-green" else "#EF9F27" if class_comp=="dot-yellow" else "#E24B4A"}"></div></div>
+                <span class="m-name">Complexity — arquivos não complexos (ciclomática/função &le; 10)</span>
+                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['complexity']*100:.0f}%; background:{"#1D9E75" if class_comp=="dot-green" else "#EF9F27" if class_comp=="dot-yellow" else "#E24B4A"}"></div></div>
                 <span class="m-val" style="color:{"#1D9E75" if class_comp=="dot-green" else "#EF9F27" if class_comp=="dot-yellow" else "#E24B4A"}">{ultima_sprint['complexity']:.2f}</span>
               </div>
               <div class="metric-item">
                 <span class="m-dot {class_comm}"></span>
                 <span class="m-name">Comments — arquivos com linhas de comentários aceitáveis (&lt; 30%)</span>
-                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['comments']*100:.0f}%;background:{"#1D9E75" if class_comm=="dot-green" else "#EF9F27" if class_comm=="dot-yellow" else "#E24B4A"}"></div></div>
+                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['comments']*100:.0f}%; background:{"#1D9E75" if class_comm=="dot-green" else "#EF9F27" if class_comm=="dot-yellow" else "#E24B4A"}"></div></div>
                 <span class="m-val" style="color:{"#1D9E75" if class_comm=="dot-green" else "#EF9F27" if class_comm=="dot-yellow" else "#E24B4A"}">{ultima_sprint['comments']:.2f}</span>
               </div>
               <div class="metric-item">
                 <span class="m-dot {class_dup}"></span>
                 <span class="m-name">Duplication — arquivos com &lt; 5% linhas duplicadas</span>
-                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['duplication']*100:.0f}%;background:{"#1D9E75" if class_dup=="dot-green" else "#EF9F27" if class_dup=="dot-yellow" else "#E24B4A"}"></div></div>
+                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['duplication']*100:.0f}%; background:{"#1D9E75" if class_dup=="dot-green" else "#EF9F27" if class_dup=="dot-yellow" else "#E24B4A"}"></div></div>
                 <span class="m-val" style="color:{"#1D9E75" if class_dup=="dot-green" else "#EF9F27" if class_dup=="dot-yellow" else "#E24B4A"}">{ultima_sprint['duplication']:.2f}</span>
               </div>
             </div>
@@ -187,24 +233,24 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
           <div class="divider"></div>
           
           <div class="factor-row">
-            <div class="factor-label">Testing Status<br><span style="font-size:10px;color:var(--color-text-tertiary)">Reliability · SonarQube</span></div>
+            <div class="factor-label">Testing Status<br><small style="color:var(--color-text-tertiary)">Reliability · SonarQube</small></div>
             <div class="metrics-group">
               <div class="metric-item">
                 <span class="m-dot {class_ts}"></span>
-                <span class="m-name">Test success — (unit tests − erros − falhas) / unit tests</span>
-                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['test_success']*100:.0f}%;background:{"#1D9E75" if class_ts=="dot-green" else "#EF9F27" if class_ts=="dot-yellow" else "#E24B4A"}"></div></div>
+                <span class="m-name">Test success — (unit tests &minus; erros &minus; falhas) / unit tests</span>
+                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['test_success']*100:.0f}%; background:{"#1D9E75" if class_ts=="dot-green" else "#EF9F27" if class_ts=="dot-yellow" else "#E24B4A"}"></div></div>
                 <span class="m-val" style="color:{"#1D9E75" if class_ts=="dot-green" else "#EF9F27" if class_ts=="dot-yellow" else "#E24B4A"}">{ultima_sprint['test_success']:.2f}</span>
               </div>
               <div class="metric-item">
                 <span class="m-dot {class_fast}"></span>
                 <span class="m-name">Fast tests — builds de testes rápidos (&lt; 5 min)</span>
-                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['fast_tests']*100:.0f}%;background:{"#1D9E75" if class_fast=="dot-green" else "#EF9F27" if class_fast=="dot-yellow" else "#E24B4A"}"></div></div>
+                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['fast_tests']*100:.0f}%; background:{"#1D9E75" if class_fast=="dot-green" else "#EF9F27" if class_fast=="dot-yellow" else "#E24B4A"}"></div></div>
                 <span class="m-val" style="color:{"#1D9E75" if class_fast=="dot-green" else "#EF9F27" if class_fast=="dot-yellow" else "#E24B4A"}">{ultima_sprint['fast_tests']:.2f}</span>
               </div>
               <div class="metric-item">
                 <span class="m-dot {class_cov}"></span>
                 <span class="m-name">Coverage — arquivos com cobertura de código ideal (&gt; 60%)</span>
-                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['coverage']*100:.0f}%;background:{"#1D9E75" if class_cov=="dot-green" else "#EF9F27" if class_cov=="dot-yellow" else "#E24B4A"}"></div></div>
+                <div class="m-bar-wrap"><div class="m-bar" style="width:{ultima_sprint['coverage']*100:.0f}%; background:{"#1D9E75" if class_cov=="dot-green" else "#EF9F27" if class_cov=="dot-yellow" else "#E24B4A"}"></div></div>
                 <span class="m-val" style="color:{"#1D9E75" if class_cov=="dot-green" else "#EF9F27" if class_cov=="dot-yellow" else "#E24B4A"}">{ultima_sprint['coverage']:.2f}</span>
               </div>
             </div>
@@ -245,7 +291,8 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
 .kpi-val { font-size:22px; font-weight:500; }
 
 .card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:8px; padding:1rem 1.25rem; margin-bottom: 1rem; }
-.card-title { font-size:13px; font-weight:500; color:var(--color-text-primary); margin:0 0 10px; }
+.card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.card-title { font-size:13px; font-weight:500; color:var(--color-text-primary); margin:0; }
 .legend { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:8px; font-size:11px; color:var(--color-text-secondary); }
 .legend span { display:flex; align-items:center; gap:5px; }
 .legend b { width:20px; height:3px; display:inline-block; border-radius:2px; }
@@ -264,11 +311,12 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
 .pill-warn { background:#FAEEDA; color:#633806; }
 .pill-bad { background:#FCEBEB; color:#791F1F; }
 .pill-fut { background:#F1EFE8; color:#444441; }
+
+.btn-export { background: #185FA5; color: #fff; border: none; padding: 4px 10px; font-size: 11px; font-weight: 500; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 4px; }
+.btn-export:hover { background: #0c447c; }
 </style>
 </head>
 <body>
-
-<h2 class="sr-only">Dashboard eixo Projeto — Agile EVM com Scrum, sprints e milestones </h2>
 
 <div class="db-header">
   <div class="db-accent"></div>
@@ -299,7 +347,7 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
     </div>
     <div class="formula-item">
       <code>EV</code> <b>Earned Value</b> = <i>BAC</i> &times; <i>APC</i> <br>
-      <small style="color:var(--color-text-tertiary)">(Onde Progresso Real <i>APC</i> = Pontos Entregues Acumulados / Escopo Atualizado)</small>
+      <small style="color:var(--color-text-tertiary)">(Onde Progresso Real <i>APC</i> = Pontos Entregues Acumulados / Escopo Updated)</small>
     </div>
     <div class="formula-item">
       <code>SPI</code> <b>Schedule Performance Index</b> = <i>EV</i> / <i>PV</i> <br>
@@ -359,14 +407,44 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
     </div>
   </div>
   <div class="card">
-    <p class="card-title">Milestones / sprints — status</p>
+    <p class="card-title">Sprints — status</p>
     <table class="sprint-table">
-      <thead><tr><th>Milestone / Sprint</th><th>Due</th><th>SP Entregues</th><th>Status</th></tr></thead>
+      <thead><tr><th>Sprint</th><th>Due</th><th>SP Entregues</th><th>Status</th></tr></thead>
       <tbody>
         __TABELA_LINHAS__
       </tbody>
     </table>
   </div>
+</div>
+
+<div class="card">
+  <div class="card-header-flex">
+    <p class="card-title">Mapeamento e Auditoria Completa de Siglas do Agile EVM</p>
+    <button class="btn-export" onclick="exportTableToCSV('agile_evm_metrics.csv')">
+      📥 Exportar CSV
+    </button>
+  </div>
+  <table class="sprint-table" id="auditTable" style="text-align: center;">
+    <thead>
+      <tr>
+        <th style="text-align: center;">Sprint</th>
+        <th style="text-align: center;">PRP₀</th>
+        <th style="text-align: center;">BAC</th>
+        <th style="text-align: center;">PA</th>
+        <th style="text-align: center;">PRPₙ</th>
+        <th style="text-align: center;">PS</th>
+        <th style="text-align: center;">PPC</th>
+        <th style="text-align: center;">RPC</th>
+        <th style="text-align: center;">APC</th>
+        <th style="text-align: center;">PV</th>
+        <th style="text-align: center;">EV</th>
+        <th style="text-align: center;">SPI</th>
+      </tr>
+    </thead>
+    <tbody>
+      __TABELA_AUDITORIA_EVM__
+    </tbody>
+  </table>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
@@ -407,8 +485,38 @@ new Chart(document.getElementById('spiC'), {
       { label:'Ref 1.0', data: __SPI_REF__, borderColor:'#B4B2A9', borderWidth:1.5, borderDash:[5,4], pointRadius:0, fill:false }
     ]
   },
-  options:{ ...baseOpts, scales:{ x:{ grid:{ color:grid }, ticks:{ color:txtColor, font:{ size:11 } } }, y:{ grid:{ color:grid }, ticks:{ color:txtColor, font:{ size:11 }, callback: v => v.toFixed(2) }, min:0, max:1.5 } } }
+  options:{ ...baseOpts, scales:{ x:{ grid:{ color:grid }, ticks:{ color:txtColor, font:{ size:11 } } }, y:{ grid:{ color:grid }, ticks:{ color:txtColor, font:{ size:11 }, callback: v => v.toFixed(2) }, min:0, max:3.0 } } }
 });
+
+function exportTableToCSV(filename) {
+    var csv = [];
+    var rows = document.querySelectorAll("#auditTable tr");
+    
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th");
+        for (var j = 0; j < cols.length; j++) {
+            let text = cols[j].innerText.trim();
+            if (text.includes(';')) {
+                text = '"' + text + '"';
+            }
+            row.push(text);
+        }
+        csv.push(row.join(";"));
+    }
+
+    // Usa String.fromCharCode(10) para pular de linha sem usar caracteres de barra que dão conflito no Python
+    var quebraLinha = String.fromCharCode(10);
+    var csvContent = String.fromCharCode(65279) + csv.join(quebraLinha);
+    var csvFile = new Blob([csvContent], {type: "text/csv;charset=utf-8;"});
+    
+    var downloadLink = document.createElement("a");
+    downloadLink.download = filename;
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
 </script>
 </body>
 </html>

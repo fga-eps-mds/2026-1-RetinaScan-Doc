@@ -178,6 +178,9 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
     total_pa = 0.0  
     total_rpc = 0.0 
 
+    # String acumuladora para a nova tabela de auditoria requisitada
+    linhas_auditoria_html = []
+
     for idx, s in enumerate(sprints_lista):
         n = idx + 1  
         num_sprint_real = 8 + idx
@@ -201,11 +204,10 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
         burnup_labels.append(f"{s_label}\n{start_txt}")
         velocity_labels.append(f"{start_txt}\n{end_txt}")
         
-        # --- CÁLCULO DO AGILE EVM ---
         total_pa += s["pa_n"]
         prp_n = PRP_0 + total_pa
         
-        ppc = n / PS                                
+        ppc = n / PS                                                
         burnup_ideal.append(round(ppc * bac, 1))
         
         pv_oficial = ppc * bac
@@ -227,10 +229,37 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
             
             if s["state"] != "ACTIVE":
                 ultima_velocity = s["pc_n"]
+                
+            spi_audit_val = spi
+            ev_audit_val = ev_oficial
+            apc_audit_val = apc_n
+            rpc_audit_val = total_rpc
         else:
             burnup_ev.append(None)
             velocity_data.append(0)
             velocity_colors.append("#D3D1C7") 
+            
+            spi_audit_val = 0.0
+            ev_audit_val = 0.0
+            apc_audit_val = total_rpc / prp_n if prp_n > 0 else 0.0
+            rpc_audit_val = total_rpc
+
+        linhas_auditoria_html.append(f"""
+        <tr>
+            <td><b>{s_label}</b></td>
+            <td>{PRP_0:.1f}</td>
+            <td>{bac:.1f}</td>
+            <td>{s["pa_n"]:.1f}</td>
+            <td>{prp_n:.1f}</td>
+            <td>{PS:.1f}</td>
+            <td>{ppc:.2f}</td>
+            <td>{rpc_audit_val:.1f}</td>
+            <td>{apc_audit_val:.2f}</td>
+            <td>{pv_oficial:.1f}</td>
+            <td>{ev_audit_val:.1f}</td>
+            <td><span class="pill {'pill-ok' if spi_audit_val >= 1.0 else 'pill-warn' if spi_audit_val > 0 else 'pill-fut'}">{spi_audit_val:.2f}</span></td>
+        </tr>
+        """)
 
     if spi_data:
         spi_atual = spi_data[-1]
@@ -256,5 +285,6 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
         "spi_labels": spi_labels,
         "spi_data": spi_data,
         "spi_ref": [1.0] * len(spi_data),
-        "sprints_lista_tabela": sprints_lista
+        "sprints_lista_tabela": sprints_lista,
+        "tabela_auditoria_evm": "\n".join(linhas_auditoria_html)
     }

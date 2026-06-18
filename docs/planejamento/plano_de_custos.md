@@ -82,6 +82,7 @@ Estes pressupostos refletem o planejamento inicial e servem como ponto de refer�
 | Data | Tipo de Ajuste | Descrição | Impacto (R$) | Novo Total (R$) | Responsável | Justificativa |
 | :---: | :---: | :--- | :---: | :---: | :---: | :--- |
 | 29/04/2026 | Saída de pessoal | Um integrante saiu do projeto a partir da semana 8 | - R$3,277.34 | **R$65,432.85** | [Elias Oliveira](https://github.com/EliasOliver21) | Redução de 12 para 11 integrantes |
+| 20/05/2026 | Saída de Pessoal | Um integrante saiu do projeto a partir da semana 11 | - R$2,294.14 | **R$63,138.71** | [André Maia](https://github.com/andre-maia51) | Redução de 11 para 10 integrantes | 
 
 ### Notas Importantes
 
@@ -140,3 +141,4 @@ Estes pressupostos refletem o planejamento inicial e servem como ponto de refer�
 | `1.1`  | 21/04/2026 | Correção do custo de hora de trabalho e referências      | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |
 | `1.2`  | 10/05/2026 | Refatoração para pressupostos/ajustes estruturais, adição de responsáveis e processo de validação, referência PMBOK      | [Elias Oliveira](https://github.com/EliasOliver21) | [André Maia](https://github.com/andre-maia51) |
 | `1.3`  | 15/05/2026 | Correção dos valores da seção de pressupostos e ajustes estruturais     | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |
+| `1.4`  | 17/06/2026 | Correção dos valores da seção de pressupostos e ajustes estruturais     | [André Maia](https://github.com/andre-maia51) | [Elias Oliveira](https://github.com/EliasOliver21) |

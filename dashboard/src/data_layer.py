@@ -69,13 +69,10 @@ def build_raw_components_dataframe(json_list: list) -> pd.DataFrame:
         
     return df_res.sort_values(by=['repository', 'datetime'])
 
-
 def load_zenhub_sprints_raw() -> dict:
-    """Carrega o dicionário bruto de sprints_velocity do arquivo analytics."""
+    """Carrega o dicionário bruto completo do arquivo analytics."""
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
-    
     raiz_do_projeto = os.path.dirname(os.path.dirname(diretorio_atual))
-    
     caminho_json = os.path.join(raiz_do_projeto, "zenhub_analytics.json")
     
     if not os.path.exists(caminho_json):
@@ -88,4 +85,4 @@ def load_zenhub_sprints_raw() -> dict:
     with open(caminho_json, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
-    return data.get("sprints_velocity", {})
+    return data if isinstance(data, dict) else {}

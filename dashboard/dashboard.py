@@ -151,14 +151,11 @@ def render_project_metrics_tab():
     evm = calculate_scrum_evm_metrics(sprints_raw)
     
     linhas_dados_grafico = ""
-    
     PS = 5.0  # Total de sprints planejadas para a R3
     
+    # Executa a iteração tratando como listas legítimas do Python
     for i in range(1, len(evm["burnup_labels"])):
-        # Pega o nome limpo da Sprint (ex: "S8")
         s_nome = evm["burnup_labels"][i].split('\n')[0]  
-        
-        # n indica a sequência da sprint na Release 3 (1 para S8, 2 para S9...)
         n = i  
         
         ppc_porcentagem = (n / PS) * 100
@@ -169,9 +166,9 @@ def render_project_metrics_tab():
         
         idx_arrays = i - 1
         
+        # Correção aqui: verifica se o valor é numérico antes de aplicar formatação float
         if evm["burnup_ev"][i] is not None:
-            ev_val = f"{evm['burnup_ev'][i]} SP"
-            
+            ev_val = f"R$ {evm['burnup_ev'][i]:,.2f}"
             apc_porcentagem = (evm["burnup_ev"][i] / evm["bac"]) * 100
             apc_str = f"{apc_porcentagem:.1f}%"
         else:
@@ -191,9 +188,8 @@ def render_project_metrics_tab():
         linhas_dados_grafico += f"""
         <tr>
             <td><b>{s_nome}</b></td>
-            <td><span style="color:#6c757d;">{ppc_str}</span> &rarr; <b>{pv_val} SP</b></td>
+            <td><span style="color:#6c757d;">{ppc_str}</span> &rarr; <b>R$ {pv_val:,.2f}</b></td>
             <td><span style="color:#6c757d;">{apc_str}</span> &rarr; <b>{ev_val}</b></td>
-            <td>{ideal_val} SP</td>
             <td>{vel_val}</td>
             <td><b>{spi_val}</b></td>
         </tr>
@@ -203,39 +199,47 @@ def render_project_metrics_tab():
     hoje = datetime.now(timezone.utc)
     
     for s in evm["sprints_lista_tabela"]:
-        if s["state"] == "CLOSED" or s["end_at"] < hoje:
+        s_start = s["start_at"] if s["start_at"] else hoje
+        s_end = s["end_at"] if s["end_at"] else hoje
+
+        if s["state_raw"] == "CLOSED" or s_end < hoje:
             pill = '<span class="pill pill-ok">Fechado</span>'
-        elif s["state"] == "ACTIVE" or (s["start_at"] <= hoje <= s["end_at"]):
+        elif s["state_raw"] == "ACTIVE" or (s_start <= hoje <= s_end):
             pill = '<span class="pill pill-warn">Em andamento</span>'
         else:
             pill = '<span class="pill pill-fut">Planejado</span>'
             
+        end_txt = s_end.strftime('%d/%m') if s["end_at"] else "N/A"
         linhas_html += f"""
         <tr>
             <td>{s['name']}</td>
-            <td>{s['end_at'].strftime('%d/%m')}</td>
+            <td>{end_txt}</td>
             <td>{int(s['delivered_sp'])} SP</td>
             <td>{pill}</td>
         </tr>
         """
 
+    burnup_labels_json = json.dumps(evm["burnup_labels"])
+    burnup_pv_json = json.dumps(evm["burnup_pv"])
+    burnup_ev_json = json.dumps(evm["burnup_ev"]) 
+    burnup_ideal_json = json.dumps(evm["burnup_ideal"])
+
     html_pronto = (
         PROJECT_EVM_TEMPLATE
         .replace("__SPRINT_ATUAL_NOME__", evm["sprint_atual_nome"])
-        .replace("__KPI_BAC__", str(int(evm["bac"])))
-        .replace("__KPI_EV__", str(int(evm["ev_acumulado"])))
+        .replace("__KPI_BAC__", f"R$ {evm['bac']:,.2f}")
+        .replace("__KPI_EV__", f"R$ {evm['ev_acumulado']:,.2f}")
         .replace("__KPI_SPI__", f"{evm['spi_atual']:.2f}")
-        .replace("__KPI_VELOCITY__", str(int(evm["ultima_velocity"])))
-        .replace("__KPI_SCORE__", str(evm["score_zenhub"]))
+        .replace("__KPI_ETC__", f"R$ {evm['etc_atual']:,.2f}")
+        .replace("__KPI_SCORE__", f"{evm['score_zenhub']}/100")
         
         .replace("__TABELA_DADOS_GRAFICO_LINHAS__", linhas_dados_grafico)
-
         .replace("__TABELA_AUDITORIA_EVM__", evm["tabela_auditoria_evm"])
         
-        .replace("__BURNUP_LABELS__", json.dumps(evm["burnup_labels"]))
-        .replace("__BURNUP_PV__", json.dumps(evm["burnup_pv"]))
-        .replace("__BURNUP_EV__", json.dumps(evm["burnup_ev"]))
-        .replace("__BURNUP_IDEAL__", json.dumps(evm["burnup_ideal"]))
+        .replace("__BURNUP_LABELS__", burnup_labels_json)
+        .replace("__BURNUP_PV__", burnup_pv_json)
+        .replace("__BURNUP_EV__", burnup_ev_json)
+        .replace("__BURNUP_IDEAL__", burnup_ideal_json)
         
         .replace("__VELOCITY_LABELS__", json.dumps(evm["velocity_labels"]))
         .replace("__VELOCITY_DATA__", json.dumps(evm["velocity_data"]))
@@ -295,7 +299,7 @@ def render_project_metrics_tab():
     st.subheader("ℹ️ Memória de Cálculo e Critérios do Agile EVM")
     st.markdown(
         """
-        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço:
+        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço e integrando o controle orçamentário real:
 
         * **BAC (Budget at Completion):** Orçamento total planejado de pontos da Release, definido pelo escopo inicial de pontos planejados ($PRP_0$):
         $$BAC = PRP_0$$
@@ -309,7 +313,16 @@ def render_project_metrics_tab():
         $$PV = PPC \\times BAC$$
         * **EV (Earned Value):** Valor Agregado real baseado na entrega efetiva de valor de negócio homologado:
         $$EV = APC_n \\times BAC$$
-        * **SPI (Schedule Performance Index):** Eficiência do cronograma medido pela razão métrica oficial do artigo ($SPI = EV / PV$).
+        * **AC (Actual Cost):** Custo Real acumulado despendido no projeto até a Sprint $n$, derivado da somatória dos custos reais de cada iteração ($SC$):
+        $$AC_n = \\sum_{k=1}^{n} SC_k$$
+        * **SPI (Schedule Performance Index):** Eficiência do cronograma medido pela razão métrica oficial do artigo:
+        $$SPI = \\frac{EV}{PV}$$
+        * **CPI (Cost Performance Index):** Índice de Desempenho de Custos, que mede a eficiência financeira em relação ao valor agregado entregue:
+        $$CPI = \\frac{EV}{AC_n}$$
+        * **ETC (Estimate To Complete):** Estimativa de esforço/custo financeiro que ainda será necessário para concluir o escopo restante da release:
+        $$ETC = \\frac{BAC - EV}{CPI}$$
+        * **EAC (Estimate At Completion):** Projeção do custo total final da release, revisado com base na performance atual do projeto:
+        $$EAC = AC_n + ETC = \\frac{BAC}{CPI}$$
         """
     )
 

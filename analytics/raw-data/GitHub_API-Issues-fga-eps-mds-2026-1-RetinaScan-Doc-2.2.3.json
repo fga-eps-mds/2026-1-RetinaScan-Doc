@@ -86,92 +86,6 @@
     "pinned_comment": null
   },
   {
-    "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114",
-    "repository_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc",
-    "labels_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114/labels{/name}",
-    "comments_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114/comments",
-    "events_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114/events",
-    "html_url": "https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114",
-    "id": 4717871089,
-    "node_id": "I_kwDOR2Tni88AAAABGTT_8Q",
-    "number": 114,
-    "title": "backend n\u00e3o aceita arquivos dicom",
-    "user": {
-      "login": "cwtshh",
-      "id": 101185927,
-      "node_id": "U_kgDOBgf5hw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/101185927?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/cwtshh",
-      "html_url": "https://github.com/cwtshh",
-      "followers_url": "https://api.github.com/users/cwtshh/followers",
-      "following_url": "https://api.github.com/users/cwtshh/following{/other_user}",
-      "gists_url": "https://api.github.com/users/cwtshh/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/cwtshh/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/cwtshh/subscriptions",
-      "organizations_url": "https://api.github.com/users/cwtshh/orgs",
-      "repos_url": "https://api.github.com/users/cwtshh/repos",
-      "events_url": "https://api.github.com/users/cwtshh/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/cwtshh/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "id": 10574676712,
-        "node_id": "LA_kwDOR2Tni88AAAACdkzC6A",
-        "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/labels/bug",
-        "name": "bug",
-        "color": "d73a4a",
-        "default": true,
-        "description": "Something isn't working"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignees": [],
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2026-06-22T15:01:36Z",
-    "updated_at": "2026-06-22T15:01:36Z",
-    "closed_at": null,
-    "assignee": null,
-    "author_association": "MEMBER",
-    "issue_field_values": [],
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "## Descri\u00e7\u00e3o\n\n<!--- Hist\u00f3ria de usu\u00e1rio (se houver)  -->\n\n<!--- Explica\u00e7\u00e3o direta sobre a tarefa -->\n\n## Pr\u00e9-requisitos\n<!--- Link da issue (se houver) -->\n\n## Crit\u00e9rios de aceita\u00e7\u00e3o\n<!--- Liste os crit\u00e9rios de aceita\u00e7\u00e3o -->\n<!--- - [ ] Crit\u00e9rio de aceita\u00e7\u00e3o -->\n",
-    "closed_by": null,
-    "reactions": {
-      "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/114/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null,
-    "pinned_comment": null
-  },
-  {
     "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/113",
     "repository_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc",
     "labels_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/113/labels{/name}",
@@ -704,11 +618,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
@@ -859,11 +773,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -1096,11 +1010,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
@@ -1216,7 +1130,7 @@
         "description": "New feature or request"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1292,18 +1206,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-08T14:24:20Z",
-    "updated_at": "2026-06-15T13:55:16Z",
-    "closed_at": null,
+    "updated_at": "2026-06-23T12:55:55Z",
+    "closed_at": "2026-06-23T12:55:55Z",
     "assignee": {
       "login": "cqcoding",
       "id": 92647006,
@@ -1342,7 +1256,27 @@
       "total_blocking": 0
     },
     "body": "## Descri\u00e7\u00e3o\n\nNessa tarefa, deve ser adicionado a ordena\u00e7\u00e3o das solicita\u00e7\u00f5es do admin \n\n## Crit\u00e9rios T\u00e9cnicos\n- [ ] Deve ser poss\u00edvel ordenar as solicita\u00e7\u00f5es atrav\u00e9s de filtros\n- [ ] Dever ser poss\u00edvel apagar as solicita\u00e7\u00f5es\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "andre-maia51",
+      "id": 76632983,
+      "node_id": "MDQ6VXNlcjc2NjMyOTgz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76632983?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/andre-maia51",
+      "html_url": "https://github.com/andre-maia51",
+      "followers_url": "https://api.github.com/users/andre-maia51/followers",
+      "following_url": "https://api.github.com/users/andre-maia51/following{/other_user}",
+      "gists_url": "https://api.github.com/users/andre-maia51/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/andre-maia51/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/andre-maia51/subscriptions",
+      "organizations_url": "https://api.github.com/users/andre-maia51/orgs",
+      "repos_url": "https://api.github.com/users/andre-maia51/repos",
+      "events_url": "https://api.github.com/users/andre-maia51/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/andre-maia51/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/104/reactions",
       "total_count": 0,
@@ -1357,7 +1291,7 @@
     },
     "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/104/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null
   },
   {
@@ -1403,7 +1337,7 @@
         "description": ""
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -1479,18 +1413,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-06-08T14:17:35Z",
-    "updated_at": "2026-06-21T15:45:53Z",
-    "closed_at": null,
+    "updated_at": "2026-06-23T12:55:54Z",
+    "closed_at": "2026-06-23T12:55:54Z",
     "assignee": {
       "login": "IderlanJ",
       "id": 101422838,
@@ -1538,7 +1472,27 @@
       "total_blocking": 0
     },
     "body": "## Descri\u00e7\u00e3o\n\nEu, como m\u00e9dico/especialista, quero poder colocar analisar a imagem com mais detalhes ap\u00f3s o processamento da IA\n\nNessa tarefa,  as fotos no p\u00f3s processamento precisam poder ser analisadas al\u00e9m na mera apresenta\u00e7\u00e3o da imagem\n\n\n## Crit\u00e9rios de aceita\u00e7\u00e3o\n- [ ] O m\u00e9dico/especialista deve poder dar zoom e arrastar imagem na an\u00e1lise.\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "andre-maia51",
+      "id": 76632983,
+      "node_id": "MDQ6VXNlcjc2NjMyOTgz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76632983?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/andre-maia51",
+      "html_url": "https://github.com/andre-maia51",
+      "followers_url": "https://api.github.com/users/andre-maia51/followers",
+      "following_url": "https://api.github.com/users/andre-maia51/following{/other_user}",
+      "gists_url": "https://api.github.com/users/andre-maia51/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/andre-maia51/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/andre-maia51/subscriptions",
+      "organizations_url": "https://api.github.com/users/andre-maia51/orgs",
+      "repos_url": "https://api.github.com/users/andre-maia51/repos",
+      "events_url": "https://api.github.com/users/andre-maia51/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/andre-maia51/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/103/reactions",
       "total_count": 0,
@@ -1553,7 +1507,7 @@
     },
     "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/103/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null
   },
   {
@@ -1834,11 +1788,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -2029,11 +1983,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -2210,11 +2164,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -2421,11 +2375,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -2959,11 +2913,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -3186,11 +3140,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -3423,11 +3377,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -3702,11 +3656,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -4368,11 +4322,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -4407,6 +4361,7 @@
         "issue_field_id": 3585156,
         "node_id": "IFSSV_kgDOABKy1A",
         "data_type": "single_select",
+        "issue_field_name": "Priority",
         "value": 6268586,
         "single_select_option": {
           "id": 6268586,
@@ -4418,6 +4373,7 @@
         "issue_field_id": 3585159,
         "node_id": "IFSSV_kgDOABKy1Q",
         "data_type": "single_select",
+        "issue_field_name": "Effort",
         "value": 6268588,
         "single_select_option": {
           "id": 6268588,
@@ -4628,11 +4584,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -5513,11 +5469,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
@@ -12444,17 +12400,17 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-11T23:58:27Z",
-    "updated_at": "2026-06-08T13:35:29Z",
+    "updated_at": "2026-06-27T02:43:03Z",
     "closed_at": null,
     "assignee": {
       "login": "EliasOliver21",
@@ -12502,7 +12458,7 @@
       "blocking": 0,
       "total_blocking": 0
     },
-    "body": "## Descri\u00e7\u00e3o\n\nEu, como usu\u00e1rio, desejo compartilhar resultados de exames por meio de um link para que outras pessoas possam acessar essas informa\u00e7\u00f5es de forma controlada.\n\nNessa tarefa, o sistema deve gerar links de acesso para compartilhamento de resultados.\n\n## Pr\u00e9-requisitos\n* #4 \n\n## Crit\u00e9rios de aceita\u00e7\u00e3o\n- [ ] O sistema deve permitir a gera\u00e7\u00e3o de um link para compartilhamento de resultados\n- [ ] O link deve permitir acesso \u00e0s informa\u00e7\u00f5es do exame correspondente\n- [ ] O sistema deve garantir que apenas usu\u00e1rios autorizados possam gerar links\n- [ ] O sistema deve garantir controle de acesso ao conte\u00fado compartilhado\n- [ ] O sistema deve garantir consist\u00eancia entre os dados exibidos e os armazenados\n\n\n",
+    "body": "## Descri\u00e7\u00e3o\n\nEu, como usu\u00e1rio, desejo compartilhar resultados de exames por meio de um link para que outras pessoas possam acessar essas informa\u00e7\u00f5es de forma controlada.\n\nNessa tarefa, o sistema deve gerar links de acesso para compartilhamento de resultados.\n\n## Pr\u00e9-requisitos\n* #4 \n\n## Crit\u00e9rios de aceita\u00e7\u00e3o\n- [x] O sistema deve permitir a gera\u00e7\u00e3o de um link para compartilhamento de resultados\n- [x] O link deve permitir acesso \u00e0s informa\u00e7\u00f5es do exame correspondente\n- [x] O sistema deve garantir que apenas usu\u00e1rios autorizados possam gerar links\n- [x] O sistema deve garantir controle de acesso ao conte\u00fado compartilhado\n- [x] O sistema deve garantir consist\u00eancia entre os dados exibidos e os armazenados\n\n\n",
     "closed_by": null,
     "reactions": {
       "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/27/reactions",
@@ -12661,11 +12617,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
@@ -12801,7 +12757,7 @@
         "description": "New feature or request"
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignees": [
       {
@@ -12898,18 +12854,18 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 12,
+      "open_issues": 0,
+      "closed_issues": 13,
       "state": "open",
       "created_at": "2026-04-19T17:08:47Z",
-      "updated_at": "2026-06-16T19:55:44Z",
+      "updated_at": "2026-06-23T12:55:56Z",
       "due_on": "2026-06-15T00:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2026-04-11T23:51:18Z",
-    "updated_at": "2026-06-20T20:23:33Z",
-    "closed_at": null,
+    "updated_at": "2026-06-23T12:55:56Z",
+    "closed_at": "2026-06-23T12:55:56Z",
     "assignee": {
       "login": "IderlanJ",
       "id": 101422838,
@@ -12957,7 +12913,27 @@
       "total_blocking": 0
     },
     "body": "## Descri\u00e7\u00e3o\n\nEu, como administrador, desejo visualizar m\u00e9tricas sobre os exames realizados para que eu possa analisar padr\u00f5es e acompanhar o uso do sistema.\n\nNessa tarefa, o sistema deve apresentar dados agregados de forma clara e visual.\n\n## Pr\u00e9-requisitos\n* fga-eps-mds/2026-1-RetinaScan-Web#26 \n* fga-eps-mds/2026-1-RetinaScan-Doc#21 \n\n## Crit\u00e9rios de aceita\u00e7\u00e3o\n- [ ] O sistema deve exibir m\u00e9tricas agregadas sobre exames realizados\n- [ ] O sistema deve apresentar as informa\u00e7\u00f5es de forma visual\n- [ ] O sistema deve garantir que os dados exibidos sejam consistentes com os exames armazenados\n- [ ] O sistema deve permitir acesso apenas a usu\u00e1rios autorizados\n\n\n",
-    "closed_by": null,
+    "closed_by": {
+      "login": "andre-maia51",
+      "id": 76632983,
+      "node_id": "MDQ6VXNlcjc2NjMyOTgz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76632983?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/andre-maia51",
+      "html_url": "https://github.com/andre-maia51",
+      "followers_url": "https://api.github.com/users/andre-maia51/followers",
+      "following_url": "https://api.github.com/users/andre-maia51/following{/other_user}",
+      "gists_url": "https://api.github.com/users/andre-maia51/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/andre-maia51/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/andre-maia51/subscriptions",
+      "organizations_url": "https://api.github.com/users/andre-maia51/orgs",
+      "repos_url": "https://api.github.com/users/andre-maia51/repos",
+      "events_url": "https://api.github.com/users/andre-maia51/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/andre-maia51/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
     "reactions": {
       "url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/25/reactions",
       "total_count": 0,
@@ -12972,7 +12948,7 @@
     },
     "timeline_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/25/timeline",
     "performed_via_github_app": null,
-    "state_reason": null,
+    "state_reason": "completed",
     "pinned_comment": null
   },
   {
@@ -13041,11 +13017,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 5,
-      "closed_issues": 2,
+      "open_issues": 3,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2026-04-19T17:14:01Z",
-      "updated_at": "2026-06-19T14:41:18Z",
+      "updated_at": "2026-06-26T15:57:25Z",
       "due_on": "2026-06-29T00:00:00Z",
       "closed_at": null
     },
@@ -14176,8 +14152,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 3,
-      "completed": 1,
-      "percent_completed": 33
+      "completed": 2,
+      "percent_completed": 66
     },
     "parent_issue_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/54",
     "issue_dependencies_summary": {
@@ -14464,8 +14440,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 7,
-      "completed": 5,
-      "percent_completed": 71
+      "completed": 6,
+      "percent_completed": 85
     },
     "parent_issue_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/51",
     "issue_dependencies_summary": {
@@ -14578,8 +14554,8 @@
     "active_lock_reason": null,
     "sub_issues_summary": {
       "total": 11,
-      "completed": 9,
-      "percent_completed": 81
+      "completed": 10,
+      "percent_completed": 90
     },
     "parent_issue_url": "https://api.github.com/repos/fga-eps-mds/2026-1-RetinaScan-Doc/issues/51",
     "issue_dependencies_summary": {

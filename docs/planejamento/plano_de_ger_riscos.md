@@ -121,11 +121,23 @@ Os riscos foram divididos nessas seguintes categorias:
 
 ## Conclusão
 
+### R2
+
 No que tange aos riscos gerenciais, observa-se uma variação pontual no R02 (Saída de algum integrante do projeto) na Sprint 7. O aumento na probabilidade desse evento deve-se ao fato de esta ter sido a última semana letiva disponível para o trancamento de disciplinas na universidade, configurando um período crítico para a estabilidade da equipe. Em contrapartida, uma evolução positiva foi registrada a partir da Sprint 4 no risco externo R06 (Indisponibilidade do cliente ou de especialistas); a integração efetiva do Dr. Tiago nas reuniões semanais mitigou a probabilidade de falta de alinhamento, gerando um impacto positivo no andamento das atividades e facilitando o esclarecimento contínuo de requisitos.
 
 A oscilação do risco gerencial R04 (Alteração no escopo do projeto) reflete diretamente a dinâmica de descoberta do projeto e o relacionamento com o cliente. Na Sprint 5, a identificação da necessidade de manipulação do formato de imagem DICOM gerou uma elevação temporária no score do risco. Embora a equipe tenha projetado uma estabilização na Sprint 6, a proximidade do fechamento da Release 2 (R2) na Sprint 7 trouxe uma nova solicitação por parte dos clientes, o que alterou significativamente o planejamento inicial e elevou os índices de probabilidade e impacto.
 
 Por fim, os reflexos dessa mudança de escopo (R04) foram projetados para as sprints subsequentes, mantendo o nível de impacto fixado em seu grau máximo (5). Essa decisão gerencial preventiva baseia-se na necessidade de revalidar histórias de usuário e critérios de aceitação, o que consome tempo e esforço. Além disso, uma alteração estrutural nas etapas finais do ciclo de desenvolvimento impõe o risco de não cumprimento de algumas funcionalidades previamente planejadas. Portanto, manter o score elevado serve como um alerta estratégico para manter o time preparado e mitigar potenciais impactos em outras entregas do projeto.
+
+### R3 (S8 - S12)
+
+No que concerne à evolução dos riscos gerenciais na Release 3 (R3), a partir da Sprint 10 observaram-se alterações significativas no mapeamento da equipe. O risco R02 (Saída de algum integrante do projeto) sofreu uma elevação crítica em sua probabilidade, saltando de 1 para 4. Essa revisão analítica fundamenta-se na ausência constante de um dos membros do grupo, o que aumentou consideravelmente as chances de desfalque formal na equipe e demandou atenção da gestão para a redistribuição de carga de trabalho. 
+
+Adicionalmente, o risco R03 (Divergência nos horários disponíveis dos integrantes) permaneceu com índices elevados. Essa estabilidade em um patamar alto reflete a proximidade do encerramento do semestre letivo, período no qual o acúmulo de compromissos acadêmicos e avaliações externas reduz de forma severa a flexibilidade de horários do time, exigindo um esforço contínuo de coordenação para os rituais do projeto.
+
+Por outro lado, mitigou-se com sucesso o risco interno R09 (Dependência entre atividades), cuja probabilidade foi reduzida de 3 para 1. Essa evolução positiva decorre de uma reestruturação estratégica no planejamento das sprints, em que as tarefas foram intencionalmente isoladas e modularizadas para evitar gargalos. A eliminação dessas dependências mútuas otimizou o fluxo de trabalho e conferiu maior autonomia e agilidade ao processo de desenvolvimento na reta final do projeto.
+
+
 
 ## Referências
 
@@ -134,6 +146,7 @@ Por fim, os reflexos dessa mudança de escopo (R04) foram projetados para as spr
 ## Histórico de versões
 | Versão | Data | Modificação | Autor |
 |--|--|--|--|
-|1.0|12/04/2026 | Criação do documento | Natália De Morais |
-|2.0|12/04/2026 | Adicionando Gráficos e explicação | Natália De Morais |
+|1.0|12/04/2026 | Criação do documento | [Natália De Morais](https://github.com/Natyrodrigues) |
+|2.0|12/04/2026 | Adicionando Gráficos e explicação | [Natália De Morais](https://github.com/Natyrodrigues) |
+|3.0|28/06/2026 | Nova analise de riscos para a R3 |  [Natália De Morais](https://github.com/Natyrodrigues) |
 

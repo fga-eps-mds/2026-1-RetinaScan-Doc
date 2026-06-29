@@ -86,3 +86,24 @@ def load_zenhub_sprints_raw() -> dict:
         data = json.load(f)
         
     return data if isinstance(data, dict) else {}
+
+def load_github_runs_raw() -> list:
+    """Varre e unifica as listas de workflow_runs de todos os arquivos de Runs na pasta raw-data."""
+    import glob
+    diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+    raiz_do_projeto = os.path.dirname(os.path.dirname(diretorio_atual))
+    
+    # Busca por todos os padrões de arquivos de Runs gerados pela automação
+    caminho_runs = os.path.join(raiz_do_projeto, "analytics", "raw-data", "GitHub_API-Runs-*.json")
+    arquivos = glob.glob(caminho_runs)
+    
+    all_runs = []
+    for arquivo in arquivos:
+        try:
+            dados = unmarshall_json(arquivo)
+            if "workflow_runs" in dados:
+                all_runs.extend(dados["workflow_runs"])
+        except Exception as e:
+            print(f"Erro ao ler arquivo de runs {arquivo}: {e}")
+            
+    return all_runs

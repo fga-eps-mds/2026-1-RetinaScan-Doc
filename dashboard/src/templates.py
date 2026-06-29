@@ -263,7 +263,6 @@ def build_product_html_template(repo_key, ultima_sprint) -> str:
     </html>
     """
 
-
 PROJECT_EVM_TEMPLATE = """
 <!DOCTYPE html>
 <html>
@@ -293,9 +292,10 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
 .card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:8px; padding:1rem 1.25rem; margin-bottom: 1rem; }
 .card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .card-title { font-size:13px; font-weight:500; color:var(--color-text-primary); margin:0; }
-.legend { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:8px; font-size:11px; color:var(--color-text-secondary); }
+.legend { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:12px; font-size:11px; color:var(--color-text-secondary); align-items: center;}
 .legend span { display:flex; align-items:center; gap:5px; }
 .legend b { width:20px; height:3px; display:inline-block; border-radius:2px; }
+.legend i { width:10px; height:10px; display:inline-block; border-radius:50%; }
 
 .sprint-table { width:100%; font-size:12px; border-collapse:collapse; }
 .sprint-table th { text-align:left; font-weight:500; color:var(--color-text-secondary); padding:6px 8px; border-bottom:1px solid var(--color-border-tertiary); font-size:11px; background: var(--color-background-secondary); }
@@ -353,59 +353,50 @@ body { font-family: sans-serif; margin: 0; padding: 10px; background: transparen
       <small style="color:var(--color-text-tertiary)">(Onde Progresso Real <i>APC</i> = Pontos Entregues Acumulados / Escopo Updated)</small>
     </div>
     <div class="formula-item">
-      <code>SPI</code> <b>Schedule Performance Index</b> = <i>EV</i> / <i>PV</i> <br>
-      <small style="color:var(--color-text-tertiary)">(Mede a eficiência do cronograma. Valores &ge; 1.0 indicam adiantamento)</small>
+      <code>SPI / CPI</code> <b>Performance Indices</b> = Eficiência de Cronograma (EV/PV) e de Custo (EV/AC). <br>
+      <small style="color:var(--color-text-tertiary)">(Valores &ge; 1.0 indicam conformidade ou desempenho acima do esperado)</small>
     </div>
   </div>
 </div>
 
 <div class="card">
-  <p class="card-title">Tabela de Rastreabilidade do Agile EVM</p>
-  <table class="sprint-table" style="margin-top: 5px;">
-    <thead>
-      <tr>
-        <th>Sprint</th>
-        <th>Planejado (PPC &rarr; PV)</th>
-        <th>Entregue Acumulado (APC &rarr; EV)</th>
-        <th>Velocity (Sprint)</th>
-        <th>SPI (Eficiência)</th>
-      </tr>
-    </thead>
-    <tbody>
-      __TABELA_DADOS_GRAFICO_LINHAS__
-    </tbody>
-  </table>
+  <p class="card-title" style="margin-bottom: 6px;">Evolução de Escopo (Eixo Esquerdo) vs. Índices de Desempenho CPI e SPI (Eixo Direito)</p>
+  <div class="legend">
+    <span><b style="background:#B5D4F4"></b> PV (Planejado)</span>
+    <span><b style="background:#185FA5"></b> EV (Realizado)</span>
+    <span><i style="background:#E24B4A"></i> CPI</span>
+    <span><i style="background:#EF9F27"></i> SPI</span>
+    <span><b style="background:#B4B2A9; border-top:1.5px dashed #B4B2A9; height:0; width:15px;"></b> Ref 1.0</span>
+  </div>
+  <div style="position:relative; width:100%; height:320px;">
+    <canvas id="unifiedEVMChart" role="img"></canvas>
+  </div>
 </div>
 
-<div style="display:grid; grid-template-columns:3fr 2fr; gap:14px; margin-bottom:1rem;">
-  <div class="card">
-    <p class="card-title">Burnup — Story points planejados × entregues por sprint</p>
-    <div class="legend">
-      <span><b style="background:#B5D4F4"></b> PV (planejado)</span>
-      <span><b style="background:#185FA5"></b> EV (realizado)</span>
-    </div>
-    <div style="position:relative;width:100%;height:190px;">
-      <canvas id="burnupC" role="img"></canvas>
-    </div>
-  </div>
-  <div class="card">
-    <p class="card-title">Velocity por sprint (SP entregues)</p>
-    <div style="position:relative;width:100%;height:190px;">
-      <canvas id="velC" role="img"></canvas>
-    </div>
+<div class="card">
+  <p class="card-title">Velocity por Sprint (SP entregues)</p>
+  <div style="position:relative; width:100%; height:160px;">
+    <canvas id="velC" role="img"></canvas>
   </div>
 </div>
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:1rem;">
   <div class="card">
-    <p class="card-title">SPI por sprint</p>
-    <div class="legend">
-      <span><b style="background:#185FA5"></b> SPI</span>
-      <span><b style="background:#B4B2A9; border-top:2px dashed #B4B2A9; height:0"></b> Referência 1.0</span>
-    </div>
-    <div style="position:relative;width:100%;height:150px;">
-      <canvas id="spiC" role="img"></canvas>
-    </div>
+    <p class="card-title">Tabela de Rastreabilidade do Agile EVM</p>
+    <table class="sprint-table" style="margin-top: 5px;">
+      <thead>
+        <tr>
+          <th>Sprint</th>
+          <th>Planejado (PPC &rarr; PV)</th>
+          <th>Entregue Acumulado (APC &rarr; EV)</th>
+          <th>Velocity (Sprint)</th>
+          <th>SPI</th>
+        </tr>
+      </thead>
+      <tbody>
+        __TABELA_DADOS_GRAFICO_LINHAS__
+      </tbody>
+    </table>
   </div>
   <div class="card">
     <p class="card-title">Sprints — status</p>
@@ -462,14 +453,69 @@ const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
 const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
 const txtColor = isDark ? '#aaa' : '#888';
 
+// JAVASCRIPT: GRÁFICO UNIFICADO (4 LINHAS)
 try {
-    new Chart(document.getElementById('burnupC'), {
+    new Chart(document.getElementById('unifiedEVMChart'), {
         type: 'line',
         data: {
             labels: __BURNUP_LABELS__,
             datasets: [
-                { label: 'PV', data: __BURNUP_PV__, borderColor: '#B5D4F4', backgroundColor: 'rgba(181,212,244,0.15)', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#B5D4F4', tension: 0.1 },
-                { label: 'EV', data: __BURNUP_EV__, borderColor: '#185FA5', backgroundColor: 'rgba(24,95,165,0.08)', borderWidth: 2.5, pointRadius: 5, pointBackgroundColor: '#185FA5', tension: 0.1, spanGaps: true }
+                { 
+                    label: 'PV (Planejado)', 
+                    data: __BURNUP_PV__, 
+                    borderColor: '#B5D4F4', 
+                    backgroundColor: 'rgba(181,212,244,0.1)', 
+                    borderWidth: 2, 
+                    pointRadius: 3,
+                    yAxisID: 'yLeft',
+                    tension: 0.1 
+                },
+                { 
+                    label: 'EV (Realizado)', 
+                    data: __BURNUP_EV__, 
+                    borderColor: '#185FA5', 
+                    backgroundColor: 'rgba(24,95,165,0.05)', 
+                    borderWidth: 2.5, 
+                    pointRadius: 4, 
+                    pointBackgroundColor: '#185FA5',
+                    yAxisID: 'yLeft',
+                    tension: 0.1, 
+                    spanGaps: true 
+                },
+                { 
+                    label: 'CPI', 
+                    data: __CPI_DATA__, 
+                    borderColor: '#E24B4A', 
+                    borderWidth: 2, 
+                    pointStyle: 'diamond',
+                    pointRadius: 5, 
+                    pointBackgroundColor: '#E24B4A',
+                    yAxisID: 'yRight',
+                    tension: 0.2,
+                    spanGaps: true
+                },
+                { 
+                    label: 'SPI', 
+                    data: __SPI_DATA__, 
+                    borderColor: '#EF9F27', 
+                    borderWidth: 2, 
+                    pointStyle: 'triangle',
+                    pointRadius: 5, 
+                    pointBackgroundColor: '#EF9F27',
+                    yAxisID: 'yRight',
+                    tension: 0.2,
+                    spanGaps: true
+                },
+                { 
+                    label: 'Ref 1.0', 
+                    data: __SPI_REF__, 
+                    borderColor: '#B4B2A9', 
+                    borderWidth: 1.5, 
+                    borderDash: [6,4], 
+                    pointRadius: 0, 
+                    yAxisID: 'yRight',
+                    fill: false 
+                }
             ]
         },
         options: {
@@ -477,13 +523,30 @@ try {
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: {
-                x: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 10 }, maxRotation: 0 } },
-                y: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 11 } }, min: 0 }
+                x: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 10 } } },
+                yLeft: {
+                    type: 'linear',
+                    position: 'left',
+                    min: 0,
+                    grid: { color: gridColor },
+                    ticks: { color: txtColor, font: { size: 11 } },
+                    title: { display: true, text: 'Valor / Pontos de Escopo', color: txtColor }
+                },
+                yRight: {
+                    type: 'linear',
+                    position: 'right',
+                    min: 0,
+                    max: 2.0,
+                    grid: { drawOnChartArea: false }, 
+                    ticks: { color: txtColor, font: { size: 11 } },
+                    title: { display: true, text: 'Valor dos Índices (CPI / SPI)', color: txtColor }
+                }
             }
         }
     });
-} catch (e) { console.error("Erro no gráfico Burnup:", e); }
+} catch (e) { console.error("Erro no gráfico Unificado EVM:", e); }
 
+// JAVASCRIPT: RESTAURADO GRÁFICO DO VELOCITY
 try {
     new Chart(document.getElementById('velC'), {
         type: 'bar',
@@ -496,34 +559,12 @@ try {
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: {
-                x: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 10 }, maxRotation: 0 } },
+                x: { grid: { display: false }, ticks: { color: txtColor, font: { size: 10 }, maxRotation: 0 } },
                 y: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 11 } }, min: 0 }
             }
         }
     });
 } catch (e) { console.error("Erro no gráfico Velocity:", e); }
-
-try {
-    new Chart(document.getElementById('spiC'), {
-        type: 'line',
-        data: {
-            labels: __SPI_LABELS__,
-            datasets: [
-                { label: 'SPI', data: __SPI_DATA__, borderColor: '#185FA5', backgroundColor: 'rgba(24,95,165,0.1)', borderWidth: 2.5, pointRadius: 5, pointBackgroundColor: '#185FA5', tension: 0.2, fill: true },
-                { label: 'Ref 1.0', data: __SPI_REF__, borderColor: '#B4B2A9', borderWidth: 1.5, borderDash: [5,4], pointRadius: 0, fill: false }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-                x: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 11 } } },
-                y: { grid: { color: gridColor }, ticks: { color: txtColor, font: { size: 11 } }, min: 0, max: 3.0 }
-            }
-        }
-    });
-} catch (e) { console.error("Erro no gráfico SPI:", e); }
 
 function exportTableToCSV(filename) {
     try {
@@ -562,3 +603,116 @@ function exportTableToCSV(filename) {
 </body>
 </html>
 """
+
+def build_process_html_template(metrics: dict) -> str:
+    """Gera o HTML estruturado com cards e gráficos injetados no Chart.js para a aba de Processos."""
+    import json
+    ci_labels_js = json.dumps(metrics["ci_line_labels"])
+    ci_data_js = json.dumps(metrics["ci_line_data"])
+    wf_data_js = json.dumps(metrics["wf_pie_data"])
+    tp_data_js = json.dumps(metrics["throughput_pie_data"])
+    
+    html_content = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+    :root {{
+        --color-background-primary: #ffffff;
+        --color-background-secondary: #f8f9fa;
+        --color-border-secondary: #e9ecef;
+        --color-border-tertiary: #dee2e6;
+        --color-text-primary: #212529;
+        --color-text-secondary: #495057;
+    }}
+    body {{ font-family: sans-serif; margin: 0; padding: 10px; background: transparent; }}
+    .qh{{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;padding-top:1rem}}
+    .qa{{width:8px;height:36px;background:#2E7D32;border-radius:3px;flex-shrink:0}}
+    .qt{{font-size:16px;font-weight:500;margin:0;color:var(--color-text-primary);}}
+    .qs{{font-size:12px;color:var(--color-text-secondary);margin:0}}
+    .qb{{margin-left:auto;font-size:11px;background:#E8F5E9;color:#2E7D32;padding:3px 10px;border-radius:4px}}
+    .kgq{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:1.25rem}}
+    .kpq{{background:var(--color-background-secondary);border-radius:4px;padding:12px 14px;border:0.5px solid var(--color-border-tertiary);}}
+    .knum{{font-size:22px;font-weight:500}}
+    .card {{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:8px;padding:1rem 1.25rem;margin-bottom:1rem;}}
+    </style>
+    </head>
+    <body>
+        <div class="qh">
+            <div class="qa"></div>
+            <div>
+                <h2 class="qt">Indicadores de Processo e Qualidade da Esteira</h2>
+                <p class="qs">Análise em tempo real do pipeline de CI/CD (GitHub Actions) e fluxo de Throughput do time.</p>
+            </div>
+            <div class="qb">Aba de Processo</div>
+        </div>
+
+        <div class="kgq">
+            <div class="kpq">
+                <div class="qs" style="font-weight: 500; text-transform: uppercase;">Tempo Médio de Feedback (CI)</div>
+                <div class="knum" style="color: #3C3489; margin-top: 5px;">{metrics['avg_feedback_minutes']} <span style="font-size:14px; font-weight:normal;">minutos</span></div>
+            </div>
+            <div class="kpq">
+                <div class="qs" style="font-weight: 500; text-transform: uppercase;">Total de Execuções de Builds</div>
+                <div class="knum" style="color: #185FA5; margin-top: 5px;">{metrics['total_runs']} <span style="font-size:14px; font-weight:normal;">execuções</span></div>
+            </div>
+            <div class="kpq">
+                <div class="qs" style="font-weight: 500; text-transform: uppercase;">Throughput Acumulado</div>
+                <div class="knum" style="color: #2E7D32; margin-top: 5px;">{metrics['total_closed_issues']} / {metrics['total_created_issues']} <span style="font-size:12px; font-weight:normal;">Issues</span></div>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+            <div class="card">
+                <h4 style="margin: 0 0 15px 0; font-size: 13px; font-weight: 500; text-align: center; color:var(--color-text-primary);">Estabilidade das Builds (CI/CD)</h4>
+                <div style="position: relative; height: 220px; width: 100%;"><canvas id="wfPieChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h4 style="margin: 0 0 15px 0; font-size: 13px; font-weight: 500; text-align: center; color:var(--color-text-primary);">Eficiência de Entrega (Throughput)</h4>
+                <div style="position: relative; height: 220px; width: 100%;"><canvas id="throughputPieChart"></canvas></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h4 style="margin: 0 0 15px 0; font-size: 13px; font-weight: 500; color:var(--color-text-primary);">Evolução Histórica do Tempo de Feedback (CI)</h4>
+            <div style="position: relative; height: 260px; width: 100%;"><canvas id="ciLineChart"></canvas></div>
+        </div>
+
+    <script>
+    setTimeout(function() {{
+        const isDark = document.body.getAttribute('data-theme') === 'dark' || 
+                       window.getComputedStyle(document.body).backgroundColor.includes('rgb(14, 17, 23)');
+        const txtColor = isDark ? '#E0E0E0' : '#333333';
+        const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.05)';
+
+        try {{
+            new Chart(document.getElementById('wfPieChart'), {{
+                type: 'pie',
+                data: {{ labels: ['Sucesso', 'Falha'], datasets: [{{ data: {wf_data_js}, backgroundColor: ['#1D9E75', '#E24B4A'], borderWidth: 1 }}] }},
+                options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ position: 'bottom', labels: {{ color: txtColor }} }} }} }}
+            }});
+        }} catch(e) {{}}
+
+        try {{
+            new Chart(document.getElementById('throughputPieChart'), {{
+                type: 'pie',
+                data: {{ labels: ['Issues Fechadas', 'Issues Abertas'], datasets: [{{ data: {tp_data_js}, backgroundColor: ['#185FA5', '#EF9F27'], borderWidth: 1 }}] }},
+                options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ position: 'bottom', labels: {{ color: txtColor }} }} }} }}
+            }});
+        }} catch(e) {{}}
+
+        try {{
+            new Chart(document.getElementById('ciLineChart'), {{
+                type: 'line',
+                data: {{ labels: {ci_labels_js}, datasets: [{{ label: 'Minutos', data: {ci_data_js}, borderColor: '#534AB7', backgroundColor: 'rgba(83, 74, 183, 0.1)', borderWidth: 2, tension: 0.2, fill: true }}] }},
+                options: {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ display: false }} }}, scales: {{ x: {{ grid: {{ color: gridColor }}, ticks: {{ color: txtColor }} }}, y: {{ grid: {{ color: gridColor }}, ticks: {{ color: txtColor }} }} }} }}
+            }});
+        }} catch(e) {{}}
+    }}, 300);
+    </script>
+    </body>
+    </html>
+ """
+    return html_content

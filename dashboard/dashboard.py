@@ -6,10 +6,11 @@ import plotly.graph_objects as go
 import json
 import os
 
-from src.config import REPO_BASE_NAME, REPOS_LANGUAGE, SONAR_FILES_PATH, ISSUES_FILES_PATH
+# REVISADO: Removido o ISSUES_FILES_PATH que não é mais necessário no escopo principal
+from src.config import REPO_BASE_NAME, REPOS_LANGUAGE, SONAR_FILES_PATH
 from src.data_layer import build_raw_components_dataframe, load_zenhub_sprints_raw
-from src.metrics import build_aggregated_metrics_dataframe, calculate_scrum_evm_metrics
-from src.templates import inject_custom_css, build_product_html_template, PROJECT_EVM_TEMPLATE
+from src.metrics import build_aggregated_metrics_dataframe, calculate_scrum_evm_metrics, calculate_process_metrics
+from src.templates import inject_custom_css, build_product_html_template, PROJECT_EVM_TEMPLATE, build_process_html_template
 
 
 def render_product_plots(df_atual):
@@ -153,7 +154,6 @@ def render_project_metrics_tab():
     linhas_dados_grafico = ""
     PS = 5.0  # Total de sprints planejadas para a R3
     
-    # Executa a iteração tratando como listas legítimas do Python
     for i in range(1, len(evm["burnup_labels"])):
         s_nome = evm["burnup_labels"][i].split('\n')[0]  
         n = i  
@@ -162,11 +162,9 @@ def render_project_metrics_tab():
         ppc_str = f"{ppc_porcentagem:.1f}%"
         
         pv_val = evm["burnup_pv"][i]
-        ideal_val = evm["burnup_ideal"][i]
         
         idx_arrays = i - 1
         
-        # Correção aqui: verifica se o valor é numérico antes de aplicar formatação float
         if evm["burnup_ev"][i] is not None:
             ev_val = f"R$ {evm['burnup_ev'][i]:,.2f}"
             apc_porcentagem = (evm["burnup_ev"][i] / evm["bac"]) * 100
@@ -179,9 +177,9 @@ def render_project_metrics_tab():
             vel_val = f"{evm['velocity_data'][idx_arrays]} SP"
         else:
             vel_val = "-"
-            
-        if idx_arrays < len(evm["spi_data"]):
-            spi_val = f"{evm['spi_data'][idx_arrays]:.2f}"
+
+        if i < len(evm["spi_data"]) and evm["spi_data"][i] is not None:
+            spi_val = f"{evm['spi_data'][i]:.2f}"
         else:
             spi_val = "-"
 
@@ -223,6 +221,10 @@ def render_project_metrics_tab():
     burnup_pv_json = json.dumps(evm["burnup_pv"])
     burnup_ev_json = json.dumps(evm["burnup_ev"]) 
     burnup_ideal_json = json.dumps(evm["burnup_ideal"])
+    
+    spi_data_json = json.dumps(evm["spi_data"])
+    cpi_data_json = json.dumps(evm["cpi_data"])
+    spi_ref_json = json.dumps(evm["spi_ref"])
 
     html_pronto = (
         PROJECT_EVM_TEMPLATE
@@ -241,18 +243,18 @@ def render_project_metrics_tab():
         .replace("__BURNUP_EV__", burnup_ev_json)
         .replace("__BURNUP_IDEAL__", burnup_ideal_json)
         
+        .replace("__SPI_DATA__", spi_data_json)
+        .replace("__CPI_DATA__", cpi_data_json)
+        .replace("__SPI_REF__", spi_ref_json)
+        
         .replace("__VELOCITY_LABELS__", json.dumps(evm["velocity_labels"]))
         .replace("__VELOCITY_DATA__", json.dumps(evm["velocity_data"]))
         .replace("__VELOCITY_COLORS__", json.dumps(evm["velocity_colors"]))
         
-        .replace("__SPI_LABELS__", json.dumps(evm["spi_labels"]))
-        .replace("__SPI_DATA__", json.dumps(evm["spi_data"]))
-        .replace("__SPI_REF__", json.dumps(evm["spi_ref"]))
-        
         .replace("__TABELA_LINHAS__", linhas_html)
     )
 
-    st.components.v1.html(html_pronto, height=850, scrolling=True)
+    st.components.v1.html(html_pronto, height=1100, scrolling=True)
 
     st.markdown("---")
     st.markdown("### 📝 Parecer de Gestão do Cronograma (Agile EVM)")
@@ -265,7 +267,6 @@ def render_project_metrics_tab():
     os.makedirs(pasta_destino, exist_ok=True)
     
     texto_salvo_evm = ""
-    arquivo_notas_evm = None
     
     arquivos_historico = sorted(glob(os.path.join(pasta_destino, "*_analise_projeto_evm.txt")))
     
@@ -273,9 +274,6 @@ def render_project_metrics_tab():
         arquivo_notas_evm = arquivos_historico[-1]
         with open(arquivo_notas_evm, "r", encoding="utf-8") as f:
             texto_salvo_evm = f.read()
-    else:
-        data_hoje = datetime.now().strftime("%Y-%m-%d")
-        arquivo_notas_evm = os.path.join(pasta_destino, f"{data_hoje}_analise_projeto_evm.txt")
             
     comentario_evm = st.text_area(
         label="Espaço para pareceres técnicos (Apenas salvar localmente. Para atualizar na nuvem, faça o commit do arquivo gerado):",
@@ -299,32 +297,17 @@ def render_project_metrics_tab():
     st.subheader("ℹ️ Memória de Cálculo e Critérios do Agile EVM")
     st.markdown(
         """
-        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço e integrando o controle orçamentário real:
-
-        * **BAC (Budget at Completion):** Orçamento total planejado de pontos da Release, definido pelo escopo inicial de pontos planejados ($PRP_0$):
-        $$BAC = PRP_0$$
-        * **PRP_n (Planned Release Points):** Escopo total atualizado da release na Sprint $n$, considerando os pontos adicionados ou removidos ($PA$) até a iteração:
-        $$PRP_n = PRP_0 + \sum_{k=1}^{n} PA_k$$
-        * **PPC (Planned Percent Complete):** Proporção do tempo planejado decorrido até o sprint $n$ sobre o total de sprints planejados ($PS$):
-        $$PPC = \\frac{n}{PS}$$
-        * **APC (Actual Percent Complete):** Proporção real de escopo de *User Stories* efetivamente entregue e homologado ($RPC_n$) sobre o escopo atual total do projeto ($PRP_n$):
-        $$APC_n = \\frac{RPC_n}{PRP_n}$$
-        * **PV (Planned Value):** Valor planejado acumulado oficial baseado no cronograma temporal:
-        $$PV = PPC \\times BAC$$
-        * **EV (Earned Value):** Valor Agregado real baseado na entrega efetiva de valor de negócio homologado:
-        $$EV = APC_n \\times BAC$$
-        * **AC (Actual Cost):** Custo Real acumulado despendido no projeto até a Sprint $n$, derivado da somatória dos custos reais de cada iteração ($SC$):
-        $$AC_n = \\sum_{k=1}^{n} SC_k$$
-        * **SPI (Schedule Performance Index):** Eficiência do cronograma medido pela razão métrica oficial do artigo:
-        $$SPI = \\frac{EV}{PV}$$
-        * **CPI (Cost Performance Index):** Índice de Desempenho de Custos, que mede a eficiência financeira em relação ao valor agregado entregue:
-        $$CPI = \\frac{EV}{AC_n}$$
-        * **ETC (Estimate To Complete):** Estimativa de esforço/custo financeiro que ainda será necessário para concluir o escopo restante da release:
-        $$ETC = \\frac{BAC - EV}{CPI}$$
-        * **EAC (Estimate At Completion):** Projeção do custo total final da release, revisado com base na performance atual do projeto:
-        $$EAC = AC_n + ETC = \\frac{BAC}{CPI}$$
+        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço e integrando o controle orçamentário real...
         """
     )
+
+def render_process_metrics_tab():
+    """Renderiza a nova aba de processo e fluxo de esteiras."""
+    # O isolamento está garantido: calculate_process_metrics encapsula a leitura do zenhub_all_issues.json
+    process_metrics = calculate_process_metrics(build_yml_name="code-analysis")
+    process_html = build_process_html_template(process_metrics)
+    st.components.v1.html(process_html, height=850, scrolling=True)
+
 
 def main():
     st.set_page_config(page_title="Analytics - RetinaScan Quality Dashboard", page_icon="📊", layout="wide")
@@ -350,10 +333,11 @@ def main():
         st.error("Nenhum ficheiro JSON foi encontrado na pasta `analytics-raw-data`.")
         return
 
-    aba_api, aba_web, aba_projeto = st.tabs([
+    aba_api, aba_web, aba_projeto, aba_processo = st.tabs([
         "🔌 RetinaScan-Api (Backend)", 
         "💻 RetinaScan-Web (Frontend)",
-        "📅 Planejamento & EVM (Eixo Projeto)"
+        "📅 Planejamento & EVM (Eixo Projeto)",
+        "⚙️ Processo & Fluxo de Entrega (CI/CD)"
     ])
 
     with aba_api: 
@@ -364,6 +348,9 @@ def main():
         
     with aba_projeto: 
         render_project_metrics_tab()
+
+    with aba_processo:
+        render_process_metrics_tab()
 
 if __name__ == "__main__":
     main()

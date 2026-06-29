@@ -1,0 +1,7 @@
+Durante todo o ciclo R3, nossa prioridade estratégica foi a entrega contínua de valor funcional. Mantivemos um rigor técnico absoluto em testes, complexidade e cobertura, garantindo que o software fosse entregue estável e sem débito técnico.
+
+Vale ressaltar que, ao longo de todas as semanas do R3, nossos indicadores técnicos permaneceram consistentes em patamares elevados. Essa estabilidade constante nos deu a segurança de que o projeto possuía uma base sólida e resiliente, o que nos permitiu focar 100% da capacidade do time na implementação das User Stories. Entendemos que, naquele momento, a entrega de funcionalidade era a prioridade absoluta para o cliente, e os dados nos confirmavam que podíamos seguir com esse foco sem comprometer a saúde do produto.
+
+A baixa densidade de comentários é uma consequência direta dessa definição consciente de prioridade. Optamos por priorizar o desenvolvimento funcional, cientes de que a documentação técnica seria a etapa final para garantir a sustentabilidade do projeto.
+
+Agora que o core funcional está consolidado, nosso foco mudou. Estabelecemos um plano para as Sprints 12 e 13 exclusivamente para tratar esse déficit de documentação. Nosso objetivo final é traduzir o conhecimento técnico do código em comentários, garantindo que a transição e a manutenção futura do software sejam feitas com total clareza.

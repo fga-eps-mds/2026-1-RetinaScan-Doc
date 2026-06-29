@@ -1,0 +1,12 @@
+PANORAMA TÉCNICO E ESTABILIDADE (R3)
+Ao longo de todo o ciclo R3, os indicadores de qualidade do repositório Web mantiveram-se em patamares estáveis e elevados, refletindo um ambiente de desenvolvimento controlado. A complexidade do código, a baixa duplicação e a robustez da nossa suíte de testes (com cobertura e sucesso integral) confirmam que o software foi construído sobre uma base sólida.
+
+Essa constância nas métricas de performance técnica, que permaneceram sem oscilações significativas ao longo de todas as semanas, deu ao time a segurança necessária para adotar uma estratégia de priorização focada na entrega funcional.
+
+DECISÕES DE PRIORIZAÇÃO
+A métrica de comentários reflete uma escolha deliberada do grupo. Durante o desenvolvimento das Sprints, priorizamos 100% da capacidade técnica na entrega e refinamento das User Stories (USs). Entendemos que o valor imediato para o cliente residia na funcionalidade e estabilidade, e não na documentação interna.
+
+Como as métricas de "Code Quality" e "Reliability" sempre se mostraram robustas e aprovadas dentro dos critérios do Q-Rapids, validamos que o débito de documentação não representava um risco à integridade do software, mas sim um compromisso de "entrega final".
+
+PLANO DE AÇÃO PARA AS SPRINTS FINAIS
+Com a base do produto consolidada, o foco mudou. Para as Sprints 12 e 13, estabelecemos um plano específico para corrigir o déficit na densidade de comentários. O objetivo é ajustar esse indicador para garantir que o projeto, além de estável, seja tecnicamente legível para futuras manutenções, elevando o fator de manutenibilidade (Maintainability) e fechando o ciclo com qualidade homologada em todos os quadrantes do framework Q-Rapids.

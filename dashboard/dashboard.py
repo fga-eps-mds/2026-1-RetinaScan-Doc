@@ -297,7 +297,30 @@ def render_project_metrics_tab():
     st.subheader("ℹ️ Memória de Cálculo e Critérios do Agile EVM")
     st.markdown(
         """
-        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço e integrando o controle orçamentário real...
+        As métricas exibidas no painel seguem estritamente a modelagem matemática estabelecida por **Sulaiman, Barton e Blackburn (2006)** no artigo *"AgileEVM - Earned Value Management in Scrum Projects"*, aplicando equações do PMBOK adaptadas ao framework Scrum utilizando **Story Points (SP)** de *User Stories* como métrica de esforço e integrando o controle orçamentário real:
+
+        * **BAC (Budget at Completion):** Orçamento total planejado de pontos da Release, definido pelo escopo inicial de pontos planejados ($PRP_0$):
+        $$BAC = PRP_0$$
+        * **PRP_n (Planned Release Points):** Escopo total atualizado da release na Sprint $n$, considerando os pontos adicionados ou removidos ($PA$) até a iteração:
+        $$PRP_n = PRP_0 + \sum_{k=1}^{n} PA_k$$
+        * **PPC (Planned Percent Complete):** Proporção do tempo planejado decorrido até o sprint $n$ sobre o total de sprints planejados ($PS$):
+        $$PPC = \\frac{n}{PS}$$
+        * **APC (Actual Percent Complete):** Proporção real de escopo de *User Stories* efetivamente entregue e homologado ($RPC_n$) sobre o escopo atual total do projeto ($PRP_n$):
+        $$APC_n = \\frac{RPC_n}{PRP_n}$$
+        * **PV (Planned Value):** Valor planejado acumulado oficial baseado no cronograma temporal:
+        $$PV = PPC \\times BAC$$
+        * **EV (Earned Value):** Valor Agregado real baseado na entrega efetiva de valor de negócio homologado:
+        $$EV = APC_n \\times BAC$$
+        * **AC (Actual Cost):** Custo Real acumulado despendido no projeto até a Sprint $n$, derivado da somatória dos custos reais de cada iteração ($SC$):
+        $$AC_n = \\sum_{k=1}^{n} SC_k$$
+        * **SPI (Schedule Performance Index):** Eficiência do cronograma medido pela razão métrica oficial do artigo:
+        $$SPI = \\frac{EV}{PV}$$
+        * **CPI (Cost Performance Index):** Índice de Desempenho de Custos, que mede a eficiência financeira em relação ao valor agregado entregue:
+        $$CPI = \\frac{EV}{AC_n}$$
+        * **ETC (Estimate To Complete):** Estimativa de esforço/custo financeiro que ainda será necessário para concluir o escopo restante da release:
+        $$ETC = \\frac{BAC - EV}{CPI}$$
+        * **EAC (Estimate At Completion):** Projeção do custo total final da release, revisado com base na performance atual do projeto:
+        $$EAC = AC_n + ETC = \\frac{BAC}{CPI}$$
         """
     )
 

@@ -1,0 +1,1646 @@
+[
+    {
+        "number": 1,
+        "title": "Autenticação e Controle de Acesso",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-11T17:44:32Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 2,
+        "title": "Cadastro e Upload de Exames",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-11T18:06:03Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": [
+            "R1",
+            "R2"
+        ]
+    },
+    {
+        "number": 3,
+        "title": "Histórico e Consulta",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-11T18:17:49Z",
+        "closed_at": "2026-06-17T20:22:31Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 4,
+        "title": "Processamento e IA",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-11T18:33:31Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 34,
+        "title": "docs: corrige documentação do banco",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-15T20:44:56Z",
+        "closed_at": "2026-04-15T20:46:56Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: Mar 30 - Apr 5, 2026",
+            "Sprint: Apr 6 - Apr 12, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 36,
+        "title": "Docs/regras versionamento - Revisão de artefatos",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-16T14:37:21Z",
+        "closed_at": "2026-04-16T14:37:24Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 19, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 39,
+        "title": "Templates de Issue e Pr",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-16T15:28:12Z",
+        "closed_at": "2026-04-16T15:34:40Z",
+        "story_points": 1.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 19, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 5,
+        "title": "BUG - Mensagem de erro não está sendo corretamente mostrada",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T02:50:56Z",
+        "closed_at": "2026-04-20T03:25:13Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 11,
+        "title": "hotfix: corrige erro do better auth de senha mutio fraca que nao estava sendo retornada ao front",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T03:07:09Z",
+        "closed_at": "2026-04-20T03:22:03Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 6,
+        "title": "Edição de dados do usuário - Front",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T03:31:09Z",
+        "closed_at": "2026-04-21T02:03:49Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 19, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 14,
+        "title": "hotfix: adiciona campo image ao retorno do better auth",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T18:07:11Z",
+        "closed_at": "2026-04-20T18:11:13Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 19, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 45,
+        "title": "Add: Dashboard analítico",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T20:05:25Z",
+        "closed_at": "2026-04-20T20:26:45Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 19, 2026"
+        ],
+        "labels": [
+            "dashboard"
+        ],
+        "releases": []
+    },
+    {
+        "number": 15,
+        "title": "Edição de imagens de perfil cria várias imagens dentro do banco do minio",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T21:08:03Z",
+        "closed_at": "2026-04-25T22:39:13Z",
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 16,
+        "title": "hotfix: corrige erro do drizzle ao atualizar email",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T21:36:09Z",
+        "closed_at": "2026-04-23T12:17:52Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 7,
+        "title": "Feature/edicao de dados do usuario",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-20T21:46:13Z",
+        "closed_at": "2026-04-23T12:19:39Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 51,
+        "title": "R1",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-24T21:08:08Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 52,
+        "title": "R2",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-24T21:17:30Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 53,
+        "title": "R3",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-24T22:07:51Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 54,
+        "title": "RM6",
+        "state": "OPEN",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-24T22:08:39Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 19,
+        "title": "Feature/cadastro de exame",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-24T23:59:46Z",
+        "closed_at": "2026-04-25T21:38:56Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 20,
+        "title": "Feature/solicitacao de alteracao de cpf crm",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-25T17:14:24Z",
+        "closed_at": "2026-04-25T22:35:08Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 24,
+        "title": "Fix/minio atualizacao imagem",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-25T21:58:09Z",
+        "closed_at": "2026-04-25T22:37:47Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 56,
+        "title": "Fix: Correções na configuração do dashboard para interagir com arquivos .json",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-26T10:18:57Z",
+        "closed_at": "2026-04-26T13:44:24Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "dashboard"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 60,
+        "title": "Organização das atas de reunião e do menu de navegação da gitpages",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-26T14:53:54Z",
+        "closed_at": "2026-04-26T21:59:56Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 12,
+        "title": "Feature/alteracao cpf crm",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-27T02:13:52Z",
+        "closed_at": "2026-04-27T02:52:27Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 13,
+        "title": "Release MAJOR 1 - Autenticação e Controle de Acessos",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-27T03:17:22Z",
+        "closed_at": "2026-04-27T03:38:31Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026"
+        ],
+        "labels": [
+            "MAJOR RELEASE"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 27,
+        "title": "Release MAJOR 1 - Autenticação e Controle de Acessos",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-27T03:18:55Z",
+        "closed_at": "2026-04-27T03:40:15Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026"
+        ],
+        "labels": [
+            "MAJOR RELEASE"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 28,
+        "title": "Revert \"Release MAJOR 1 - Autenticação e Controle de Acessos\"",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-27T03:47:51Z",
+        "closed_at": "2026-04-27T03:49:42Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 29,
+        "title": "Release MAJOR 1 - Autenticação e Controle de Acessos",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-27T04:15:56Z",
+        "closed_at": "2026-04-27T04:27:03Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "MAJOR RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 63,
+        "title": "refactor: ajusta caminhos do analytics e remove arquivos duplicados",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-27T05:57:07Z",
+        "closed_at": "2026-04-27T05:58:43Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 65,
+        "title": "Configuração de VM e Proxy Reverso para acesso via domínio",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-04-29T02:14:44Z",
+        "closed_at": "2026-04-29T02:14:56Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 20, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 22,
+        "title": "Feature/componente de upload de imagem",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-02T23:44:32Z",
+        "closed_at": "2026-05-03T00:34:26Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "DEVELOP"
+        ],
+        "releases": []
+    },
+    {
+        "number": 23,
+        "title": "Feature/componente de upload de imagem",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-03T00:53:32Z",
+        "closed_at": "2026-05-03T15:37:30Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 35,
+        "title": "metrics: corrige export de metricas",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-03T19:17:19Z",
+        "closed_at": "2026-05-03T22:37:53Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "bug",
+            "documentation",
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 25,
+        "title": "Feature/componente de upload de imagem",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-03T21:02:11Z",
+        "closed_at": "2026-05-03T21:28:44Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "DEVELOP"
+        ],
+        "releases": []
+    },
+    {
+        "number": 37,
+        "title": "fix: Erro ao editar os dados do Admin Cadastrado Automaticamente",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-04T13:46:03Z",
+        "closed_at": "2026-05-08T17:48:42Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 70,
+        "title": "Ata reuniao",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-04T22:51:58Z",
+        "closed_at": "2026-05-04T23:17:16Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": []
+    },
+    {
+        "number": 71,
+        "title": "docs: adicionando ata da reuniao",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-05T00:34:29Z",
+        "closed_at": "2026-05-08T17:56:22Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "documentation"
+        ],
+        "releases": []
+    },
+    {
+        "number": 40,
+        "title": "Release Minor",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-05T13:37:22Z",
+        "closed_at": "2026-05-05T13:41:33Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "MINOR RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 32,
+        "title": "Feature/componente relatorio",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-08T15:03:48Z",
+        "closed_at": "2026-05-10T00:54:41Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "DEVELOP"
+        ],
+        "releases": []
+    },
+    {
+        "number": 74,
+        "title": "Correção de documentação com Feedback Review da Release 1",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-10T18:27:09Z",
+        "closed_at": "2026-05-13T01:01:50Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: May 4 - May 10, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 43,
+        "title": "ci: corrige pipeline de coleta de metricas",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-10T19:40:31Z",
+        "closed_at": "2026-05-11T22:46:48Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "documentation",
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 75,
+        "title": "docs: atualizando documentacao e corrigindo artefatos",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-10T21:10:23Z",
+        "closed_at": "2026-05-11T00:16:33Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 44,
+        "title": "fix: ajusta visualizacao dos exames pelo admin",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-10T22:28:51Z",
+        "closed_at": "2026-05-10T22:58:20Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 46,
+        "title": "Revert \"fix :Retornar 409 Conflict ao criar usuário duplicado\"",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-11T13:29:12Z",
+        "closed_at": "2026-05-11T13:32:51Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "NOT RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 47,
+        "title": "Fix erro generico criacao de usuario existente",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-11T13:34:25Z",
+        "closed_at": "2026-05-11T22:14:05Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 48,
+        "title": "fix: adiciona filtragem por status na listagem de exames",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-11T23:11:49Z",
+        "closed_at": "2026-05-12T00:34:29Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 49,
+        "title": "Release Minor",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-12T01:00:07Z",
+        "closed_at": "2026-05-12T01:17:11Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "MINOR RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 78,
+        "title": "Criacao de ata de reunião sprint review e retrospective",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-13T03:26:13Z",
+        "closed_at": "2026-05-18T02:42:06Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: May 4 - May 10, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 55,
+        "title": "Feature/sistema de notificacoes",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-23T21:51:34Z",
+        "closed_at": "2026-05-24T00:57:07Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: May 18 - May 24, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 58,
+        "title": "Develop",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-25T03:27:04Z",
+        "closed_at": "2026-05-25T03:31:34Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "MAJOR RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 50,
+        "title": "Develop",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-25T03:28:25Z",
+        "closed_at": "2026-05-25T03:34:54Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "MAJOR RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 59,
+        "title": "Implementação da documentação de rotas",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-31T19:16:38Z",
+        "closed_at": "2026-06-01T00:30:50Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "documentation"
+        ],
+        "releases": []
+    },
+    {
+        "number": 61,
+        "title": "fix: corrigindo problemas no lint e também code smell",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-31T20:21:59Z",
+        "closed_at": "2026-06-01T20:52:37Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 62,
+        "title": "ci: melhora pipeline de deploy para prod e homolog",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-05-31T20:48:34Z",
+        "closed_at": "2026-05-31T20:50:38Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 66,
+        "title": "Feature/change upload image flow",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-01T02:35:37Z",
+        "closed_at": "2026-06-01T11:14:40Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 67,
+        "title": "Implementação da refatoração da ordem",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-01T02:37:04Z",
+        "closed_at": "2026-06-06T22:46:42Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "backend"
+        ],
+        "releases": []
+    },
+    {
+        "number": 68,
+        "title": "Release Minor",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-02T00:25:40Z",
+        "closed_at": "2026-06-02T00:44:08Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "MINOR RELEASE"
+        ],
+        "releases": []
+    },
+    {
+        "number": 98,
+        "title": "Hospedagem da IA na Google Cloud",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-04T18:04:58Z",
+        "closed_at": "2026-06-05T14:52:15Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "documentation"
+        ],
+        "releases": []
+    },
+    {
+        "number": 69,
+        "title": "Migracao de servidores - HOMOLOG",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-06T22:53:54Z",
+        "closed_at": "2026-06-06T22:56:24Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 57,
+        "title": "Feature/cadastro medico especialista",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-07T21:52:28Z",
+        "closed_at": "2026-06-08T00:49:01Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 72,
+        "title": "Feature/adicionar laudo do especialista",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-08T00:22:18Z",
+        "closed_at": "2026-06-08T00:46:28Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 73,
+        "title": "docs: atualiza licenca do software",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-08T23:27:18Z",
+        "closed_at": "2026-06-09T00:06:48Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 109,
+        "title": "Adicionar texto modelo no laudo do especialista",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-13T18:33:02Z",
+        "closed_at": "2026-06-17T20:20:38Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 64,
+        "title": "fix: remove arquivos desnecessarios do sonar cloud e apaga rotas que não são usadas",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-13T20:48:46Z",
+        "closed_at": "2026-06-14T19:38:03Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 76,
+        "title": "feat: adiciona funcionalidade de geração de PDF de exame",
+        "state": "CLOSED",
+        "pipeline_atual": "New Issues",
+        "created_at": "2026-06-14T18:51:37Z",
+        "closed_at": "2026-06-15T00:50:12Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 21,
+        "title": "Ao criar um usuário com email, cpf ou crm que ja existe o sistema retorna um erro generio",
+        "state": "CLOSED",
+        "pipeline_atual": "Icebox",
+        "created_at": "2026-04-25T19:40:35Z",
+        "closed_at": "2026-05-23T00:44:02Z",
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 33,
+        "title": "Aplicacao quebra quando nao consegue se conectar com a API",
+        "state": "CLOSED",
+        "pipeline_atual": "Icebox",
+        "created_at": "2026-05-09T20:04:24Z",
+        "closed_at": "2026-06-13T20:04:04Z",
+        "story_points": 5.0,
+        "sprints": [],
+        "labels": [
+            "bug"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 8,
+        "title": "Refatora a estrutura e arquitetura do projeto",
+        "state": "CLOSED",
+        "pipeline_atual": "Icebox",
+        "created_at": "2026-05-10T22:17:52Z",
+        "closed_at": "2026-06-06T20:05:18Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: May 11 - May 17, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 100,
+        "title": "Botão do email de notificação nào redireciona para o site.",
+        "state": "CLOSED",
+        "pipeline_atual": "Icebox",
+        "created_at": "2026-06-08T03:25:16Z",
+        "closed_at": "2026-06-13T20:00:20Z",
+        "story_points": 0.0,
+        "sprints": [],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 107,
+        "title": "Adição de comentários nos repositórios",
+        "state": "OPEN",
+        "pipeline_atual": "Product Backlog",
+        "created_at": "2026-06-08T14:59:13Z",
+        "closed_at": null,
+        "story_points": 3.0,
+        "sprints": [],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 88,
+        "title": "Adicionar laudo do especialista",
+        "state": "CLOSED",
+        "pipeline_atual": "Sprint Backlog",
+        "created_at": "2026-05-25T16:28:03Z",
+        "closed_at": "2026-06-13T18:32:35Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Jun 1 - Jun 7, 2026",
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 115,
+        "title": "Exibição de Dicom no upload de imagens",
+        "state": "OPEN",
+        "pipeline_atual": "Sprint Backlog",
+        "created_at": "2026-06-22T15:02:46Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 17,
+        "title": "Cadastro de exame",
+        "state": "CLOSED",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-04-11T22:54:45Z",
+        "closed_at": "2026-04-25T22:39:29Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Apr 20 - Apr 26, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 9,
+        "title": "feat: adiciona rota para resgatar todos os usuarios (admin)",
+        "state": "CLOSED",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-04-17T22:02:37Z",
+        "closed_at": "2026-04-20T01:57:29Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: Apr 13 - Apr 19, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 79,
+        "title": "Atualização da documentação",
+        "state": "CLOSED",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-05-15T16:31:57Z",
+        "closed_at": "2026-05-25T02:03:46Z",
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: May 18 - May 24, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 84,
+        "title": "Atualização da documentação",
+        "state": "CLOSED",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-05-25T01:51:50Z",
+        "closed_at": "2026-05-25T01:55:56Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: May 18 - May 24, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 113,
+        "title": "Campo outras comorbidades está sendo exibido criptografado",
+        "state": "OPEN",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-06-22T14:04:35Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 18,
+        "title": "Upload de imagem do exame",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-04-11T22:59:00Z",
+        "closed_at": "2026-05-04T02:22:06Z",
+        "story_points": 13.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026"
+        ],
+        "labels": [
+            "MINOR RELEASE",
+            "US"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 30,
+        "title": "Pré-processamento de imagem",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-04-11T23:07:22Z",
+        "closed_at": "2026-05-11T15:01:41Z",
+        "story_points": 21.0,
+        "sprints": [
+            "Sprint: May 11 - May 17, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 10,
+        "title": "Upload de imagem do exame",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-04-23T01:02:34Z",
+        "closed_at": "2026-05-04T02:22:13Z",
+        "story_points": 13.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026"
+        ],
+        "labels": [
+            "DEVELOP"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 41,
+        "title": "Integração paginação de médicos com API",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-05-14T19:40:05Z",
+        "closed_at": "2026-05-18T02:46:31Z",
+        "story_points": 3.0,
+        "sprints": [
+            "Sprint: May 11 - May 17, 2026"
+        ],
+        "labels": [
+            "DEVELOP"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 89,
+        "title": "Alteração no cadastro de Médico",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-05-25T16:38:20Z",
+        "closed_at": "2026-06-08T13:22:47Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 90,
+        "title": "Adequação da EAP",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-05-30T21:35:42Z",
+        "closed_at": "2026-06-06T20:19:04Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 97,
+        "title": "docs: atualiza o documento da EAP",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-06-01T23:19:07Z",
+        "closed_at": "2026-06-06T20:17:06Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 110,
+        "title": "Não é possível pesquisar o exame por ID",
+        "state": "OPEN",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-06-13T18:53:34Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 77,
+        "title": "Compartilhamento de resultados via link",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-06-15T02:34:44Z",
+        "closed_at": "2026-06-27T19:53:25Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 15 - Jun 21, 2026"
+        ],
+        "labels": [
+            "backend",
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 83,
+        "title": "Feature/compartilhamento link",
+        "state": "CLOSED",
+        "pipeline_atual": "Review/QA",
+        "created_at": "2026-06-27T02:40:02Z",
+        "closed_at": "2026-06-28T20:09:41Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 31,
+        "title": "Desenvolvimento da documentação do projeto",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-04-13T23:46:30Z",
+        "closed_at": "2026-04-15T23:54:55Z",
+        "story_points": 21.0,
+        "sprints": [
+            "Sprint: Mar 30 - Apr 5, 2026",
+            "Sprint: Apr 6 - Apr 12, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 26,
+        "title": "Melhorias na listagem de solicitações de CPF/CRM, validações em POST /api/exams",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-04-27T01:18:49Z",
+        "closed_at": "2026-04-27T01:22:41Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Apr 27 - May 3, 2026",
+            "Sprint: May 4 - May 10, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R1"
+        ]
+    },
+    {
+        "number": 42,
+        "title": "Problema com scroll na listagem de exames",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-05-17T21:54:22Z",
+        "closed_at": "2026-06-15T14:43:12Z",
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [
+            "bug"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 92,
+        "title": "Verificação de code smells",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-05-31T18:15:38Z",
+        "closed_at": "2026-06-07T18:38:55Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: May 25 - May 31, 2026",
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [
+            "bug",
+            "duplicate"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 93,
+        "title": "Criar documentação das rotas da API",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-05-31T19:03:00Z",
+        "closed_at": "2026-06-01T02:17:39Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: May 25 - May 31, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": []
+    },
+    {
+        "number": 94,
+        "title": "Hospedagem da IA na Google Cloud",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-05-31T19:28:18Z",
+        "closed_at": "2026-06-05T15:20:08Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [
+            "documentation",
+            "enhancement"
+        ],
+        "releases": []
+    },
+    {
+        "number": 99,
+        "title": "Email de recuperacao de senha está redirecionando para o link errado.",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-06-06T22:51:37Z",
+        "closed_at": "2026-06-08T13:26:12Z",
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 101,
+        "title": "Dados privados sendo exibidos no logs de criar exame",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-06-08T03:28:58Z",
+        "closed_at": "2026-06-28T23:48:50Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 106,
+        "title": "Remoção de arquivos sem necessidade de testes do Sonar",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-06-08T14:46:17Z",
+        "closed_at": "2026-06-15T14:43:18Z",
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [
+            "documentation"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 108,
+        "title": "Página de resultado do exame as vezes não exibe o laudo do especialista",
+        "state": "CLOSED",
+        "pipeline_atual": "Done",
+        "created_at": "2026-06-09T00:11:30Z",
+        "closed_at": "2026-06-09T00:37:23Z",
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026"
+        ],
+        "labels": [],
+        "releases": []
+    },
+    {
+        "number": 38,
+        "title": "Back-end Visualização histórico de exames",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-05-04T14:19:55Z",
+        "closed_at": "2026-05-11T13:15:49Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: May 4 - May 10, 2026"
+        ],
+        "labels": [
+            "MINOR RELEASE"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 80,
+        "title": "Resultado de exame",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-05-18T14:50:25Z",
+        "closed_at": "2026-05-27T19:51:17Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: May 18 - May 24, 2026",
+            "Sprint: May 25 - May 31, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": [
+            "R2"
+        ]
+    },
+    {
+        "number": 81,
+        "title": "Recuperação de senha",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-05-18T15:04:40Z",
+        "closed_at": "2026-06-06T20:18:24Z",
+        "story_points": 13.0,
+        "sprints": [
+            "Sprint: May 18 - May 24, 2026",
+            "Sprint: May 25 - May 31, 2026",
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 82,
+        "title": "Refatoração na ordem do cadastro de exame",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-05-18T22:14:18Z",
+        "closed_at": "2026-06-06T20:18:50Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: May 25 - May 31, 2026",
+            "Sprint: Jun 1 - Jun 7, 2026"
+        ],
+        "labels": [],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 87,
+        "title": "Formulário de inscrição via email",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-05-25T16:26:57Z",
+        "closed_at": "2026-06-16T19:55:43Z",
+        "story_points": 21.0,
+        "sprints": [
+            "Sprint: Jun 8 - Jun 14, 2026",
+            "Sprint: Jun 15 - Jun 21, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 103,
+        "title": "Análise da Imagem Pós Processamento da IA",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-06-08T14:17:35Z",
+        "closed_at": "2026-06-23T12:55:54Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Jun 15 - Jun 21, 2026",
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": [
+            "R3"
+        ]
+    },
+    {
+        "number": 104,
+        "title": "Ordenação de Solicitações do Admin",
+        "state": "CLOSED",
+        "pipeline_atual": "Waiting PO Approval",
+        "created_at": "2026-06-08T14:24:20Z",
+        "closed_at": "2026-06-23T12:55:55Z",
+        "story_points": 8.0,
+        "sprints": [
+            "Sprint: Jun 15 - Jun 21, 2026",
+            "Sprint: Jun 22 - Jun 28, 2026"
+        ],
+        "labels": [
+            "enhancement"
+        ],
+        "releases": [
+            "R3"
+        ]
+    }
+]

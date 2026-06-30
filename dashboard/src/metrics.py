@@ -430,7 +430,6 @@ def calculate_scrum_evm_metrics(sprints_raw: dict) -> dict:
     }   
 
 def calculate_process_metrics(build_yml_name="code-analysis"):
-    # 1. INTERVALOS DE DATAS DA RELEASE ATUAL
     START_DATE_WF = "2026-01-01"
     END_DATE_WF = "2026-07-01"
 
@@ -451,29 +450,24 @@ def calculate_process_metrics(build_yml_name="code-analysis"):
     except:
         raw_data_dir = os.path.join('analytics', 'raw-data')
 
-    sub_repos = ['Api', 'Web']
+    padrao_busca = os.path.join(raw_data_dir, 'GitHub_API-Runs-*.json')
+    todos_arquivos_runs = glob(padrao_busca)
 
-    # 2. ENCONTRAR OS ARQUIVOS DE WORKFLOW
-    ultimos_arquivos_runs = []
-    for repo in sub_repos:
-        runs_files = glob(os.path.join(raw_data_dir, f'GitHub_API-Runs-*-{repo}-*.json'))
-        if runs_files:
-            ultimos_arquivos_runs.append(max(runs_files, key=os.path.getmtime))
+    print(f"[DASHBOARD DEBUG] Arquivos de Runs encontrados na pasta: {len(todos_arquivos_runs)}")
 
-    if not ultimos_arquivos_runs:
-        ultimos_arquivos_runs = glob(os.path.join(raw_data_dir, 'GitHub_API-Runs-*.json'))
-
-    # 3. EXTRAÇÃO DOS WORKFLOW RUNS
     table_runs_data = []
-    nomes_encontrados = set() 
+    nomes_encontrados = {} 
 
-    for json_path in ultimos_arquivos_runs:
+    for json_path in todos_arquivos_runs:
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 dados = json.load(f)
                 for run in dados.get("workflow_runs", []):
+                    if "path" not in run:
+                        continue
+                        
                     nome_yml = run["path"].split("/")[-1].replace(".yml", "").replace(".yaml", "")
-                    nomes_encontrados.add(nome_yml)
+                    nomes_encontrados[nome_yml] = nomes_encontrados.get(nome_yml, 0) + 1
 
                     updated_at = datetime.strptime(run["updated_at"], "%Y-%m-%dT%H:%M:%SZ")
                     created_at = datetime.strptime(run["created_at"], "%Y-%m-%dT%H:%M:%SZ")
@@ -486,7 +480,8 @@ def calculate_process_metrics(build_yml_name="code-analysis"):
                         "Feedback Time": (updated_at - created_at).total_seconds(),
                         "Workflow .YML Name": nome_yml
                     })
-        except:
+        except Exception as e:
+            print(f"[DASHBOARD DEBUG] Erro ao ler o arquivo {json_path}: {str(e)}")
             continue
 
     if table_runs_data:
@@ -494,16 +489,15 @@ def calculate_process_metrics(build_yml_name="code-analysis"):
         df['Updated at'] = pd.to_datetime(df['Updated at']).dt.tz_localize(None)
         df['Created at'] = pd.to_datetime(df['Created at']).dt.tz_localize(None)
         
-        # Filtro de data
         df = df[(df['Updated at'] >= pd.to_datetime(START_DATE_WF)) & 
                 (df['Updated at'] <= pd.to_datetime(END_DATE_WF) + pd.Timedelta(days=1))]
         
-        # Filtro pelo nome (com fallback se não encontrar)
         df_yml = df[df["Workflow .YML Name"] == build_yml_name]
+        
         if df_yml.empty and nomes_encontrados:
-            print(f"DEBUG: '{build_yml_name}' não encontrado. Disponíveis: {list(nomes_encontrados)}")
-            build_yml_name = list(nomes_encontrados)[0]
-            df_yml = df[df["Workflow .YML Name"] == build_yml_name]
+            workflow_mais_frequente = max(nomes_encontrados, key=nomes_encontrados.get)
+            print(f"[DASHBOARD DEBUG] '{build_yml_name}' vazio. Trocando para o mais frequente: '{workflow_mais_frequente}'")
+            df_yml = df[df["Workflow .YML Name"] == workflow_mais_frequente]
 
         if not df_yml.empty:
             metrics["avg_feedback_minutes"] = round(df_yml["Feedback Time"].mean() / 60, 2)
@@ -517,7 +511,7 @@ def calculate_process_metrics(build_yml_name="code-analysis"):
             metrics["ci_line_labels"] = hist.index.tolist()
             metrics["ci_line_data"] = [round(ts / 60, 2) for ts in hist.values.tolist()]
 
-    # 4. EXTRAÇÃO DO THROUGHPUT (ZENHUB)
+
     try:
         from .config import _REPO_ROOT
         caminho_all_issues = os.path.join(_REPO_ROOT, 'zenhub_all_issues.json')

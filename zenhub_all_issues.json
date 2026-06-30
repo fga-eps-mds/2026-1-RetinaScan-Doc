@@ -2,10 +2,10 @@
     {
         "number": 1,
         "title": "Autenticação e Controle de Acesso",
-        "state": "OPEN",
+        "state": "CLOSED",
         "pipeline_atual": "New Issues",
         "created_at": "2026-04-11T17:44:32Z",
-        "closed_at": null,
+        "closed_at": "2026-06-29T02:20:37Z",
         "story_points": 0.0,
         "sprints": [],
         "labels": [],
@@ -16,10 +16,10 @@
     {
         "number": 2,
         "title": "Cadastro e Upload de Exames",
-        "state": "OPEN",
+        "state": "CLOSED",
         "pipeline_atual": "New Issues",
         "created_at": "2026-04-11T18:06:03Z",
-        "closed_at": null,
+        "closed_at": "2026-06-29T02:20:47Z",
         "story_points": 0.0,
         "sprints": [],
         "labels": [],
@@ -45,10 +45,10 @@
     {
         "number": 4,
         "title": "Processamento e IA",
-        "state": "OPEN",
+        "state": "CLOSED",
         "pipeline_atual": "New Issues",
         "created_at": "2026-04-11T18:33:31Z",
-        "closed_at": null,
+        "closed_at": "2026-06-29T02:21:18Z",
         "story_points": 0.0,
         "sprints": [],
         "labels": [],
@@ -790,7 +790,9 @@
         "labels": [
             "documentation"
         ],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 61,
@@ -842,7 +844,9 @@
         "labels": [
             "backend"
         ],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 68,
@@ -934,7 +938,9 @@
             "Sprint: Jun 8 - Jun 14, 2026"
         ],
         "labels": [],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 64,
@@ -1070,22 +1076,6 @@
         "releases": [
             "R3"
         ]
-    },
-    {
-        "number": 115,
-        "title": "Exibição de Dicom no upload de imagens",
-        "state": "OPEN",
-        "pipeline_atual": "Sprint Backlog",
-        "created_at": "2026-06-22T15:02:46Z",
-        "closed_at": null,
-        "story_points": 0.0,
-        "sprints": [
-            "Sprint: Jun 22 - Jun 28, 2026"
-        ],
-        "labels": [
-            "bug"
-        ],
-        "releases": []
     },
     {
         "number": 17,
@@ -1301,16 +1291,18 @@
     {
         "number": 110,
         "title": "Não é possível pesquisar o exame por ID",
-        "state": "OPEN",
+        "state": "CLOSED",
         "pipeline_atual": "Review/QA",
         "created_at": "2026-06-13T18:53:34Z",
-        "closed_at": null,
+        "closed_at": "2026-06-29T00:52:27Z",
         "story_points": 0.0,
         "sprints": [
             "Sprint: Jun 22 - Jun 28, 2026"
         ],
         "labels": [],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 77,
@@ -1431,7 +1423,9 @@
         "labels": [
             "documentation"
         ],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 94,
@@ -1448,7 +1442,9 @@
             "documentation",
             "enhancement"
         ],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 99,
@@ -1478,7 +1474,9 @@
             "Sprint: Jun 22 - Jun 28, 2026"
         ],
         "labels": [],
-        "releases": []
+        "releases": [
+            "R3"
+        ]
     },
     {
         "number": 106,

@@ -1,0 +1,2517 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../plano_de_custos/">
+      
+      
+        <link rel="next" href="../grafico_de_gantt/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Plano de Qualidade - RetinaScan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plano-de-gestao-de-qualidade-de-produto-modelo-q-rapids" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RetinaScan" class="md-header__button md-logo" aria-label="RetinaScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RetinaScan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plano de Qualidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetinaScan - Doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../metodologia/metodologia-aplicada/" class="md-tabs__link">
+          
+  
+  
+  Metodologia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../produto/lean-inception/" class="md-tabs__link">
+          
+  
+  
+  Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../EAP/" class="md-tabs__link">
+          
+  
+  
+  Planejamento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projeto/arquitetura/" class="md-tabs__link">
+          
+  
+  
+  Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guia_de_contribuicao/codigo-de-conduta/" class="md-tabs__link">
+          
+  
+  
+  Guia de Contribuição
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../atas-reunioes/Ata-01-EPS-2026-03-23-PO/" class="md-tabs__link">
+          
+  
+  
+  Atas de Reuniões
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RetinaScan" class="md-nav__button md-logo" aria-label="RetinaScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RetinaScan
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fga-eps-mds/2026-1-RetinaScan-Doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetinaScan - Doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metodologia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/metodologia-aplicada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologia Aplicada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/comunicacao-operacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comunicação Operacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/lean-inception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lean Inception
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/mvp-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canvas MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/prototipo-de-alta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protótipo de Alta Fidelidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/identidade-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidade Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produto/backlog-do-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Planejamento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EAP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap-do-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plano_de_ger_riscos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Gestão de Riscos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plano_de_custos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-e-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introdução e Contexto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abordagem-metodologica-e-regras-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Abordagem Metodológica e Regras de Avaliação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Abordagem Metodológica e Regras de Avaliação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limiares-semaforicos-aplicados-a-product-quality-e-metricas-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limiares Semafóricos (Aplicados a Product Quality e Métricas Base)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-memoria-de-calculo-e-formulas-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Memória de Cálculo e Fórmulas Utilizadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Memória de Cálculo e Fórmulas Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-agregadores-de-codigo-e-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Agregadores de Código e Testes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-fatores-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Fatores de Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-diagnostico-e-documentacao-das-metricas-atuais-versao-224" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Diagnóstico e Documentação das Métricas Atuais (Versão 2.2.4)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Diagnóstico e Documentação das Métricas Atuais (Versão 2.2.4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-repositorio-api-5856-ncloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Repositório: Api (5.856 NCLOC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. Repositório: Api (5.856 NCLOC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historico-de-qualidade-documentado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Qualidade Documentado:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-repositorio-web-4439-ncloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Repositório: Web (4.439 NCLOC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Repositório: Web (4.439 NCLOC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historico-de-qualidade-documentado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Qualidade Documentado:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-criterios-tecnicos-de-amostragem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Critérios Técnicos de Amostragem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Critérios Técnicos de Amostragem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-criterios-tecnicos-de-filtragem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Critérios Técnicos de Filtragem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-escopo-alvo-de-engenharia-por-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Escopo Alvo de Engenharia por Repositório
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-planejamento-operacional-por-sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Planejamento Operacional por Sprints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Planejamento Operacional por Sprints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-planejamento-detalhado-sprint-12-jun-22-jun-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Planejamento Detalhado: Sprint 12 (Jun 22 - Jun 28)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-planejamento-detalhado-sprint-13-jun-29-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Planejamento Detalhado: Sprint 13 (Jun 29 - Final)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grafico_de_gantt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico de Gantt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decisoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projeto/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projeto/modelagem-do-BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem do Banco de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projeto/ia/modelos_de_ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Inteligência Artificial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projeto/ia/migracao_para_gcloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migração da IA para Google Cloud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projeto/ia/versionamento_modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionamento de Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guia de Contribuição
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia_de_contribuicao/codigo-de-conduta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Código de Conduta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia_de_contribuicao/politica-de-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Política de Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guia_de_contribuicao/politica-de-commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Política de Commits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atas de Reuniões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atas de Reuniões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-01-EPS-2026-03-23-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 23.03.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-02-EPS-2026-03-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 30.03.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-03-EPS-2026-04-01-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 01.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-04-EPS-2026-04-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 06.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-05-EPS-2026-04-06-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 06.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-06-EPS-2026-04-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 13.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-07-EPS-2026-04-13-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 13.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-08-EPS-2026-04-20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 20.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-09-EPS-2026-04-20-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 20.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-11-EPS-2026-04-30-R1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R1 – 30.04.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-12-EPS-2026-05-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 04.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-13-EPS-2026-05-04-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 04.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-14-EPS-2026-05-11-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 11.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-15-EPS-2026-05-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 11.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-16-EPS-2026-05-18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe 18.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-17-EPS-2026-05-18-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO 18.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-18-EPS-2026-05-25-R2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R2 – 25.05.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-19-EPS-2026-06-01-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO - 01.06.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-20-EPS-2026-06-08-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO - 08.06.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-21-EPS-2026-06-15-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO - 15.06.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reunioes/Ata-22-EPS-2026-06-22-PO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PO - 22.06.2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="plano-de-gestao-de-qualidade-de-produto-modelo-q-rapids">Plano de Gestão de Qualidade de Produto — Modelo Q-Rapids</h1>
+<h2 id="1-introducao-e-contexto">1. Introdução e Contexto</h2>
+<p>Este documento formaliza o <strong>Plano de Gestão de Qualidade</strong> para os repositórios do projeto (<strong>Api</strong> e <strong>Web</strong>), utilizando o framework <strong>Q-Rapids</strong> sobre os dados do <strong>SonarQube</strong> e <strong>GitHub</strong>[cite: 1]. </p>
+<p>Como o time já vinha mantendo uma cultura estrita de testes automatizados, baixo índice de duplicação e código modular desde o início do ciclo de desenvolvimento, as métricas brutas do projeto já se encontram em patamares excelentes[cite: 1]. Este plano cumpre o papel de documentar formalmente esses critérios e estipular as ações para as duas últimas sprints do projeto (<strong>Sprint 12</strong> e <strong>Sprint 13</strong>), focando na resolução do déficit de documentação inline sem comprometer a estabilidade do software[cite: 1].</p>
+<hr />
+<h2 id="2-abordagem-metodologica-e-regras-de-avaliacao">2. Abordagem Metodológica e Regras de Avaliação</h2>
+<p>O modelo Q-Rapids organiza a avaliação de qualidade de forma hierárquica em três níveis[cite: 1]:
+1. <strong>Indicador Estratégico (<em>Strategic Indicator</em>):</strong> Visão macro do produto (<em>Product Quality Total Score</em>)[cite: 1].
+2. <strong>Fatores de Qualidade (<em>Quality Factors</em>):</strong> Aspectos de engenharia (<em>Maintainability</em> e <em>Reliability</em>), regulamentados por constantes de peso fixas[cite: 1].
+3. <strong>Métricas Base (<em>Metrics</em>):</strong> Dados brutos extraídos do SonarQube e GitHub[cite: 1].</p>
+<h3 id="limiares-semaforicos-aplicados-a-product-quality-e-metricas-base">Limiares Semafóricos (Aplicados a Product Quality e Métricas Base)</h3>
+<ul>
+<li>🟢 <strong>Verde (Aprovado):</strong> $\ge 0.75$[cite: 1]</li>
+<li>🟡 <strong>Amarelo (Atenção):</strong> $0.50 - 0.74$[cite: 1]</li>
+<li>🔴 <strong>Vermelho (Crítico):</strong> $&lt; 0.50$[cite: 1]</li>
+</ul>
+<p><em>Nota Explicativa:</em> Os Fatores de Qualidade (Maintainability e Reliability) não utilizam essa escala de cores direta, pois são multiplicados pelas constantes de peso $PC_1$ e $PC_2$ (fixadas em $0.50$), limitando o seu teto matemático máximo a $0.50$[cite: 1].</p>
+<hr />
+<h2 id="3-memoria-de-calculo-e-formulas-utilizadas">3. Memória de Cálculo e Fórmulas Utilizadas</h2>
+<h3 id="31-agregadores-de-codigo-e-testes">3.1. Agregadores de Código e Testes</h3>
+<p>$$\text{Code Quality} = (\text{Complexity} \times 0.33) + (\text{Comments} \times 0.33) + (\text{Duplication} \times 0.33)$$
+* Mapeia a conformidade de arquivos (FIL) para complexidade $\le 10$, linhas de comentários entre $10\% - 30\%$ e duplicação $&lt; 5\%$[cite: 1].</p>
+<p>$$\text{Testing Status} = (\text{Test Success} \times 0.25) + (\text{Fast Tests} \times 0.25) + (\text{Coverage} \times 0.50)$$
+* Mapeia suítes de testes (UTS) 100% estáveis, execuções rápidas ($&lt; 5\text{ min}$) e arquivos com cobertura $&gt; 60\%$[cite: 1].</p>
+<h3 id="32-fatores-de-qualidade">3.2. Fatores de Qualidade</h3>
+<p>$$\text{Maintainability (Manutenibilidade)} = \text{Code Quality} \times 0.50$$
+$$\text{Reliability (Confiabilidade)} = \text{Testing Status} \times 0.50$$</p>
+<hr />
+<h2 id="4-diagnostico-e-documentacao-das-metricas-atuais-versao-224">4. Diagnóstico e Documentação das Métricas Atuais (Versão 2.2.4)</h2>
+<h3 id="41-repositorio-api-5856-ncloc">4.1. Repositório: Api (5.856 NCLOC)</h3>
+<ul>
+<li><strong>Product Quality (Total Score):</strong> <strong>0.83</strong> 🟢 (Aprovado)[cite: 1]</li>
+<li><strong>Maintainability (Manutenibilidade):</strong> 0.33 <em>(Escala 0 a 0.50)</em>[cite: 1]</li>
+<li><strong>Reliability (Confiabilidade):</strong> 0.50 <em>(Escala 0 a 0.50 - Teto Máximo)</em>[cite: 1]</li>
+</ul>
+<h4 id="historico-de-qualidade-documentado">Histórico de Qualidade Documentado:</h4>
+<ul>
+<li><strong>Complexity (1.00) 🟢:</strong> Funções totalmente modulares com complexidade ciclomática por função $\le 10$[cite: 1].</li>
+<li><strong>Duplication (1.00) 🟢:</strong> Código limpo e sem redundâncias (linhas duplicadas $&lt; 5\%$)[cite: 1].</li>
+<li><strong>Test Success (1.00) 🟢:</strong> Suíte de testes unitários 100% estável, sem erros ou falhas[cite: 1].</li>
+<li><strong>Fast Tests (1.00) 🟢:</strong> Builds de testes rápidos executando em tempo inferior a 5 minutos[cite: 1].</li>
+<li><strong>Coverage (1.00) 🟢:</strong> Cobertura vacinal ideal e completa nos arquivos elegíveis ($&gt; 60\%$)[cite: 1].</li>
+<li><strong>Comments (0.02) 🔴:</strong> Único ponto abaixo do esperado devido à escassez de comentários inline ($&lt; 30\%$)[cite: 1].</li>
+</ul>
+<h3 id="42-repositorio-web-4439-ncloc">4.2. Repositório: Web (4.439 NCLOC)</h3>
+<ul>
+<li><strong>Product Quality (Total Score):</strong> <strong>0.79</strong> 🟢 (Aprovado)[cite: 1]</li>
+<li><strong>Maintainability (Manutenibilidade):</strong> 0.33 <em>(Escala 0 a 0.50)</em>[cite: 1]</li>
+<li><strong>Reliability (Confiabilidade):</strong> 0.46 <em>(Escala 0 a 0.50)</em>[cite: 1]</li>
+</ul>
+<h4 id="historico-de-qualidade-documentado_1">Histórico de Qualidade Documentado:</h4>
+<ul>
+<li><strong>Complexity (0.98) 🟢:</strong> Componentes e funções de interface bem estruturados e simples[cite: 1].</li>
+<li><strong>Duplication (0.98) 🟢:</strong> Baixíssimo índice de redundância de código ou styles reutilizados[cite: 1].</li>
+<li><strong>Test Success (1.00) 🟢:</strong> Testes de interface e hooks rodando com 100% de sucesso[cite: 1].</li>
+<li><strong>Fast Tests (1.00) 🟢:</strong> Feedback ágil nas execuções de CI da esteira de desenvolvimento[cite: 1].</li>
+<li><strong>Coverage (0.86) 🟢:</strong> Cobertura de código sólida e amplamente superior à meta estabelecida de 60%[cite: 1].</li>
+<li><strong>Comments (0.03) 🔴:</strong> Ausência crônica de linhas de comentários aceitáveis no frontend[cite: 1].</li>
+</ul>
+<hr />
+<h2 id="5-criterios-tecnicos-de-amostragem">5. Critérios Técnicos de Amostragem</h2>
+<p>Como o volume total do ecossistema de software ultrapassa 10.000 linhas de código (NCLOC), tentar documentar todos os arquivos indistintamente é inviável e ineficiente[cite: 1]. O plano estabelece uma estratégia de <strong>esforço focado por amostragem de criticidade</strong>, utilizando parâmetros técnicos objetivos extraídos do próprio SonarQube para filtrar onde a intervenção de documentação gera maior retorno em manutenibilidade[cite: 1].</p>
+<h3 id="51-criterios-tecnicos-de-filtragem">5.1. Critérios Técnicos de Filtragem</h3>
+<p>Os arquivos serão priorizados e incluídos no escopo de atuação com base em dois indicadores técnicos do SonarQube:
+1. <strong>Tamanho do Arquivo (Linhas de Código - NCLOC):</strong> Arquivos extensos que centralizam regras de negócio.
+    * <em>Filtro Técnico:</em> Arquivos com $\ge 150 \text{ NCLOC}$.
+2. <strong>Densidade de Lógica Relativa:</strong> Arquivos que possuem ramificações lógicas reais e necessitam de contextualização técnica, evitando o desperdício de tempo em arquivos com complexidade zero.
+    * <em>Filtro Técnico:</em> Arquivos com complexidade ciclomática total no arquivo $\ge 5$.</p>
+<h3 id="52-escopo-alvo-de-engenharia-por-repositorio">5.2. Escopo Alvo de Engenharia por Repositório</h3>
+<ul>
+<li><strong>No ecossistema API:</strong> Classes controladoras (<em>Views/Controllers</em>) de endpoints centrais e métodos que herdam de modelos de banco de dados com múltiplos relacionamentos. Arquivos de migração automatizada, configurações locais e rotas de roteamento simples estão <strong>fora de escopo</strong>.</li>
+<li><strong>No ecossistema WEB:</strong> Hooks customizados e componentes de interface que gerenciam estados complexos ou que realizam a integração de chamadas assíncronas com a API. Componentes puramente visuais, folhas de estilo e declarações de tipos estáticos estão <strong>fora de escopo</strong>.</li>
+</ul>
+<hr />
+<h2 id="6-planejamento-operacional-por-sprints">6. Planejamento Operacional por Sprints</h2>
+<p>O cronograma operacional remove qualquer outra atividade colateral e foca exclusivamente nas tarefas de documentação inline para forçar a subida dos indicadores de código:</p>
+<h3 id="61-planejamento-detalhado-sprint-12-jun-22-jun-28">6.1. Planejamento Detalhado: Sprint 12 (Jun 22 - Jun 28)</h3>
+<ul>
+<li><strong>Meta da Sprint:</strong> Iniciar a escrita de comentários nos primeiros 50% dos arquivos críticos selecionados pelos critérios de amostragem.</li>
+<li><strong>Ações de Engenharia:</strong></li>
+<li><strong>Triagem Imediata (Dia 1):</strong> Varredura automatizada para extrair a lista exata de arquivos que atendem a &gt;= 150 NCLOC e complexidade &gt;= 5.</li>
+<li><strong>Injeção de Comentários - Lote API:</strong> Escrita dedicada de comentários padronizados na primeira metade dos módulos controladores e serviços mapeados da API.</li>
+<li><strong>Injeção de Comentários - Lote Web:</strong> Escrita dedicada de comentários padronizados na primeira metade dos hooks customizados e gerenciadores de estado mapeados no Web.</li>
+<li><strong>Validação Parcial (Dia 6):</strong> Execução de análise local no SonarQube para computar o progresso parcial e garantir que os arquivos alterados sigam com os testes de regressão estáveis.</li>
+<li><strong>Entregável Técnico:</strong> Primeira metade do ecossistema crítico devidamente documentada no repositório.</li>
+</ul>
+<h3 id="62-planejamento-detalhado-sprint-13-jun-29-final">6.2. Planejamento Detalhado: Sprint 13 (Jun 29 - Final)</h3>
+<ul>
+<li><strong>Meta da Sprint:</strong> Finalizar a escrita de comentários nos 50% restantes dos arquivos críticos e consolidar a métrica <code>Comments</code> global acima do patamar mínimo de 15% de densidade.</li>
+<li><strong>Ações de Engenharia:</strong></li>
+<li><strong>Injeção de Comentários - Lote API Restante (Dias 1 e 2):</strong> Conclusão da escrita de comentários no restante dos arquivos alvos selecionados para a API.</li>
+<li><strong>Injeção de Comentários - Lote Web Restante (Dias 3 e 4):</strong> Conclusão da escrita de comentários no restante dos arquivos alvos selecionados para o Web.</li>
+<li><strong>Validação Final da Métrica Base (Dia 5):</strong> Disparo de varredura completa do SonarQube para homologar que a densidade geral de comentários atingiu a meta de 15%, forçando a transição do status do agregador de Crítico (🔴) para Atenção (🟡).</li>
+<li><strong>Entregável Técnico:</strong> 100% dos arquivos críticos de negócio documentados e validação final da métrica de <code>Maintainability</code> rebalanceada no Q-Rapids.</li>
+</ul>
+<hr />
+<h2 id="7-conclusao">7. Conclusão</h2>
+<p>O plano de gestão estabelece uma abordagem matemática e pragmática para o encerramento do ciclo de desenvolvimento. Ao focar exclusivamente na atividade de documentação inline nas Sprints 12 e 13, o time divide a carga de trabalho de forma equilibrada, eleva os indicadores de código e garante a entrega de um produto final com qualidade homologada em todos os parâmetros do Q-Rapids.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>1.0</code></td>
+<td>28/06/2026</td>
+<td>Criação do documento de planejamento de qualidade</td>
+<td><a href="https://github.com/Natyrodrigues">Natália De Morais</a></td>
+<td>---</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

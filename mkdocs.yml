@@ -47,6 +47,7 @@ nav:
   - Metodologia: 
       - Metodologia Aplicada: "metodologia/metodologia-aplicada.md"
       - Comunicação Operacional: "metodologia/comunicacao-operacional.md"
+  - Post-Mortem: "planejamento/post-mortem.md"
   - Produto:
       - Lean Inception: "produto/lean-inception.md"
       - Canvas MVP: "produto/mvp-canvas.md"

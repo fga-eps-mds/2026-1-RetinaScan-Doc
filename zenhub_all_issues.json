@@ -1152,16 +1152,48 @@
     {
         "number": 113,
         "title": "Campo outras comorbidades está sendo exibido criptografado",
-        "state": "OPEN",
+        "state": "CLOSED",
         "pipeline_atual": "In Progress",
         "created_at": "2026-06-22T14:04:35Z",
-        "closed_at": null,
+        "closed_at": "2026-07-04T02:16:45Z",
         "story_points": 0.0,
         "sprints": [
             "Sprint: Jun 22 - Jun 28, 2026"
         ],
         "labels": [
             "bug"
+        ],
+        "releases": []
+    },
+    {
+        "number": 118,
+        "title": "Visualização de Grad-CAM por olho no resultado do exame",
+        "state": "OPEN",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-07-04T02:14:33Z",
+        "closed_at": null,
+        "story_points": 0.0,
+        "sprints": [
+            "Sprint: Jun 29 - Jul 5, 2026"
+        ],
+        "labels": [
+            "US"
+        ],
+        "releases": []
+    },
+    {
+        "number": 119,
+        "title": "Criação dos testes End-to-End",
+        "state": "OPEN",
+        "pipeline_atual": "In Progress",
+        "created_at": "2026-07-05T18:31:14Z",
+        "closed_at": null,
+        "story_points": 5.0,
+        "sprints": [
+            "Sprint: Jun 29 - Jul 5, 2026"
+        ],
+        "labels": [
+            "enhancement"
         ],
         "releases": []
     },

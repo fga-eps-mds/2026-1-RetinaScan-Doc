@@ -1,6 +1,6 @@
 {
     "workspace_name": "2026.1-RetinaScan",
-    "generated_at": "2026-06-28T22:04:22.656429Z",
+    "generated_at": "2026-07-07T02:47:49.836791Z",
     "milestones": [
         {
             "number": 6,
@@ -14,7 +14,7 @@
             "title": "6 - Conclusão do MVP & Compartilhamento (R3)",
             "state": "OPEN",
             "total_issues": 3,
-            "closed_issues": 2
+            "closed_issues": 3
         }
     ],
     "sprints_velocity": {
@@ -39,8 +39,8 @@
             "start_at": "2026-06-08T03:59:00Z",
             "end_at": "2026-06-15T02:59:00Z",
             "state": "CLOSED",
-            "delivered_story_points": 29.0,
-            "completed_issues_count": 2
+            "delivered_story_points": 37.0,
+            "completed_issues_count": 3
         },
         "Sprint: Jun 15 - Jun 21, 2026": {
             "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80OTQwNTA1",
@@ -54,7 +54,7 @@
             "id": "Z2lkOi8vcmFwdG9yL1NwcmludC80OTYzNTk0",
             "start_at": "2026-06-22T03:59:00Z",
             "end_at": "2026-06-29T02:59:00Z",
-            "state": "OPEN",
+            "state": "CLOSED",
             "delivered_story_points": 0.0,
             "completed_issues_count": 0
         }
@@ -66,28 +66,7 @@
         "Sprint Backlog": [],
         "In Progress": [],
         "Review/QA": [],
-        "Waiting PO Approval": [
-            {
-                "number": 27,
-                "title": "Compartilhamento de resultados via link",
-                "state": "OPEN",
-                "created_at": "2026-04-11T23:58:27Z",
-                "closed_at": null,
-                "story_points": 8.0,
-                "sprints": [
-                    "Sprint: Jun 8 - Jun 14, 2026",
-                    "Sprint: Jun 15 - Jun 21, 2026",
-                    "Sprint: Jun 22 - Jun 28, 2026"
-                ],
-                "milestone": "6 - Conclusão do MVP & Compartilhamento (R3)",
-                "releases": [
-                    "R3"
-                ],
-                "labels": [
-                    "US"
-                ]
-            }
-        ],
+        "Waiting PO Approval": [],
         "Done": [],
         "Closed": [
             {
@@ -119,6 +98,26 @@
                 "sprints": [
                     "Sprint: Jun 8 - Jun 14, 2026",
                     "Sprint: Jun 15 - Jun 21, 2026"
+                ],
+                "milestone": "6 - Conclusão do MVP & Compartilhamento (R3)",
+                "releases": [
+                    "R3"
+                ],
+                "labels": [
+                    "US"
+                ]
+            },
+            {
+                "number": 27,
+                "title": "Compartilhamento de resultados via link",
+                "state": "CLOSED",
+                "created_at": "2026-04-11T23:58:27Z",
+                "closed_at": "2026-07-04T02:16:57Z",
+                "story_points": 8.0,
+                "sprints": [
+                    "Sprint: Jun 8 - Jun 14, 2026",
+                    "Sprint: Jun 15 - Jun 21, 2026",
+                    "Sprint: Jun 22 - Jun 28, 2026"
                 ],
                 "milestone": "6 - Conclusão do MVP & Compartilhamento (R3)",
                 "releases": [
